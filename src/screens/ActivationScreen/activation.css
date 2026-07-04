@@ -1,0 +1,451 @@
+/**
+ * activation.css
+ * Aktivasyon ekranı için koyu tema token'ları ve split-screen layout.
+ * CSS custom property'leri ile tutarlı tema sistemi.
+ */
+
+/* ─── Design Tokens ─────────────────────────────────────────────────────────── */
+:root {
+  /* Arka plan katmanları */
+  --bg-base:       #0D0F14;
+  --bg-card:       #1A1D26;
+  --bg-elevated:   #252836;
+  --bg-overlay:    rgba(13, 15, 20, 0.85);
+
+  /* Marka rengi */
+  --accent:        #F4821F;
+  --accent-hover:  #FF9A3D;
+  --accent-dim:    rgba(244, 130, 31, 0.15);
+
+  /* Durum renkleri */
+  --state-loading: #8892A4;
+  --state-pending: #3498DB;
+  --state-active:  #2ECC71;
+  --state-expired: #E74C3C;
+
+  /* Metin */
+  --text-primary:  #EAECF0;
+  --text-secondary:#8892A4;
+  --text-muted:    #4B5568;
+  --text-mac:      #FFFFFF;
+
+  /* Fokus */
+  --focus-ring:    #F4821F;
+  --focus-scale:   1.04;
+
+  /* Kenar + gölge */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --shadow-card:   0 4px 24px rgba(0, 0, 0, 0.5);
+  --shadow-badge:  0 2px 12px rgba(0, 0, 0, 0.3);
+
+  /* Yazı */
+  --font-ui:       'Inter', system-ui, sans-serif;
+  --font-mono:     'JetBrains Mono', 'Courier New', monospace;
+
+  /* Geçiş */
+  --transition-fast: 150ms ease;
+  --transition-med:  300ms ease;
+}
+
+/* ─── Reset & Base ──────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.activation-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Arka plan doku efekti */
+.activation-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(244, 130, 31, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(52, 152, 219, 0.04) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* ─── Split Layout ──────────────────────────────────────────────────────────── */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+}
+
+/* ─── Sol Panel ─────────────────────────────────────────────────────────────── */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 64px 80px 80px;
+  border-right: 1px solid var(--border-subtle);
+  gap: 40px;
+}
+
+/* App Logo */
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-logo__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.app-logo__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+/* MAC Address Card */
+.mac-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: var(--shadow-card);
+}
+
+.mac-card__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.mac-card__value {
+  font-family: var(--font-mono);
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--text-mac);
+  word-break: break-all;
+}
+
+.mac-card__value--loading {
+  color: var(--text-muted);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Step List */
+.step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step-list__title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.step-item__num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.step-item__text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.step-item__text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: var(--shadow-badge);
+  transition: background-color var(--transition-med), color var(--transition-med);
+  align-self: flex-start;
+}
+
+.status-badge--loading {
+  background: rgba(136, 146, 164, 0.12);
+  color: var(--state-loading);
+  border: 1px solid rgba(136, 146, 164, 0.2);
+}
+
+.status-badge--pending {
+  background: rgba(52, 152, 219, 0.12);
+  color: var(--state-pending);
+  border: 1px solid rgba(52, 152, 219, 0.25);
+}
+
+.status-badge--active {
+  background: rgba(46, 204, 113, 0.12);
+  color: var(--state-active);
+  border: 1px solid rgba(46, 204, 113, 0.25);
+}
+
+.status-badge--expired {
+  background: rgba(231, 76, 60, 0.12);
+  color: var(--state-expired);
+  border: 1px solid rgba(231, 76, 60, 0.25);
+}
+
+.status-badge__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ─── Sağ Panel ─────────────────────────────────────────────────────────────── */
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  gap: 32px;
+  text-align: center;
+}
+
+/* QR Code Box */
+.qr-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transition: opacity var(--transition-med);
+}
+
+.qr-box--dimmed {
+  opacity: 0.35;
+  filter: grayscale(0.5);
+}
+
+.qr-frame {
+  width: 220px;
+  height: 220px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.qr-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qr-caption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  max-width: 260px;
+  line-height: 1.5;
+}
+
+/* URL Display */
+.url-display {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+/* Action Area */
+.action-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* ─── Butonlar ──────────────────────────────────────────────────────────────── */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 32px;
+  border-radius: 12px;
+  border: none;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    outline var(--transition-fast);
+  outline: 3px solid transparent;
+  outline-offset: 3px;
+  position: relative;
+}
+
+/* remote-focus-nav: fokuslu eleman görsel olarak belirgin */
+.btn:focus,
+.btn[data-focused="true"] {
+  outline: 3px solid var(--focus-ring);
+  transform: scale(var(--focus-scale));
+  box-shadow: 0 0 0 6px rgba(244, 130, 31, 0.18);
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #000000;
+}
+
+.btn--primary:hover,
+.btn--primary[data-focused="true"] {
+  background: var(--accent-hover);
+}
+
+.btn--secondary {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+.btn--secondary:hover,
+.btn--secondary[data-focused="true"] {
+  background: #2F3244;
+}
+
+.btn--danger {
+  background: rgba(231, 76, 60, 0.15);
+  color: var(--state-expired);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.btn--danger:hover,
+.btn--danger[data-focused="true"] {
+  background: rgba(231, 76, 60, 0.25);
+}
+
+.btn--disabled,
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Support link */
+.support-link {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+/* Error message */
+.error-message {
+  font-size: 0.85rem;
+  color: var(--state-expired);
+  text-align: center;
+  padding: 8px 16px;
+  background: rgba(231, 76, 60, 0.08);
+  border-radius: 8px;
+  border: 1px solid rgba(231, 76, 60, 0.2);
+}
+
+/* ─── Animasyonlar ──────────────────────────────────────────────────────────── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+/* Screen enter animasyonu */
+.activation-screen .left-panel,
+.activation-screen .right-panel {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.activation-screen .right-panel {
+  animation-delay: 0.1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}

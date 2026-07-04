@@ -1,0 +1,121 @@
+/**
+ * app.css — Global uygulama layout token'ları
+ * Aktivasyon ekranının activation.css'inden import edilmez;
+ * bu dosya sidebar + content layout'u tanımlar.
+ */
+
+/* ─── Layout sabitler ────────────────────────────────────────────────────────── */
+:root {
+  --sidebar-width:        240px;
+  --banner-height:        56px;
+  --content-bg:           #10121A;
+  --sidebar-bg:           #13151F;
+  --sidebar-border:       rgba(255, 255, 255, 0.06);
+
+  /* Paket kart renkleri */
+  --card-bg:              #1A1D26;
+  --card-border:          rgba(255, 255, 255, 0.08);
+  --card-featured-border: #F4821F;
+  --card-selected-bg:     rgba(244, 130, 31, 0.12);
+
+  /* Durum renkleri (ortak) */
+  --color-active:   #2ECC71;
+  --color-grace:    #F39C12;
+  --color-expired:  #E74C3C;
+  --color-accent:   #F4821F;
+
+  /* Yazı */
+  --font-ui:    'Inter', system-ui, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Courier New', monospace;
+
+  /* Geçiş */
+  --tr-fast:    150ms ease;
+  --tr-med:     300ms ease;
+}
+
+/* ─── Reset ──────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0D0F14;
+  color: #EAECF0;
+  font-family: var(--font-ui);
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ─── Ana Layout ─────────────────────────────────────────────────────────────── */
+.app-root {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Banner varken içerik offset */
+.app-root--with-banner {
+  padding-top: var(--banner-height);
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ─── Sidebar (SideMenu) ─────────────────────────────────────────────────────── */
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ─── İçerik Alanı ───────────────────────────────────────────────────────────── */
+.app-content {
+  flex: 1;
+  background: var(--content-bg);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ─── Fokus token'ları (remote-focus-nav) ─────────────────────────────────────── */
+[data-focusable="true"]:focus,
+[data-focused="true"] {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* ─── Yardımcı sınıflar ──────────────────────────────────────────────────────── */
+.screen-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  gap: 24px;
+  padding: 48px;
+}
+
+.screen-full {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #0D0F14;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up { animation: fadeUp 0.3s ease forwards; }

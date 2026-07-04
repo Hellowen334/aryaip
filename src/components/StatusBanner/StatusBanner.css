@@ -1,0 +1,62 @@
+/**
+ * StatusBanner.css
+ * Grace / expired durumlarında ekranın üstünde kalıcı uyarı şeridi.
+ * Kapatma butonu YOK (skill kuralı).
+ */
+
+.status-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--banner-height, 56px);
+  z-index: 8000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 32px;
+  font-family: var(--font-ui, system-ui);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  user-select: none;
+}
+
+/* Grace — turuncu */
+.status-banner--grace {
+  background: linear-gradient(90deg, #7A3D00 0%, #B85A00 50%, #7A3D00 100%);
+  color: #FFD49A;
+  border-bottom: 1px solid rgba(244, 130, 31, 0.4);
+}
+
+/* Expired — kırmızı (ExpiredScreen içinde de kullanılır) */
+.status-banner--expired {
+  background: linear-gradient(90deg, #6B1111 0%, #9B1C1C 50%, #6B1111 100%);
+  color: #FCA5A5;
+  border-bottom: 1px solid rgba(231, 76, 60, 0.4);
+}
+
+.status-banner__icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.status-banner__text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.status-banner__separator {
+  opacity: 0.5;
+  margin: 0 2px;
+}
+
+.status-banner__highlight {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
