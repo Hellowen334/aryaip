@@ -18,7 +18,7 @@ module.exports = {
   },
   resolve: { extensions: ['.js', '.jsx'] },
   plugins: [
-    new HtmlWebpackPlugin({ template: './public/index.html' }),
+    new HtmlWebpackPlugin({ template: './public/index.html', scriptLoading: 'blocking' }),
     new CopyPlugin({
       patterns: [
         { from: 'appinfo.json', to: 'appinfo.json' },
