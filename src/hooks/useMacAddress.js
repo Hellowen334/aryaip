@@ -76,18 +76,17 @@ export function readMacAddress() {
 
   return callLuna(
     'luna://com.webos.service.connectionmanager',
-    'getinfo',
+    'getStatus',
     {}
   ).then(function(info) {
-    // wifiInfo kontrolü: connected && macAddress var mı
-    // ES6 uyumlu — optional chaining (?.) kullanılmıyor (webOS 4.x Chromium 68)
-    var wifi = info && info.wifiInfo;
+    // wifiInfo (newer) veya wifi (older webOS) kontrolü
+    var wifi = (info && info.wifiInfo) || (info && info.wifi);
     if (wifi && wifi.state === 'connected' && wifi.macAddress) {
       return wifi.macAddress.toUpperCase();
     }
 
-    // wiredInfo fallback
-    var wired = info && info.wiredInfo;
+    // wiredInfo veya wired fallback
+    var wired = (info && info.wiredInfo) || (info && info.wired);
     if (wired && wired.state === 'connected' && wired.macAddress) {
       return wired.macAddress.toUpperCase();
     }

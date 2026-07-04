@@ -9,7 +9,7 @@ module.exports = {
         }
       }
     ],
-    '@babel/preset-react'
+    ['@babel/preset-react', { runtime: 'automatic', development: false }]
   ],
   plugins: [
     ['polyfill-corejs3', { method: 'usage-global' }]
