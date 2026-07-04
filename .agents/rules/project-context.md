@@ -68,3 +68,13 @@
 ## Kod stili
 - useState her zaman `const [x, setX] = useState(...)` destructuring
   formatında yazılır, array index erişimi (`x[0]`) kullanılmaz.
+
+## Gerçek test cihazı (kesinleşmiş)
+- Model: LG 49UH770V-ZA (2016) — webOS 3.0, Chromium 38
+- Bu, projenin şu ana kadarki EN DÜŞÜK hedefidir. Babel target'ı
+  chrome 38 olarak ayarlanmıştır, 53 veya 68 DEĞİL.
+- webOS sürümünden Chromium sürümünü asla tahmin etme — model bazlı
+  gerçek TV'nin ayarlar menüsünden (Settings > General > TV Information)
+  webOS sürümünü al, sonra webostv.developer.lge.com'daki resmi
+  Chromium eşleşme tablosundan doğrula. webOS major sürümü ile yıl
+  arasındaki ilişki sanılandan farklı çıkabiliyor (bu projede olduğu gibi).

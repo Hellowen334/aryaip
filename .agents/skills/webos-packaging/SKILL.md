@@ -46,3 +46,15 @@ description: Uygulamanın appinfo.json dosyasını oluşturma/düzenleme, ares-c
   onay popup'ı, 5.0 ve altında Home launcher tetikler. Custom exit
   davranışı isteniyorsa platformBack() KULLANILMAZ, kendi popup +
   window.close() mantığı kurulur.
+
+## requiredPermissions doğru değerler (ACG)
+- İzin değerleri serbest metin DEĞİL, resmi ACG (Access Control Group)
+  değerleridir — her Luna servis metodunun dokümantasyon sayfasında
+  "ACG:" etiketiyle belirtilir.
+- MAC/ağ durumu okuma (connectionmanager/getinfo, getStatus):
+  networkconnection.query
+- Yanlış/uydurma bir izin adı (örn. "networking") sessizce yok sayılır,
+  hata fırlatmaz — çağrı sadece "permission denied" ile başarısız olur.
+  Her yeni Luna servisi eklenirken ilgili resmi API sayfasındaki ACG
+  değeri teyit edilmeden requiredPermissions'a rastgele bir isim
+  yazılmaz.
