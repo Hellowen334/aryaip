@@ -2,21 +2,44 @@
  * app.css — Global uygulama layout token'ları
  * Aktivasyon ekranının activation.css'inden import edilmez;
  * bu dosya sidebar + content layout'u tanımlar.
+ *
+ * Palet: Sıcak koyu kahve-siyah (Smart Live TV referansı)
  */
 
-/* ─── Layout sabitler ────────────────────────────────────────────────────────── */
+/* ─── Layout & Renk token'ları ───────────────────────────────────────────────── */
 :root {
-  --sidebar-width:        240px;
+  /* SideMenu boyutları */
+  --sidebar-collapsed:    72px;
+  --sidebar-expanded:     220px;
   --banner-height:        56px;
-  --content-bg:           #10121A;
-  --sidebar-bg:           #13151F;
-  --sidebar-border:       rgba(255, 255, 255, 0.06);
 
-  /* Paket kart renkleri */
-  --card-bg:              #1A1D26;
-  --card-border:          rgba(255, 255, 255, 0.08);
+  /* Zemin renkleri (kahve-siyah palet) */
+  --content-bg:           #1C1712;
+  --sidebar-bg:           #15110D;
+  --sidebar-border:       rgba(255, 255, 255, 0.04);
+
+  /* Kart renkleri */
+  --card-bg:              #2A241E;
+  --card-border:          rgba(255, 255, 255, 0.06);
   --card-featured-border: #F4821F;
   --card-selected-bg:     rgba(244, 130, 31, 0.12);
+  --card-gradient-start:  #6C3FD1;
+  --card-gradient-end:    #4527A0;
+  --card-radius:          8px;
+
+  /* Fokus token'ları (remote-focus-nav) */
+  --focus-border:         #FFFFFF;
+  --focus-border-width:   3px;
+  --focus-scale:          1.05;
+
+  /* Liste fokus (Canlı TV kanal listesi) */
+  --list-focus-bg-start:  #F4821F;
+  --list-focus-bg-end:    rgba(244, 130, 31, 0.3);
+  --list-focus-text:      #1C1712;
+
+  /* Poster rozet */
+  --badge-rating-bg:      #F4821F;
+  --badge-rating-text:    #FFFFFF;
 
   /* Durum renkleri (ortak) */
   --color-active:   #2ECC71;
@@ -28,17 +51,25 @@
   --font-ui:    'Inter', system-ui, sans-serif;
   --font-mono:  'JetBrains Mono', 'Courier New', monospace;
 
+  /* Metin renkleri */
+  --text-primary:   #EAECF0;
+  --text-secondary: #A09080;
+  --text-muted:     #6B5E50;
+
   /* Geçiş */
   --tr-fast:    150ms ease;
   --tr-med:     300ms ease;
+
+  /* Kategori paneli */
+  --category-width:  180px;
 }
 
 /* ─── Reset ──────────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: #0D0F14;
-  color: #EAECF0;
+  background: #1C1712;
+  color: var(--text-primary);
   font-family: var(--font-ui);
   overflow: hidden;
   width: 100vw;
@@ -61,36 +92,40 @@ body {
 
 .app-body {
   display: flex;
+  position: relative; /* SideMenu overlay için */
   flex: 1;
-  overflow: hidden;
-}
-
-/* ─── Sidebar (SideMenu) ─────────────────────────────────────────────────────── */
-.sidebar {
-  width: var(--sidebar-width);
-  flex-shrink: 0;
-  background: var(--sidebar-bg);
-  border-right: 1px solid var(--sidebar-border);
-  display: flex;
-  flex-direction: column;
-  padding: 24px 0;
-  height: 100%;
   overflow: hidden;
 }
 
 /* ─── İçerik Alanı ───────────────────────────────────────────────────────────── */
 .app-content {
   flex: 1;
+  margin-left: var(--sidebar-collapsed); /* 72px — sabit, menü overlay olduğu için kaymaz */
   background: var(--content-bg);
   overflow: hidden;
   position: relative;
 }
 
-/* ─── Fokus token'ları (remote-focus-nav) ─────────────────────────────────────── */
-[data-focusable="true"]:focus,
-[data-focused="true"] {
-  outline: 3px solid var(--color-accent);
-  outline-offset: 3px;
+/* ─── Fokus token'ları (remote-focus-nav) — kart tipi ─────────────────────────── */
+.focus-card:focus,
+.focus-card[data-focused="true"] {
+  outline: none;
+  border: var(--focus-border-width) solid var(--focus-border);
+  transform: scale(var(--focus-scale));
+}
+
+/* ─── Fokus token'ları — liste tipi (Canlı TV) ────────────────────────────────── */
+.focus-list-item:focus,
+.focus-list-item[data-focused="true"] {
+  outline: none;
+  background: linear-gradient(90deg, var(--list-focus-bg-start), var(--list-focus-bg-end));
+  color: var(--list-focus-text);
+}
+
+/* ─── Fokus token'ları — genel (fallback) ─────────────────────────────────────── */
+[data-focusable="true"]:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 /* ─── Yardımcı sınıflar ──────────────────────────────────────────────────────── */
@@ -110,7 +145,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #0D0F14;
+  background: #1C1712;
 }
 
 @keyframes fadeUp {
@@ -119,3 +154,23 @@ body {
 }
 
 .fade-up { animation: fadeUp 0.3s ease forwards; }
+
+/* ─── Ekran header (ortak) ───────────────────────────────────────────────────── */
+.screen-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  flex-shrink: 0;
+}
+
+.screen-header__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.screen-header__spacer {
+  flex: 1;
+}

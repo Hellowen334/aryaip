@@ -76,26 +76,22 @@ export function readMacAddress() {
 
   return callLuna(
     'luna://com.webos.service.connectionmanager',
-    'getStatus',
+    'getInfo',
     {}
   ).then(function(info) {
-    // wifiInfo (newer) veya wifi (older webOS) kontrolü
-    var wifi = (info && info.wifiInfo) || (info && info.wifi);
-    if (wifi && wifi.state === 'connected' && wifi.macAddress) {
-      return wifi.macAddress.toUpperCase();
+    // Öncelikle wired tercih edilir
+    var wiredMac = info && info.wiredInfo && info.wiredInfo.macAddress;
+    if (wiredMac) {
+      return wiredMac.toUpperCase();
     }
 
-    // wiredInfo veya wired fallback
-    var wired = (info && info.wiredInfo) || (info && info.wired);
-    if (wired && wired.state === 'connected' && wired.macAddress) {
-      return wired.macAddress.toUpperCase();
+    // Fallback olarak wifi
+    var wifiMac = info && info.wifiInfo && info.wifiInfo.macAddress;
+    if (wifiMac) {
+      return wifiMac.toUpperCase();
     }
 
-    // Bağlantı yok ama MAC okunabilir (offline durumu)
-    if (wifi && wifi.macAddress) return wifi.macAddress.toUpperCase();
-    if (wired && wired.macAddress) return wired.macAddress.toUpperCase();
-
-    console.warn('[useMacAddress] connectionmanager returned no MAC:', info);
+    console.warn('[useMacAddress] connectionmanager getInfo returned no MAC:', info);
     return 'UNKNOWN';
   }).catch(function(err) {
     console.error('[useMacAddress] Luna call failed:', err);

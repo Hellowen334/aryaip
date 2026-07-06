@@ -44,10 +44,11 @@ description: Uygulama ilk açılışında aktivasyon/demo ekranı, TV MAC adresi
   bağlantı hatası ekranı mı — bu bir ürün kararı, varsayım yapmadan
   kullanıcıya sor.
 
-## MAC adresi okuma (doğrulanmış)
-- API: luna://com.webos.service.connectionmanager, method: getinfo
-- Dönen alanlar: wifiInfo.macAddress, wiredInfo.macAddress
-- Önce getStatus() ile aktif interface (wired/wifi) tespit edilir,
-  sonra ilgili MAC alınır. Varsayılan/tahmini bir alan seçilmez.
-- appinfo.json'da bu servise erişim izni tanımlanmalı (bkz.
-  webos-packaging skill).
+## MAC adresi okuma — KESİNLEŞMİŞ (2 farklı metod, karıştırılmamalı)
+- getStatus  → wired/wifi bağlantı durumunu verir, macAddress İÇERMEZ.
+- getInfo    → wiredInfo.macAddress / wifiInfo.macAddress verir, MAC
+  bilgisi SADECE bu metoddan gelir.
+- getInfo deprecated olsa da eski cihazlarda (webOS 3.x gibi) hâlâ
+  tam destekli — bizim minimum hedef cihazımız için güvenle kullanılır.
+- Pratik akış: getInfo çağır, wiredInfo.macAddress doluysa onu kullan,
+  boşsa wifiInfo.macAddress'e düş.

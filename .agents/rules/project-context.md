@@ -78,3 +78,31 @@
   webOS sürümünü al, sonra webostv.developer.lge.com'daki resmi
   Chromium eşleşme tablosundan doğrula. webOS major sürümü ile yıl
   arasındaki ilişki sanılandan farklı çıkabiliyor (bu projede olduğu gibi).
+
+## Görsel tasarım sistemi (referans: Smart Live TV tarzı)
+Zemin:       #1C1712 (sıcak koyu kahve-siyah)
+Kart zemin:  #2A241E (elevated)
+Vurgu:       #F4821F (turuncu — mevcut marka rengi)
+Kart gradyan: mor-menekşe gradyan (#6C3FD1 → #4527A0) — poster/thumbnail
+              placeholder yokken kullanılan varsayılan arka plan
+
+Sol navigasyon (icon rail):
+  - SADECE ikon, metin etiketi yok (ekran alanından tasarruf)
+  - Aktif/fokuslu ikon: dairesel #F4821F arka plan + ikon beyaza döner
+  - Kilitli öğe (grace/expired): ikonun sağ altında küçük kilit rozeti
+
+Kart fokus stili:
+  - 3px beyaz border + scale(1.05) — mevcut remote-focus-nav
+    token'larıyla (outline+scale) aynı mantık, sadece renk beyaz
+
+Liste öğesi fokus stili (Canlı TV kanal listesi gibi yerlerde):
+  - Soldan sağa turuncu gradyan DOLGU (outline değil, background-fill)
+  - Numara + ikon + isim aynı satırda, fokuslanınca metin koyu renge döner
+    (kontrast için)
+
+Poster rozeti:
+  - Sol üst köşe, küçük turuncu/sarı dikdörtgen, puan (ör. TMDb rating)
+
+Kategori filtre paneli (Filmler/Diziler/Canlı TV ekranlarının solunda):
+  - Her kategori yanında içerik sayısı (ör. "Nature  3")
+  - "All", "Favorite", "Recently Viewed" gibi sabit filtreler üstte
