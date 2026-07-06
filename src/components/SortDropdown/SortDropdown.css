@@ -1,0 +1,37 @@
+/**
+ * SortDropdown.css
+ */
+
+.sort-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color var(--tr-fast, 150ms ease);
+  outline: none;
+}
+
+.sort-dropdown--focused {
+  border-color: var(--color-accent, #F4821F);
+}
+
+.sort-dropdown__icon {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.sort-dropdown__label {
+  font-size: 0.82rem;
+  color: var(--text-primary, #EAECF0);
+  font-weight: 500;
+}
+
+.sort-dropdown__arrow {
+  font-size: 0.7rem;
+  color: var(--text-muted, #6B5E50);
+  margin-left: 4px;
+}

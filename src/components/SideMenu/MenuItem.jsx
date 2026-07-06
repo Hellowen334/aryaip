@@ -1,5 +1,9 @@
 /**
  * MenuItem.jsx
+ * Expand-on-focus SideMenu menü öğesi.
+ *
+ * Collapsed: sadece dairesel ikon wrapper görünür
+ * Expanded: ikon + etiket + badge/lock görünür
  *
  * Props:
  *   id          string   — unique id (FocusManager için)
@@ -20,8 +24,8 @@ function LockIcon() {
   return (
     <svg
       className="menu-item__lock"
-      width="14"
-      height="14"
+      width="12"
+      height="12"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -75,7 +79,9 @@ export default function MenuItem(props) {
       aria-label={label + (locked ? ', kilitli' : '') + (badge ? ', ' + badge : '')}
       tabIndex={0}
     >
-      <span className="menu-item__icon" aria-hidden="true">{icon}</span>
+      <span className="menu-item__icon-wrap" aria-hidden="true">
+        <span className="menu-item__icon">{icon}</span>
+      </span>
       <span className="menu-item__label">{label}</span>
       {locked && <LockIcon />}
       {badge && !locked && (

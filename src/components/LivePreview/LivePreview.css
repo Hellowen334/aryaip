@@ -1,0 +1,106 @@
+/**
+ * LivePreview.css — Canlı yayın ön izleme stilleri
+ */
+
+.live-preview {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  gap: 12px;
+}
+
+.live-preview--empty {
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Video alanı ────────────────────────────────────────────────────────────── */
+.live-preview__video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0D0A07;
+}
+
+.live-preview__video-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 8px;
+}
+
+.live-preview__video-icon {
+  font-size: 2.5rem;
+  opacity: 0.5;
+}
+
+.live-preview__video-text {
+  font-size: 0.85rem;
+  color: var(--text-muted, #6B5E50);
+}
+
+.live-preview__placeholder {
+  text-align: center;
+}
+
+.live-preview__placeholder-text {
+  font-size: 0.9rem;
+  color: var(--text-muted, #6B5E50);
+}
+
+/* ─── Kanal bilgisi ──────────────────────────────────────────────────────────── */
+.live-preview__info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.live-preview__channel-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.live-preview__channel-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary, #EAECF0);
+}
+
+/* ─── Aksiyon butonları ──────────────────────────────────────────────────────── */
+.live-preview__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+  padding-bottom: 8px;
+}
+
+.live-preview__btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-primary, #EAECF0);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    border-color var(--tr-fast, 150ms ease),
+    background-color var(--tr-fast, 150ms ease);
+  outline: none;
+}
+
+.live-preview__btn--focused {
+  border-color: var(--color-accent, #F4821F);
+  background: rgba(244, 130, 31, 0.15);
+  color: var(--color-accent, #F4821F);
+}

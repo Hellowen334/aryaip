@@ -1,7 +1,14 @@
 /**
  * SideMenu.jsx
- * Sol sidebar navigasyon menüsü.
- * remote-focus-nav: Up/Down ile MenuItem'lar arası, Right → içerik alanına geç.
+ * Sol sidebar navigasyon menüsü — Expand-on-focus overlay.
+ *
+ * Davranış (remote-focus-nav skill'inden):
+ *   - Varsayılan: collapsed (72px), sadece ikonlar
+ *   - Kullanıcı Sol tuşla menüye odaklanınca (isFocused=true):
+ *     menü 220px'e genişler, etiketler görünür (overlay)
+ *   - Sağ tuşla içeriğe geçince (isFocused=false):
+ *     menü daralır, sadece ikonlar kalır
+ *   - Content alanı KAYMAZ — menü position: absolute
  *
  * Props:
  *   currentScreen   string   — şu an aktif ekran (nav stack'ten)
@@ -51,8 +58,6 @@ export default function SideMenu(props) {
   var onFocusChange  = props.onFocusChange;
 
   var containerRef = useRef(null);
-  // isFocused'ın bir önceki değerini takip eder.
-  // false → true geçişinde (menüye girilince) odaklanmak için kullanılır.
   var prevIsFocusedRef = useRef(false);
 
   // Üyelik badge'i hesapla
@@ -68,11 +73,9 @@ export default function SideMenu(props) {
 
   var membershipBadge = getMembershipBadge();
 
-  // Focusable item listesi (sıra için) — MENU_ITEMS modül düzeyinde sabit, re-compute yok
+  // Focusable item listesi
   var focusableIds = MENU_ITEMS.map(function(item) { return item.id; });
 
-  // containerRef.current bir ref nesnesidir; useCallback deps'e eklenmez (React guarantee).
-  // onFocusChange prop'u referansı değişebileceğinden deps'e ekleniyor.
   var focusItemById = useCallback(function focusItemById(id) {
     if (!containerRef.current) return;
     var el = containerRef.current.querySelector('#' + id);
@@ -82,11 +85,7 @@ export default function SideMenu(props) {
     }
   }, [onFocusChange]);
 
-  // Menüye odak gelince (false → true geçişi) hedef item'a odaklan.
-  // focusedId ve focusItemById deps'e eklendi — eslint-disable YOK.
-  // Tekrar odaklanmayı önlemek için prevIsFocusedRef ile geçiş kontrolü yapılır:
-  // focusedId değişse bile (hâlâ isFocused=true iken) bu effect tekrar tetiklenir
-  // ancak prevRef zaten true olduğundan erken return eder.
+  // Menüye odak gelince (false → true geçişi) hedef item'a odaklan
   useEffect(function() {
     var justBecameFocused = isFocused && !prevIsFocusedRef.current;
     prevIsFocusedRef.current = isFocused;
@@ -119,7 +118,6 @@ export default function SideMenu(props) {
         if (onEnterContent) onEnterContent();
       } else if (e.keyCode === KEY_OK) {
         e.preventDefault();
-        // Aktif öğeye tıkla (onClick'i tetikle)
         var el = containerRef.current.querySelector('#' + (focusedId || focusableIds[0]));
         if (el) el.click();
       }
@@ -138,15 +136,21 @@ export default function SideMenu(props) {
     }
   }
 
+  // Expanded/collapsed class
+  var menuClass = 'sidemenu';
+  if (isFocused) {
+    menuClass = menuClass + ' sidemenu--expanded';
+  }
+
   return (
     <nav
       ref={containerRef}
-      className="sidemenu"
+      className={menuClass}
       aria-label="Ana menü"
     >
       {/* Logo */}
       <div className="sidemenu__logo">
-        <div className="sidemenu__logo-icon" aria-hidden="true">📺</div>
+        <div className="sidemenu__logo-icon" aria-hidden="true">IPTV</div>
         <span className="sidemenu__logo-name">Arya IPTV</span>
       </div>
 

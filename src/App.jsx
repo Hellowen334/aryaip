@@ -27,6 +27,9 @@ import ActivationScreen from './screens/ActivationScreen/index';
 import ExpiredScreen from './screens/ExpiredScreen/index';
 import RestrictedAccessScreen from './screens/RestrictedAccessScreen/index';
 import MembershipScreen from './screens/MembershipScreen/index';
+import HomeScreen from './screens/HomeScreen/HomeScreen';
+import LiveTVScreen from './screens/LiveTVScreen/LiveTVScreen';
+import MoviesScreen from './screens/MoviesScreen/MoviesScreen';
 
 import SideMenu from './components/SideMenu/SideMenu';
 import StatusBanner from './components/StatusBanner/StatusBanner';
@@ -146,15 +149,30 @@ export default function App() {
     }
 
     if (screen === SCREENS.HOME) {
-      return <PlaceholderScreen icon="🏠" title="Anasayfa" />;
+      return (
+        <HomeScreen
+          isContentFocused={focusZone === 'content'}
+          onExitLeft={handleExitLeft}
+        />
+      );
     }
 
     if (screen === SCREENS.LIVETV) {
-      return <PlaceholderScreen icon="📡" title="Canlı TV" />;
+      return (
+        <LiveTVScreen
+          isContentFocused={focusZone === 'content'}
+          onExitLeft={handleExitLeft}
+        />
+      );
     }
 
     if (screen === SCREENS.MOVIES) {
-      return <PlaceholderScreen icon="🎬" title="Filmler" />;
+      return (
+        <MoviesScreen
+          isContentFocused={focusZone === 'content'}
+          onExitLeft={handleExitLeft}
+        />
+      );
     }
 
     if (screen === SCREENS.SERIES) {

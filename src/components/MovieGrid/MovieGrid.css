@@ -1,0 +1,14 @@
+/**
+ * MovieGrid.css — Film grid stilleri
+ */
+
+.movie-grid {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.movie-grid__viewport {
+  position: relative;
+  width: 100%;
+}

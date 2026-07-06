@@ -1,0 +1,75 @@
+/**
+ * CategoryPanel.css — Kategori filtre paneli stilleri
+ */
+
+.category-panel {
+  width: var(--category-width, 180px);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ─── Kategori satırı ────────────────────────────────────────────────────────── */
+.category-panel__item {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  position: relative;
+  transition: background-color var(--tr-fast, 150ms ease);
+  outline: none;
+}
+
+.category-panel__item--focused {
+  background: rgba(244, 130, 31, 0.12);
+}
+
+.category-panel__item--selected .category-panel__name {
+  color: var(--color-accent, #F4821F);
+  font-weight: 600;
+}
+
+.category-panel__name {
+  flex: 1;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary, #A09080);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.category-panel__count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted, #6B5E50);
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.category-panel__item--selected .category-panel__count {
+  color: var(--color-accent, #F4821F);
+}
+
+/* Aktif gösterge: sol kenar turuncu dikey çizgi */
+.category-panel__indicator {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 3px;
+  background: var(--color-accent, #F4821F);
+  border-radius: 2px;
+}
+
+/* Separator */
+.category-panel__separator {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 6px 16px;
+}

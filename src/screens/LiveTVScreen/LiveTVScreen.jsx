@@ -1,0 +1,153 @@
+/**
+ * LiveTVScreen.jsx — Canlı TV ekranı
+ *
+ * 3-panel layout: CategoryPanel | ChannelList | LivePreview
+ *
+ * Fokus bölgeleri:
+ *   'categories' → CategoryPanel
+ *   'channels'   → ChannelList (virtualized)
+ *   'preview'    → LivePreview butonları
+ *
+ * Props:
+ *   channels          Array   — [{id, num, name, icon, isLive, categoryId, streamUrl}]
+ *   categories        Array   — [{id, name, count}]
+ *   isContentFocused  boolean
+ *   onExitLeft        () => void — SideMenu'ye geç
+ */
+
+import React, { useState, useCallback } from 'react';
+import CategoryPanel from '../../components/CategoryPanel/CategoryPanel';
+import ChannelList from '../../components/ChannelList/ChannelList';
+import LivePreview from '../../components/LivePreview/LivePreview';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import SortDropdown from '../../components/SortDropdown/SortDropdown';
+import './LiveTVScreen.css';
+
+// Demo veri
+var DEMO_CATEGORIES = [
+  { id: 'news',    name: 'News',    count: 2 },
+  { id: 'nature',  name: 'Nature',  count: 3 },
+  { id: 'animals', name: 'Animals', count: 3 },
+];
+
+var DEMO_CHANNELS = [
+  { id: 'ch1', num: 1, name: 'Demo News 1',    icon: null, isLive: true,  categoryId: 'news' },
+  { id: 'ch2', num: 2, name: 'Demo News 2',    icon: null, isLive: false, categoryId: 'news' },
+  { id: 'ch3', num: 3, name: 'Demo Nature 1',  icon: null, isLive: false, categoryId: 'nature' },
+  { id: 'ch4', num: 4, name: 'Demo Nature 2',  icon: null, isLive: false, categoryId: 'nature' },
+  { id: 'ch5', num: 5, name: 'Demo Nature 3',  icon: null, isLive: false, categoryId: 'nature' },
+  { id: 'ch6', num: 6, name: 'Demo Animals 1', icon: null, isLive: false, categoryId: 'animals' },
+  { id: 'ch7', num: 7, name: 'Demo Animals 2', icon: null, isLive: false, categoryId: 'animals' },
+  { id: 'ch8', num: 8, name: 'Demo Animals 3', icon: null, isLive: false, categoryId: 'animals' },
+];
+
+export default function LiveTVScreen(props) {
+  var channels         = props.channels || DEMO_CHANNELS;
+  var categories       = props.categories || DEMO_CATEGORIES;
+  var isContentFocused = props.isContentFocused || false;
+  var onExitLeft       = props.onExitLeft;
+
+  // Fokus bölgesi
+  var zoneState = useState('channels');
+  var focusZone = zoneState[0];
+  var setFocusZone = zoneState[1];
+
+  // Seçili kategori
+  var catState = useState('all');
+  var selectedCategory = catState[0];
+  var setSelectedCategory = catState[1];
+
+  // Kategori paneli fokus index
+  var catFocusState = useState(1); // 'All' başlangıç (index 1: recently-viewed=0, all=1)
+  var catFocusedIndex = catFocusState[0];
+  var setCatFocusedIndex = catFocusState[1];
+
+  // Kanal listesi fokus index
+  var chFocusState = useState(0);
+  var chFocusedIndex = chFocusState[0];
+  var setChFocusedIndex = chFocusState[1];
+
+  // Seçili kanal (preview'da gösterilecek)
+  var selectedChState = useState(channels[0] || null);
+  var selectedChannel = selectedChState[0];
+  var setSelectedChannel = selectedChState[1];
+
+  // Preview buton fokus
+  var prevBtnState = useState(0);
+  var previewFocusedBtn = prevBtnState[0];
+  var setPreviewFocusedBtn = prevBtnState[1];
+
+  // Kategori filtresi uygulanmış kanal listesi
+  var filteredChannels = channels;
+  if (selectedCategory !== 'all' && selectedCategory !== 'favorite' && selectedCategory !== 'recently-viewed') {
+    filteredChannels = channels.filter(function(ch) {
+      return ch.categoryId === selectedCategory;
+    });
+  }
+
+  // Kategori seçim handler
+  var handleCategorySelect = useCallback(function(catId) {
+    setSelectedCategory(catId);
+    setChFocusedIndex(0); // kategori değişince kanal fokusunu sıfırla
+  }, []);
+
+  // Kanal seçim handler
+  var handleChannelSelect = useCallback(function(channel) {
+    setSelectedChannel(channel);
+  }, []);
+
+  // Zone geçişleri
+  var goToCategories = useCallback(function() { setFocusZone('categories'); }, []);
+  var goToChannels   = useCallback(function() { setFocusZone('channels'); }, []);
+  var goToPreview    = useCallback(function() { setFocusZone('preview'); }, []);
+
+  return (
+    <div className="livetv-screen">
+      {/* Üst bar */}
+      <div className="screen-header">
+        <h1 className="screen-header__title">Live</h1>
+        <SearchBar placeholder="Search Channels" />
+        <div className="screen-header__spacer" />
+        <SortDropdown label="Order by number" />
+      </div>
+
+      {/* 3-panel body */}
+      <div className="livetv-screen__body">
+        {/* Sol: Kategori Paneli */}
+        <CategoryPanel
+          type="livetv"
+          categories={categories}
+          selected={selectedCategory}
+          onSelect={handleCategorySelect}
+          isFocused={isContentFocused && focusZone === 'categories'}
+          focusedIndex={catFocusedIndex}
+          onFocusChange={setCatFocusedIndex}
+          onExitRight={goToChannels}
+          onExitLeft={onExitLeft}
+        />
+
+        {/* Orta: Kanal Listesi */}
+        <ChannelList
+          channels={filteredChannels}
+          selectedId={selectedChannel ? selectedChannel.id : null}
+          focusedIndex={chFocusedIndex}
+          isFocused={isContentFocused && focusZone === 'channels'}
+          onFocusChange={setChFocusedIndex}
+          onSelect={handleChannelSelect}
+          onExitLeft={goToCategories}
+          onExitRight={goToPreview}
+          listHeight={450}
+        />
+
+        {/* Sağ: Preview */}
+        <LivePreview
+          channel={selectedChannel}
+          isFocused={isContentFocused && focusZone === 'preview'}
+          focusedButton={previewFocusedBtn}
+          onFocusChange={setPreviewFocusedBtn}
+          onExitLeft={goToChannels}
+        />
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,26 @@
+/**
+ * LiveTVScreen.css
+ */
+
+.livetv-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.livetv-screen__body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  gap: 1px;
+}
+
+/* Kanal listesinin ve preview'un arasında ince ayırıcı */
+.livetv-screen__body > * {
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.livetv-screen__body > *:last-child {
+  border-right: none;
+}
