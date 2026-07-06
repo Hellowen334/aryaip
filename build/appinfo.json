@@ -7,10 +7,15 @@
   "title": "Arya IPTV",
   "icon": "icon.png",
   "largeIcon": "largeIcon.png",
-  "resolution": "1920x1080",
+  "resolution": "1280x720",
   "bgColor": "#000000",
   "iconColor": "#ffffff",
   "requiredPermissions": [
-    "networkconnection.query"
+    "networkconnection.query",
+    "networkconnection.management",
+    "network.query",
+    "network.management",
+    "wifi.query",
+    "wifi.management"
   ]
 }

@@ -136,11 +136,8 @@ export default function SideMenu(props) {
     }
   }
 
-  // Expanded/collapsed class
+  // Menü sınıfı (artık sabit boyutlu)
   var menuClass = 'sidemenu';
-  if (isFocused) {
-    menuClass = menuClass + ' sidemenu--expanded';
-  }
 
   return (
     <nav

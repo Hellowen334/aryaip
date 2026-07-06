@@ -9,66 +9,65 @@
 /* ─── Layout & Renk token'ları ───────────────────────────────────────────────── */
 :root {
   /* SideMenu boyutları */
-  --sidebar-collapsed:    72px;
-  --sidebar-expanded:     220px;
+  --sidebar-width:        240px;
   --banner-height:        56px;
 
-  /* Zemin renkleri (kahve-siyah palet) */
-  --content-bg:           #1C1712;
-  --sidebar-bg:           #15110D;
-  --sidebar-border:       rgba(255, 255, 255, 0.04);
+  /* Zemin renkleri (kahve-siyah palet) -> Premium koyu gri/siyah referansına geçiş */
+  --content-bg:           #141414;
+  --sidebar-bg:           #111111;
+  --sidebar-border:       rgba(255, 255, 255, 0.05);
 
   /* Kart renkleri */
-  --card-bg:              #2A241E;
-  --card-border:          rgba(255, 255, 255, 0.06);
-  --card-featured-border: #F4821F;
-  --card-selected-bg:     rgba(244, 130, 31, 0.12);
-  --card-gradient-start:  #6C3FD1;
-  --card-gradient-end:    #4527A0;
-  --card-radius:          8px;
+  --card-bg:              #1E1E1E;
+  --card-border:          rgba(255, 255, 255, 0.05);
+  --card-featured-border: #D4AF37;
+  --card-selected-bg:     rgba(212, 175, 55, 0.15);
+  --card-gradient-start:  #333333;
+  --card-gradient-end:    #1A1A1A;
+  --card-radius:          10px;
 
   /* Fokus token'ları (remote-focus-nav) */
-  --focus-border:         #FFFFFF;
+  --focus-border:         #E5C07B;
   --focus-border-width:   3px;
-  --focus-scale:          1.05;
+  --focus-scale:          1.02;
 
   /* Liste fokus (Canlı TV kanal listesi) */
-  --list-focus-bg-start:  #F4821F;
-  --list-focus-bg-end:    rgba(244, 130, 31, 0.3);
-  --list-focus-text:      #1C1712;
+  --list-focus-bg-start:  #D4AF37;
+  --list-focus-bg-end:    #C5A028;
+  --list-focus-text:      #111111;
 
   /* Poster rozet */
-  --badge-rating-bg:      #F4821F;
-  --badge-rating-text:    #FFFFFF;
+  --badge-rating-bg:      #D4AF37;
+  --badge-rating-text:    #111111;
 
   /* Durum renkleri (ortak) */
   --color-active:   #2ECC71;
   --color-grace:    #F39C12;
   --color-expired:  #E74C3C;
-  --color-accent:   #F4821F;
+  --color-accent:   #D4AF37;
 
   /* Yazı */
   --font-ui:    'Inter', system-ui, sans-serif;
   --font-mono:  'JetBrains Mono', 'Courier New', monospace;
 
   /* Metin renkleri */
-  --text-primary:   #EAECF0;
-  --text-secondary: #A09080;
-  --text-muted:     #6B5E50;
+  --text-primary:   #F0F0F0;
+  --text-secondary: #AAAAAA;
+  --text-muted:     #777777;
 
   /* Geçiş */
-  --tr-fast:    150ms ease;
-  --tr-med:     300ms ease;
+  --tr-fast:    200ms ease;
+  --tr-med:     400ms ease;
 
   /* Kategori paneli */
-  --category-width:  180px;
+  --category-width:  220px;
 }
 
 /* ─── Reset ──────────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: #1C1712;
+  background: var(--content-bg);
   color: var(--text-primary);
   font-family: var(--font-ui);
   overflow: hidden;
@@ -92,18 +91,20 @@ body {
 
 .app-body {
   display: flex;
-  position: relative; /* SideMenu overlay için */
+  flex-direction: row; /* Yan yana dizilim */
   flex: 1;
   overflow: hidden;
+  width: 100%;
 }
 
 /* ─── İçerik Alanı ───────────────────────────────────────────────────────────── */
 .app-content {
   flex: 1;
-  margin-left: var(--sidebar-collapsed); /* 72px — sabit, menü overlay olduğu için kaymaz */
   background: var(--content-bg);
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ─── Fokus token'ları (remote-focus-nav) — kart tipi ─────────────────────────── */

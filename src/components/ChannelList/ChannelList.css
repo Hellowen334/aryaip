@@ -17,27 +17,31 @@
 .channel-list-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 0 12px;
+  gap: 12px;
+  padding: 8px 16px;
+  margin: 4px 8px;
   cursor: pointer;
-  border-radius: 6px;
-  transition: background var(--tr-fast, 150ms ease);
+  border-radius: 8px;
+  transition: all var(--tr-fast, 150ms ease);
   outline: none;
 }
 
-/* Fokus: turuncu gradyan dolgu */
+/* Fokus: altın/sarı gradyan dolgu */
 .channel-list-item--focused {
-  background: linear-gradient(90deg, var(--list-focus-bg-start, #F4821F), var(--list-focus-bg-end, rgba(244,130,31,0.3)));
+  background: linear-gradient(90deg, var(--list-focus-bg-start, #D4AF37), var(--list-focus-bg-end, rgba(212,175,55,0.3)));
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .channel-list-item--focused .channel-list-item__num,
 .channel-list-item--focused .channel-list-item__name {
-  color: var(--list-focus-text, #1C1712);
+  color: var(--list-focus-text, #111111);
+  font-weight: 700;
 }
 
 /* Seçili (mevcut kanal) — hafif vurgu */
 .channel-list-item--selected {
-  background: rgba(244, 130, 31, 0.1);
+  background: rgba(212, 175, 55, 0.15);
 }
 
 .channel-list-item__num {

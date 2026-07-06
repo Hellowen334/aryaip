@@ -17,26 +17,28 @@
 .category-panel__item {
   display: flex;
   align-items: center;
-  padding: 10px 16px;
+  padding: 12px 20px;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 8px;
   position: relative;
-  transition: background-color var(--tr-fast, 150ms ease);
+  transition: all var(--tr-fast, 150ms ease);
   outline: none;
+  margin: 2px 8px;
 }
 
 .category-panel__item--focused {
-  background: rgba(244, 130, 31, 0.12);
+  background: var(--card-selected-bg, rgba(212, 175, 55, 0.15));
+  transform: scale(var(--focus-scale, 1.02));
 }
 
 .category-panel__item--selected .category-panel__name {
-  color: var(--color-accent, #F4821F);
-  font-weight: 600;
+  color: var(--color-accent, #D4AF37);
+  font-weight: 700;
 }
 
 .category-panel__name {
   flex: 1;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-secondary, #A09080);
   white-space: nowrap;

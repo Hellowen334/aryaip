@@ -50,40 +50,52 @@ var STATE_MAP = {
  * @returns {Promise<{ state, plan, daysLeft, graceHoursLeft }>}
  */
 function fetchActivationStatus(mac) {
+  // --- DEV BYPASS: Geliştirme aşaması için aktivasyon atlanıyor ---
+  return Promise.resolve({ state: 'active', plan: 'demo', daysLeft: 7, graceHoursLeft: 0 });
+
   if (!mac || mac === 'UNKNOWN') {
     return Promise.resolve({ state: 'pending', plan: 'demo', daysLeft: 0, graceHoursLeft: 0 });
   }
 
   var url = API_BASE + '/api/activation/status?mac=' + encodeURIComponent(mac);
-  var controller = new AbortController();
-  var timeout = setTimeout(function() { controller.abort(); }, 10000);
 
-  return fetch(url, {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/json' },
-    signal: controller.signal,
-  }).then(function(res) {
-    clearTimeout(timeout);
-    if (!res.ok) {
-      if (res.status === 404) {
-        return { state: 'pending', plan: 'demo', daysLeft: 0, graceHoursLeft: 0 };
+  return new Promise(function(resolve, reject) {
+    var xhr = new XMLHttpRequest();
+    xhr.timeout = 10000; // 10 saniye zaman aşımı
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          try {
+            var data = JSON.parse(xhr.responseText);
+            resolve({
+              state: STATE_MAP[data.durum] || 'pending',
+              plan: data.paketTipi || 'demo',
+              daysLeft: typeof data.kalanGun === 'number' ? data.kalanGun : 0,
+              graceHoursLeft: typeof data.graceKalanSaat === 'number' ? data.graceKalanSaat : 0,
+            });
+          } catch (e) {
+            reject(new Error('Geçersiz JSON yanıtı'));
+          }
+        } else if (xhr.status === 404) {
+          resolve({ state: 'pending', plan: 'demo', daysLeft: 0, graceHoursLeft: 0 });
+        } else {
+          reject(new Error('HTTP ' + xhr.status));
+        }
       }
-      throw new Error('HTTP ' + res.status);
-    }
-    return res.json();
-  }).then(function(data) {
-    return {
-      state: STATE_MAP[data.durum] || 'pending',
-      plan: data.paketTipi || 'demo',
-      daysLeft: typeof data.kalanGun === 'number' ? data.kalanGun : 0,
-      graceHoursLeft: typeof data.graceKalanSaat === 'number' ? data.graceKalanSaat : 0,
     };
-  }).catch(function(err) {
-    clearTimeout(timeout);
-    if (err.name === 'AbortError') {
-      throw new Error('Bağlantı zaman aşımına uğradı.');
-    }
-    throw err;
+
+    xhr.ontimeout = function() {
+      reject(new Error('Bağlantı zaman aşımına uğradı.'));
+    };
+
+    xhr.onerror = function() {
+      reject(new Error('Ağ hatası.'));
+    };
+
+    xhr.open('GET', url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send();
   });
 }
 

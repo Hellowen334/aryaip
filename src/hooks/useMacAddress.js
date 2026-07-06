@@ -76,7 +76,7 @@ export function readMacAddress() {
 
   return callLuna(
     'luna://com.webos.service.connectionmanager',
-    'getInfo',
+    'getinfo',
     {}
   ).then(function(info) {
     // Öncelikle wired tercih edilir

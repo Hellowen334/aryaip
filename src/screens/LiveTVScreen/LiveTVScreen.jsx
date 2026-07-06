@@ -23,27 +23,12 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 import SortDropdown from '../../components/SortDropdown/SortDropdown';
 import './LiveTVScreen.css';
 
-// Demo veri
-var DEMO_CATEGORIES = [
-  { id: 'news',    name: 'News',    count: 2 },
-  { id: 'nature',  name: 'Nature',  count: 3 },
-  { id: 'animals', name: 'Animals', count: 3 },
-];
-
-var DEMO_CHANNELS = [
-  { id: 'ch1', num: 1, name: 'Demo News 1',    icon: null, isLive: true,  categoryId: 'news' },
-  { id: 'ch2', num: 2, name: 'Demo News 2',    icon: null, isLive: false, categoryId: 'news' },
-  { id: 'ch3', num: 3, name: 'Demo Nature 1',  icon: null, isLive: false, categoryId: 'nature' },
-  { id: 'ch4', num: 4, name: 'Demo Nature 2',  icon: null, isLive: false, categoryId: 'nature' },
-  { id: 'ch5', num: 5, name: 'Demo Nature 3',  icon: null, isLive: false, categoryId: 'nature' },
-  { id: 'ch6', num: 6, name: 'Demo Animals 1', icon: null, isLive: false, categoryId: 'animals' },
-  { id: 'ch7', num: 7, name: 'Demo Animals 2', icon: null, isLive: false, categoryId: 'animals' },
-  { id: 'ch8', num: 8, name: 'Demo Animals 3', icon: null, isLive: false, categoryId: 'animals' },
-];
+// Performans testi için üretilen devasa JSON dosyası
+import mockData from '../../data/mockIptv.json';
 
 export default function LiveTVScreen(props) {
-  var channels         = props.channels || DEMO_CHANNELS;
-  var categories       = props.categories || DEMO_CATEGORIES;
+  var channels         = props.channels || mockData.channels;
+  var categories       = props.categories || mockData.categories;
   var isContentFocused = props.isContentFocused || false;
   var onExitLeft       = props.onExitLeft;
 

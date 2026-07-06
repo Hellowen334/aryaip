@@ -2,6 +2,10 @@
 
 ## Hedef platform
 - webOS 3.5 → webOS 25 arası TÜM sürümleri desteklemeliyiz.
+- modelName : 49UH770V-ZA
+  sdkVersion : 3.4.0
+  firmwareVersion : 05.70.55
+  boardType : K2L_DVB_EU
 - webOS 3.x-4.x cihazlarda Chromium 53-68 çalışıyor: ES5+ desteklenir ama
   async/await, optional chaining (?.), nullish coalescing (??) YASAK.
   Bunun yerine Promise chain, Babel transpile ve polyfill kullan.
