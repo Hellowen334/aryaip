@@ -1,0 +1,33 @@
+/**
+ * SearchBar.scss
+ */
+
+@use '../../styles/tokens' as *;
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  min-width: 200px;
+  max-width: 300px;
+  transition: border-color $tr-fast;
+  outline: none;
+}
+
+.search-bar--focused {
+  border-color: $color-accent;
+}
+
+.search-bar__icon {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.search-bar__text {
+  font-size: 0.82rem;
+  color: $text-muted;
+}

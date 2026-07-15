@@ -17,7 +17,7 @@
  */
 
 import React from 'react';
-import './PackageCard.css';
+import './PackageCard.scss';
 
 // Kart yapılandırması
 var CARD_CONFIG = {

@@ -1,0 +1,24 @@
+/**
+ * ContentRow.scss — Yatay kart satırı stilleri
+ */
+
+@use '../../styles/tokens' as *;
+
+.content-row {
+  margin-bottom: 24px;
+}
+
+.content-row__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $text-primary;
+  padding: 0 8px 12px;
+}
+
+.content-row__scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: hidden; /* scrollbar gizli, JS ile scroll */
+  padding: 4px 8px;
+  scroll-behavior: smooth;
+}

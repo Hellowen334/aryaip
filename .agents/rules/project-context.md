@@ -110,3 +110,17 @@ Poster rozeti:
 Kategori filtre paneli (Filmler/Diziler/Canlı TV ekranlarının solunda):
   - Her kategori yanında içerik sayısı (ör. "Nature  3")
   - "All", "Favorite", "Recently Viewed" gibi sabit filtreler üstte
+
+## CSS özellik uyumluluğu (Chrome 38 hedefi — JS kadar kritik)
+- display: grid KULLANILMAZ — Chrome 57+ gerektirir, hedef cihazda
+  (Chrome 38) tamamen yok sayılır. Tüm layout'lar Flexbox ile kurulur.
+- CSS custom properties (var(--x)) KULLANILMAZ — Chrome 49+ gerektirir.
+  Bunun yerine Sass/SCSS build-time değişkenleri kullanılır (derleme
+  sonrası düz değere döner, runtime var() olarak kalmaz).
+- flexbox'ta `gap` property'si KULLANILMAZ — Chrome 84+ gerektirir,
+  margin ile spacing yapılır.
+- Her yeni CSS özelliği eklenmeden önce caniuse.com'dan Chrome 38
+  desteği kontrol edilir, varsayılmaz.
+- webpack pipeline'ına postcss-loader + autoprefixer (target: chrome 38)
+  eklidir — ama bu sadece prefix ekler, Grid/custom-property gibi
+  YAPISAL uyumsuzlukları çözmez, o kısım manuel yeniden yazılır.

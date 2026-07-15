@@ -1,0 +1,414 @@
+/**
+ * activation.scss
+ * Aktivasyon ekranı için koyu tema stilleri ve split-screen layout.
+ * Sass değişkenleri ile tutarlı tema sistemi.
+ */
+
+@use '../../styles/tokens' as *;
+
+/* ─── Reset & Base ──────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.activation-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg-base;
+  color: $act-text-primary;
+  font-family: $font-ui;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Arka plan doku efekti */
+.activation-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(244, 130, 31, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(52, 152, 219, 0.04) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* ─── Split Layout (Grid → Flexbox) ─────────────────────────────────────────── */
+.split-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+}
+
+.split-layout > * {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+/* ─── Sol Panel ─────────────────────────────────────────────────────────────── */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 64px 80px 80px;
+  border-right: 1px solid $border-subtle;
+  gap: 40px;
+}
+
+/* App Logo */
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-logo__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: $accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.app-logo__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: $act-text-primary;
+}
+
+/* MAC Address Card */
+.mac-card {
+  background: $bg-card;
+  border: 1px solid $border-subtle;
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: $shadow-card;
+}
+
+.mac-card__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $act-text-secondary;
+  margin-bottom: 12px;
+}
+
+.mac-card__value {
+  font-family: $font-mono;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: $text-mac;
+  word-break: break-all;
+}
+
+.mac-card__value--loading {
+  color: $act-text-muted;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Step List */
+.step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step-list__title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $act-text-secondary;
+  margin-bottom: 4px;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.step-item__num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: $bg-elevated;
+  border: 1px solid $border-subtle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: $accent;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.step-item__text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: $act-text-secondary;
+}
+
+.step-item__text strong {
+  color: $act-text-primary;
+  font-weight: 600;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: $shadow-badge;
+  transition: background-color $transition-med, color $transition-med;
+  align-self: flex-start;
+}
+
+.status-badge--loading {
+  background: rgba(136, 146, 164, 0.12);
+  color: $state-loading;
+  border: 1px solid rgba(136, 146, 164, 0.2);
+}
+
+.status-badge--pending {
+  background: rgba(52, 152, 219, 0.12);
+  color: $state-pending;
+  border: 1px solid rgba(52, 152, 219, 0.25);
+}
+
+.status-badge--active {
+  background: rgba(46, 204, 113, 0.12);
+  color: $state-active;
+  border: 1px solid rgba(46, 204, 113, 0.25);
+}
+
+.status-badge--expired {
+  background: rgba(231, 76, 60, 0.12);
+  color: $state-expired;
+  border: 1px solid rgba(231, 76, 60, 0.25);
+}
+
+.status-badge__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ─── Sağ Panel ─────────────────────────────────────────────────────────────── */
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  gap: 32px;
+  text-align: center;
+}
+
+/* QR Code Box */
+.qr-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transition: opacity $transition-med;
+}
+
+.qr-box--dimmed {
+  opacity: 0.35;
+  filter: grayscale(0.5);
+}
+
+.qr-frame {
+  width: 220px;
+  height: 220px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.qr-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qr-caption {
+  font-size: 0.8rem;
+  color: $act-text-muted;
+  max-width: 260px;
+  line-height: 1.5;
+}
+
+/* URL Display */
+.url-display {
+  background: $bg-card;
+  border: 1px solid $border-subtle;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-family: $font-mono;
+  font-size: 0.9rem;
+  color: $accent;
+  letter-spacing: 0.02em;
+}
+
+/* Action Area */
+.action-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* ─── Butonlar ──────────────────────────────────────────────────────────────── */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 32px;
+  border-radius: 12px;
+  border: none;
+  font-family: $font-ui;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color $transition-fast,
+    transform $transition-fast,
+    box-shadow $transition-fast,
+    outline $transition-fast;
+  outline: 3px solid transparent;
+  outline-offset: 3px;
+  position: relative;
+}
+
+/* remote-focus-nav: fokuslu eleman görsel olarak belirgin */
+.btn:focus,
+.btn[data-focused="true"] {
+  outline: 3px solid $focus-ring;
+  transform: scale($activation-focus-scale);
+  box-shadow: 0 0 0 6px rgba(244, 130, 31, 0.18);
+}
+
+.btn--primary {
+  background: $accent;
+  color: #000000;
+}
+
+.btn--primary:hover,
+.btn--primary[data-focused="true"] {
+  background: $accent-hover;
+}
+
+.btn--secondary {
+  background: $bg-elevated;
+  color: $act-text-primary;
+  border: 1px solid $border-subtle;
+}
+
+.btn--secondary:hover,
+.btn--secondary[data-focused="true"] {
+  background: #2F3244;
+}
+
+.btn--danger {
+  background: rgba(231, 76, 60, 0.15);
+  color: $state-expired;
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.btn--danger:hover,
+.btn--danger[data-focused="true"] {
+  background: rgba(231, 76, 60, 0.25);
+}
+
+.btn--disabled,
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Support link */
+.support-link {
+  font-size: 0.8rem;
+  color: $act-text-muted;
+  text-decoration: none;
+}
+
+/* Error message */
+.error-message {
+  font-size: 0.85rem;
+  color: $state-expired;
+  text-align: center;
+  padding: 8px 16px;
+  background: rgba(231, 76, 60, 0.08);
+  border-radius: 8px;
+  border: 1px solid rgba(231, 76, 60, 0.2);
+}
+
+/* ─── Animasyonlar ──────────────────────────────────────────────────────────── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+/* Screen enter animasyonu */
+.activation-screen .left-panel,
+.activation-screen .right-panel {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.activation-screen .right-panel {
+  animation-delay: 0.1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}

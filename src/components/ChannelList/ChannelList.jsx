@@ -18,7 +18,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import ChannelListItem from './ChannelListItem';
-import './ChannelList.css';
+import './ChannelList.scss';
 
 var KEY_UP    = 38;
 var KEY_DOWN  = 40;

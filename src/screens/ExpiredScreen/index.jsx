@@ -12,7 +12,7 @@ import React, { useState } from 'react';
 import StatusBanner from '../../components/StatusBanner/StatusBanner';
 import PackageGrid from '../../components/PackageGrid/PackageGrid';
 import QrCodeBox from '../ActivationScreen/QrCodeBox';
-import './expired.css';
+import './expired.scss';
 
 export default function ExpiredScreen(props) {
   var mac = props.mac || '';

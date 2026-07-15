@@ -1,0 +1,107 @@
+/**
+ * expired.scss
+ * ExpiredScreen — tam ekran, koyu tema, PackageGrid merkezi.
+ */
+
+@use '../../styles/tokens' as *;
+
+.expired-screen {
+  width: 100vw;
+  height: 100vh;
+  background: #0D0F14;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  /* StatusBanner position:fixed olduğundan içerik onun altına kaymamalı */
+  padding: ($banner-height + 24px) 48px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Arka plan atmosfer */
+.expired-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(231, 76, 60, 0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.expired-screen__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  z-index: 1;
+}
+
+.expired-screen__icon {
+  font-size: 4rem;
+  margin-bottom: 4px;
+}
+
+.expired-screen__title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #EAECF0;
+  letter-spacing: -0.02em;
+}
+
+.expired-screen__subtitle {
+  font-size: 1rem;
+  color: #8892A4;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+.expired-screen__divider {
+  width: 64px;
+  height: 2px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 1px;
+  z-index: 1;
+}
+
+.expired-screen__packages {
+  z-index: 1;
+}
+
+.expired-screen__qr-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  z-index: 1;
+}
+
+.expired-screen__qr-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.expired-screen__plan-label {
+  font-size: 0.8rem;
+  color: #8892A4;
+}
+
+.expired-screen__plan-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #F4821F;
+}
+
+.expired-screen__support {
+  font-size: 0.8rem;
+  color: #4B5568;
+  text-align: center;
+  z-index: 1;
+}
+
+.expired-screen__support a,
+.expired-screen__support span {
+  color: #8892A4;
+}

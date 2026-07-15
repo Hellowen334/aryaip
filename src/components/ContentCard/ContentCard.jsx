@@ -17,7 +17,7 @@
  */
 
 import React from 'react';
-import './ContentCard.css';
+import './ContentCard.scss';
 
 export default function ContentCard(props) {
   var id        = props.id;

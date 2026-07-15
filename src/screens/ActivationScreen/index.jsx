@@ -18,7 +18,7 @@ import LeftPanel from './LeftPanel';
 import RightPanel from './RightPanel';
 import FocusManager from './FocusManager';
 import ExitPopup from '../../components/ExitPopup/ExitPopup';
-import './activation.css';
+import './activation.scss';
 
 /**
  * Props:

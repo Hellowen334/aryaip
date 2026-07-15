@@ -4,7 +4,8 @@ const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
+  devtool: 'source-map',
   target: ['web', 'es5'],
   entry: './src/index.js',
   output: {
@@ -13,8 +14,9 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader' },
-      { test: /\.css$/, use: ['style-loader', 'css-loader', 'postcss-loader'] }
+      { test: /\.(m?js|jsx)$/, exclude: /node_modules\/(core-js|@babel|webpack)/, use: 'babel-loader' },
+      { test: /\.css$/, use: ['style-loader', 'css-loader', 'postcss-loader'] },
+      { test: /\.scss$/, use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'] }
     ]
   },
   resolve: { extensions: ['.js', '.jsx'] },

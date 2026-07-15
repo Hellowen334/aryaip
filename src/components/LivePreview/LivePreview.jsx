@@ -17,7 +17,7 @@
 
 import React, { useEffect } from 'react';
 import { useChannelPreview } from '../../hooks/useChannelPreview';
-import './LivePreview.css';
+import './LivePreview.scss';
 
 var KEY_LEFT  = 37;
 var KEY_RIGHT = 39;

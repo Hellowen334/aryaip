@@ -1,0 +1,39 @@
+/**
+ * SortDropdown.scss
+ */
+
+@use '../../styles/tokens' as *;
+
+.sort-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color $tr-fast;
+  outline: none;
+}
+
+.sort-dropdown--focused {
+  border-color: $color-accent;
+}
+
+.sort-dropdown__icon {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.sort-dropdown__label {
+  font-size: 0.82rem;
+  color: $text-primary;
+  font-weight: 500;
+}
+
+.sort-dropdown__arrow {
+  font-size: 0.7rem;
+  color: $text-muted;
+  margin-left: 4px;
+}

@@ -8,7 +8,7 @@
  */
 
 import React from 'react';
-import './StatusBanner.css';
+import './StatusBanner.scss';
 
 export default function StatusBanner(props) {
   var variant = props.variant || 'grace';

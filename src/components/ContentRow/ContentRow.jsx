@@ -19,7 +19,7 @@
 
 import React, { useEffect, useRef, useCallback } from 'react';
 import ContentCard from '../ContentCard/ContentCard';
-import './ContentRow.css';
+import './ContentRow.scss';
 
 var KEY_LEFT  = 37;
 var KEY_RIGHT = 39;

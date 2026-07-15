@@ -58,3 +58,9 @@ description: Uygulamanın appinfo.json dosyasını oluşturma/düzenleme, ares-c
   Her yeni Luna servisi eklenirken ilgili resmi API sayfasındaki ACG
   değeri teyit edilmeden requiredPermissions'a rastgele bir isim
   yazılmaz.
+
+## CSS güvenlik kontrolü — build sonrası
+- Her `npm run build` sonrası build çıktısında `var(--` araması yapılır.
+  Sonuç varsa (0 olmalı), bu yeni bir dosyada kural ihlali (var()
+  kullanımı) yapıldığı anlamına gelir — sessizce geçilmez, kaynak
+  dosya bulunup Sass'a taşınır.

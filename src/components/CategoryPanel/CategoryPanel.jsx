@@ -19,7 +19,7 @@
  */
 
 import React, { useEffect, useRef } from 'react';
-import './CategoryPanel.css';
+import './CategoryPanel.scss';
 
 var KEY_UP    = 38;
 var KEY_DOWN  = 40;

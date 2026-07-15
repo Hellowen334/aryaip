@@ -27,7 +27,7 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 import MenuItem from './MenuItem';
 import { SCREENS } from '../../hooks/useNavigationStack';
-import './SideMenu.css';
+import './SideMenu.scss';
 
 var KEY_UP    = 38;
 var KEY_DOWN  = 40;

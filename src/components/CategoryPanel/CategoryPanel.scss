@@ -1,0 +1,79 @@
+/**
+ * CategoryPanel.scss — Kategori filtre paneli stilleri
+ */
+
+@use '../../styles/tokens' as *;
+
+.category-panel {
+  width: $category-width;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ─── Kategori satırı ────────────────────────────────────────────────────────── */
+.category-panel__item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+  transition: all $tr-fast;
+  outline: none;
+  margin: 2px 8px;
+}
+
+.category-panel__item--focused {
+  background: $card-selected-bg;
+  transform: scale($focus-scale);
+}
+
+.category-panel__item--selected .category-panel__name {
+  color: $color-accent;
+  font-weight: 700;
+}
+
+.category-panel__name {
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: $text-secondary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.category-panel__count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $text-muted;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.category-panel__item--selected .category-panel__count {
+  color: $color-accent;
+}
+
+/* Aktif gösterge: sol kenar turuncu dikey çizgi */
+.category-panel__indicator {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 3px;
+  background: $color-accent;
+  border-radius: 2px;
+}
+
+/* Separator */
+.category-panel__separator {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 6px 16px;
+}

@@ -34,7 +34,7 @@ for (let c = 1; c <= CATEGORY_COUNT; c++) {
       icon: null,
       isLive: Math.random() > 0.8, // %20 ihtimalle canlı
       categoryId: catId,
-      streamUrl: `http://example.com/stream/${chId}.m3u8`
+      streamUrl: `https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8`
     });
   }
 }

@@ -38,7 +38,7 @@ import SideMenu from './components/SideMenu/SideMenu';
 import StatusBanner from './components/StatusBanner/StatusBanner';
 import ExitPopup from './components/ExitPopup/ExitPopup';
 
-import './styles/app.css';
+import './styles/app.scss';
 
 // ─── Placeholder ekranlar (henüz yazılmamış) ────────────────────────────────
 function PlaceholderScreen(props) {

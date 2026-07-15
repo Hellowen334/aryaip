@@ -1,0 +1,126 @@
+/**
+ * PackageCard.scss
+ * 3 yerde reuse edilen paket kart bileşeni stilleri.
+ * Fiyat GÖSTERİLMEZ (premium-subscription skill kuralı).
+ */
+
+@use '../../styles/tokens' as *;
+
+.package-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 28px 24px 24px;
+  background: $card-bg;
+  border: 2px solid $card-border;
+  border-radius: 16px;
+  cursor: pointer;
+  transition:
+    border-color $tr-fast,
+    background-color $tr-fast,
+    transform $tr-fast,
+    box-shadow $tr-fast;
+  min-width: 180px;
+  max-width: 220px;
+  flex: 1;
+  outline: 3px solid transparent;
+  outline-offset: 3px;
+  user-select: none;
+}
+
+/* remote-focus-nav: görsel olarak belirgin */
+.package-card:focus,
+.package-card[data-focused="true"] {
+  outline: 3px solid $color-accent;
+  transform: scale(1.04);
+  box-shadow: 0 0 0 6px rgba(244, 130, 31, 0.15);
+  border-color: $color-accent;
+}
+
+/* Seçili kart (OK ile seçilmiş, QR güncellendi) */
+.package-card--selected {
+  background: $card-selected-bg;
+  border-color: $color-accent;
+}
+
+/* Öne çıkan kart (12ay — "En Avantajlı") */
+.package-card--featured {
+  border-color: $card-featured-border;
+}
+
+.package-card--featured:not(:focus):not([data-focused="true"]) {
+  box-shadow: 0 0 0 1px rgba(244, 130, 31, 0.3);
+}
+
+/* ─── Rozet ─────────────────────────────────────────────────────────────────── */
+.package-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $color-accent;
+  color: #000;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+/* ─── İçerik ─────────────────────────────────────────────────────────────────── */
+.package-card__duration {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #EAECF0;
+  line-height: 1;
+  margin-top: 8px; /* rozet varsa boşluk */
+}
+
+.package-card__unit {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #8892A4;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.package-card__divider {
+  width: 32px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.package-card__cta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $color-accent;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.package-card--selected .package-card__cta,
+.package-card:focus .package-card__cta,
+.package-card[data-focused="true"] .package-card__cta {
+  color: $color-accent;
+}
+
+/* Seçim check ikonu */
+.package-card__check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: $color-accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity $tr-fast;
+}
+
+.package-card--selected .package-card__check {
+  opacity: 1;
+}

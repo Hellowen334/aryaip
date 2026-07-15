@@ -1,0 +1,96 @@
+// ═══════════════════════════════════════════════════════════════════════════════
+// tokens.scss — Merkezi Sass design token'ları
+// Kaynak: app.css :root + activation.css :root birleşimi
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// ─── Layout ─────────────────────────────────────────────────────────────────────
+$sidebar-width:        240px;
+$banner-height:        56px;
+
+// ─── Zemin renkleri (global) ────────────────────────────────────────────────────
+$content-bg:           #141414;
+$sidebar-bg:           #111111;
+$sidebar-border:       rgba(255, 255, 255, 0.05);
+
+// ─── Kart ───────────────────────────────────────────────────────────────────────
+$card-bg:              #1E1E1E;
+$card-border:          rgba(255, 255, 255, 0.05);
+$card-featured-border: #D4AF37;
+$card-selected-bg:     rgba(212, 175, 55, 0.15);
+$card-gradient-start:  #333333;
+$card-gradient-end:    #1A1A1A;
+$card-radius:          10px;
+
+// ─── Fokus (global) ─────────────────────────────────────────────────────────────
+$focus-border:         #E5C07B;
+$focus-border-width:   3px;
+$focus-scale:          1.02;
+$list-focus-bg-start:  #D4AF37;
+$list-focus-bg-end:    #C5A028;
+$list-focus-text:      #111111;
+
+// ─── Rozet ──────────────────────────────────────────────────────────────────────
+$badge-rating-bg:      #D4AF37;
+$badge-rating-text:    #111111;
+
+// ─── Durum renkleri (global) ────────────────────────────────────────────────────
+$color-active:         #2ECC71;
+$color-grace:          #F39C12;
+$color-expired:        #E74C3C;
+$color-accent:         #D4AF37;
+
+// ─── Yazı tipi ──────────────────────────────────────────────────────────────────
+$font-ui:              'Inter', system-ui, sans-serif;
+$font-mono:            'JetBrains Mono', 'Courier New', monospace;
+
+// ─── Metin renkleri (global) ────────────────────────────────────────────────────
+$text-primary:         #F0F0F0;
+$text-secondary:       #AAAAAA;
+$text-muted:           #777777;
+
+// ─── Geçiş (global) ────────────────────────────────────────────────────────────
+$tr-fast:              200ms ease;
+$tr-med:               400ms ease;
+
+// ─── Kategori paneli ────────────────────────────────────────────────────────────
+$category-width:       220px;
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// Activation ekranı token'ları (cooler palette)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// ─── Arka plan katmanları ───────────────────────────────────────────────────────
+$bg-base:              #0D0F14;
+$bg-card:              #1A1D26;
+$bg-elevated:          #252836;
+$bg-overlay:           rgba(13, 15, 20, 0.85);
+
+// ─── Marka rengi ────────────────────────────────────────────────────────────────
+$accent:               #F4821F;
+$accent-hover:         #FF9A3D;
+$accent-dim:           rgba(244, 130, 31, 0.15);
+
+// ─── Durum renkleri (activation) ────────────────────────────────────────────────
+$state-loading:        #8892A4;
+$state-pending:        #3498DB;
+$state-active:         #2ECC71;
+$state-expired:        #E74C3C;
+
+// ─── Metin renkleri (activation — cooler palette) ───────────────────────────────
+$act-text-primary:     #EAECF0;
+$act-text-secondary:   #8892A4;
+$act-text-muted:       #4B5568;
+$text-mac:             #FFFFFF;
+
+// ─── Fokus (activation) ────────────────────────────────────────────────────────
+$focus-ring:           #F4821F;
+$activation-focus-scale: 1.04;
+
+// ─── Kenar + gölge ─────────────────────────────────────────────────────────────
+$border-subtle:        rgba(255, 255, 255, 0.06);
+$shadow-card:          0 4px 24px rgba(0, 0, 0, 0.5);
+$shadow-badge:         0 2px 12px rgba(0, 0, 0, 0.3);
+
+// ─── Geçiş (activation) ────────────────────────────────────────────────────────
+$transition-fast:      150ms ease;
+$transition-med:       300ms ease;

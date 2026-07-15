@@ -10,7 +10,7 @@
  */
 
 import React from 'react';
-import './SortDropdown.css';
+import './SortDropdown.scss';
 
 export default function SortDropdown(props) {
   var label     = props.label || 'Order by number';

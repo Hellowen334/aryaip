@@ -10,7 +10,7 @@
  */
 
 import React from 'react';
-import './SearchBar.css';
+import './SearchBar.scss';
 
 export default function SearchBar(props) {
   var placeholder = props.placeholder || 'Search...';

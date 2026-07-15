@@ -17,7 +17,7 @@ import CurrentPlanCard from './CurrentPlanCard';
 import ActivationInfo from './ActivationInfo';
 import PackageGrid from '../../components/PackageGrid/PackageGrid';
 import QrCodeBox from '../ActivationScreen/QrCodeBox';
-import './membership.css';
+import './membership.scss';
 
 export default function MembershipScreen(props) {
   var mac              = props.mac || '';
