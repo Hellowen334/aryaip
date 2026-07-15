@@ -30,6 +30,9 @@ import MembershipScreen from './screens/MembershipScreen/index';
 import HomeScreen from './screens/HomeScreen/HomeScreen';
 import LiveTVScreen from './screens/LiveTVScreen/LiveTVScreen';
 import MoviesScreen from './screens/MoviesScreen/MoviesScreen';
+import SeriesCategoriesScreen from './screens/SeriesCategoriesScreen/SeriesCategoriesScreen';
+import SeriesDetailScreen from './screens/SeriesDetailScreen/SeriesDetailScreen';
+import PlayerScreen from './screens/PlayerScreen/PlayerScreen';
 
 import SideMenu from './components/SideMenu/SideMenu';
 import StatusBanner from './components/StatusBanner/StatusBanner';
@@ -77,6 +80,38 @@ export default function App() {
   var exitOpen = exitOpenState[0];
   var setExitOpen = exitOpenState[1];
 
+  // Seçili dizi kategorisi ve dizi ID'si
+  var selectedCategoryState = useState(null);
+  var selectedSeriesCategory = selectedCategoryState[0];
+  var setSelectedSeriesCategory = selectedCategoryState[1];
+
+  var selectedSeriesState = useState(null);
+  var selectedSeriesId = selectedSeriesState[0];
+  var setSelectedSeriesId = selectedSeriesState[1];
+
+  // Live TV state preservation
+  var liveFocusedCatIndexState = useState(1); // 'All' default
+  var liveFocusedChIndexState = useState(0);
+  var liveSelectedCatIdState = useState('all');
+  var liveFocusZoneState = useState('channels');
+  var liveSelectedChannelState = useState(null);
+
+  // Movies state preservation
+  var moviesFocusedCatIndexState = useState(1); // 'All' default
+  var moviesFocusedGridIndexState = useState(0);
+  var moviesSelectedCatIdState = useState('all');
+  var moviesFocusZoneState = useState('grid');
+
+  // Series state preservation
+  var seriesFocusedCatIndexState = useState(1); // 'All' default
+  var seriesFocusedGridIndexState = useState(0);
+  var seriesSelectedCatIdState = useState('all');
+  var seriesFocusZoneState = useState('grid');
+
+  var playerParamsState = useState(null);
+  var playerParams = playerParamsState[0];
+  var setPlayerParams = playerParamsState[1];
+
   var isGrace   = activationState === 'grace';
   var isExpired = activationState === 'expired';
 
@@ -90,8 +125,13 @@ export default function App() {
       e.stopPropagation();
 
       if (nav.canPop) {
+        var isPlayer = nav.current === SCREENS.PLAYER;
         nav.pop();
-        setFocusZone('menu'); // pop sonrası menüye dön
+        if (isPlayer) {
+          setFocusZone('content');
+        } else {
+          setFocusZone('menu');
+        }
       } else {
         setExitOpen(true);
       }
@@ -162,6 +202,20 @@ export default function App() {
         <LiveTVScreen
           isContentFocused={focusZone === 'content'}
           onExitLeft={handleExitLeft}
+          onPlay={function(streamUrl, title, type) {
+            setPlayerParams({ url: streamUrl, title: title, type: type });
+            nav.push(SCREENS.PLAYER);
+          }}
+          focusedCatIndex={liveFocusedCatIndexState[0]}
+          onFocusedCatIndexChange={liveFocusedCatIndexState[1]}
+          focusedChIndex={liveFocusedChIndexState[0]}
+          onFocusedChIndexChange={liveFocusedChIndexState[1]}
+          selectedCategory={liveSelectedCatIdState[0]}
+          onSelectedCategoryChange={liveSelectedCatIdState[1]}
+          focusZone={liveFocusZoneState[0]}
+          onFocusZoneChange={liveFocusZoneState[1]}
+          selectedChannel={liveSelectedChannelState[0]}
+          onSelectedChannelChange={liveSelectedChannelState[1]}
         />
       );
     }
@@ -171,12 +225,71 @@ export default function App() {
         <MoviesScreen
           isContentFocused={focusZone === 'content'}
           onExitLeft={handleExitLeft}
+          onPlay={function(streamUrl, title, type) {
+            setPlayerParams({ url: streamUrl, title: title, type: type });
+            nav.push(SCREENS.PLAYER);
+          }}
+          focusedCatIndex={moviesFocusedCatIndexState[0]}
+          onFocusedCatIndexChange={moviesFocusedCatIndexState[1]}
+          focusedGridIndex={moviesFocusedGridIndexState[0]}
+          onFocusedGridIndexChange={moviesFocusedGridIndexState[1]}
+          selectedCategory={moviesSelectedCatIdState[0]}
+          onSelectedCategoryChange={moviesSelectedCatIdState[1]}
+          focusZone={moviesFocusZoneState[0]}
+          onFocusZoneChange={moviesFocusZoneState[1]}
         />
       );
     }
 
     if (screen === SCREENS.SERIES) {
-      return <PlaceholderScreen icon="📺" title="Diziler" />;
+      return (
+        <SeriesCategoriesScreen
+          isContentFocused={focusZone === 'content'}
+          onSelectSeries={function(series) {
+            setSelectedSeriesId(series.id);
+            nav.push(SCREENS.SERIES_DETAIL);
+          }}
+          onExitLeft={handleExitLeft}
+          focusedCatIndex={seriesFocusedCatIndexState[0]}
+          onFocusedCatIndexChange={seriesFocusedCatIndexState[1]}
+          focusedGridIndex={seriesFocusedGridIndexState[0]}
+          onFocusedGridIndexChange={seriesFocusedGridIndexState[1]}
+          selectedCategory={seriesSelectedCatIdState[0]}
+          onSelectedCategoryChange={seriesSelectedCatIdState[1]}
+          focusZone={seriesFocusZoneState[0]}
+          onFocusZoneChange={seriesFocusZoneState[1]}
+        />
+      );
+    }
+
+    if (screen === SCREENS.SERIES_DETAIL) {
+      return (
+        <SeriesDetailScreen
+          seriesId={selectedSeriesId}
+          isContentFocused={focusZone === 'content'}
+          onExitLeft={function() {
+            nav.pop();
+          }}
+          onPlay={function(streamUrl, title, type) {
+            setPlayerParams({ url: streamUrl, title: title, type: type });
+            nav.push(SCREENS.PLAYER);
+          }}
+        />
+      );
+    }
+
+    if (screen === SCREENS.PLAYER) {
+      return (
+        <PlayerScreen
+          streamUrl={playerParams ? playerParams.url : null}
+          title={playerParams ? playerParams.title : null}
+          type={playerParams ? playerParams.type : null}
+          onExit={function() {
+            nav.pop();
+            setFocusZone('content');
+          }}
+        />
+      );
     }
 
     if (screen === SCREENS.SETTINGS) {

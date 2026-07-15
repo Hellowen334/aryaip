@@ -27,9 +27,12 @@ export var SCREENS = {
   LIVETV: 'livetv',
   MOVIES: 'movies',
   SERIES: 'series',
+  SERIES_GRID: 'series_grid',
+  SERIES_DETAIL: 'series_detail',
   SETTINGS: 'settings',
   MEMBERSHIP: 'membership',
   RESTRICTED: 'restricted',
+  PLAYER: 'player',
 };
 
 /**

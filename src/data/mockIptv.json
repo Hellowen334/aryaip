@@ -266,7 +266,7 @@
       "num": 2,
       "name": "Test Channel 1-2",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_1",
       "streamUrl": "http://example.com/stream/ch_1_2.m3u8"
     },
@@ -320,7 +320,7 @@
       "num": 8,
       "name": "Test Channel 1-8",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_1",
       "streamUrl": "http://example.com/stream/ch_1_8.m3u8"
     },
@@ -329,7 +329,7 @@
       "num": 9,
       "name": "Test Channel 1-9",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_1",
       "streamUrl": "http://example.com/stream/ch_1_9.m3u8"
     },
@@ -347,7 +347,7 @@
       "num": 11,
       "name": "Test Channel 1-11",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_1",
       "streamUrl": "http://example.com/stream/ch_1_11.m3u8"
     },
@@ -356,7 +356,7 @@
       "num": 12,
       "name": "Test Channel 1-12",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_1",
       "streamUrl": "http://example.com/stream/ch_1_12.m3u8"
     },
@@ -410,7 +410,7 @@
       "num": 18,
       "name": "Test Channel 1-18",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_1",
       "streamUrl": "http://example.com/stream/ch_1_18.m3u8"
     },
@@ -446,7 +446,7 @@
       "num": 22,
       "name": "Test Channel 1-22",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_1",
       "streamUrl": "http://example.com/stream/ch_1_22.m3u8"
     },
@@ -518,7 +518,7 @@
       "num": 30,
       "name": "Test Channel 1-30",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_1",
       "streamUrl": "http://example.com/stream/ch_1_30.m3u8"
     },
@@ -527,7 +527,7 @@
       "num": 31,
       "name": "Test Channel 1-31",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_1",
       "streamUrl": "http://example.com/stream/ch_1_31.m3u8"
     },
@@ -536,7 +536,7 @@
       "num": 32,
       "name": "Test Channel 1-32",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_1",
       "streamUrl": "http://example.com/stream/ch_1_32.m3u8"
     },
@@ -563,7 +563,7 @@
       "num": 35,
       "name": "Test Channel 1-35",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_1",
       "streamUrl": "http://example.com/stream/ch_1_35.m3u8"
     },
@@ -581,7 +581,7 @@
       "num": 37,
       "name": "Test Channel 1-37",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_1",
       "streamUrl": "http://example.com/stream/ch_1_37.m3u8"
     },
@@ -590,7 +590,7 @@
       "num": 38,
       "name": "Test Channel 1-38",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_1",
       "streamUrl": "http://example.com/stream/ch_1_38.m3u8"
     },
@@ -635,7 +635,7 @@
       "num": 43,
       "name": "Test Channel 2-3",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_2",
       "streamUrl": "http://example.com/stream/ch_2_3.m3u8"
     },
@@ -653,7 +653,7 @@
       "num": 45,
       "name": "Test Channel 2-5",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_2",
       "streamUrl": "http://example.com/stream/ch_2_5.m3u8"
     },
@@ -707,7 +707,7 @@
       "num": 51,
       "name": "Test Channel 2-11",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_2",
       "streamUrl": "http://example.com/stream/ch_2_11.m3u8"
     },
@@ -743,7 +743,7 @@
       "num": 55,
       "name": "Test Channel 2-15",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_2",
       "streamUrl": "http://example.com/stream/ch_2_15.m3u8"
     },
@@ -779,7 +779,7 @@
       "num": 59,
       "name": "Test Channel 2-19",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_2",
       "streamUrl": "http://example.com/stream/ch_2_19.m3u8"
     },
@@ -815,7 +815,7 @@
       "num": 63,
       "name": "Test Channel 2-23",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_2",
       "streamUrl": "http://example.com/stream/ch_2_23.m3u8"
     },
@@ -824,7 +824,7 @@
       "num": 64,
       "name": "Test Channel 2-24",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_2",
       "streamUrl": "http://example.com/stream/ch_2_24.m3u8"
     },
@@ -842,7 +842,7 @@
       "num": 66,
       "name": "Test Channel 2-26",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_2",
       "streamUrl": "http://example.com/stream/ch_2_26.m3u8"
     },
@@ -851,7 +851,7 @@
       "num": 67,
       "name": "Test Channel 2-27",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_2",
       "streamUrl": "http://example.com/stream/ch_2_27.m3u8"
     },
@@ -860,7 +860,7 @@
       "num": 68,
       "name": "Test Channel 2-28",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_2",
       "streamUrl": "http://example.com/stream/ch_2_28.m3u8"
     },
@@ -887,7 +887,7 @@
       "num": 71,
       "name": "Test Channel 2-31",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_2",
       "streamUrl": "http://example.com/stream/ch_2_31.m3u8"
     },
@@ -950,7 +950,7 @@
       "num": 78,
       "name": "Test Channel 2-38",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_2",
       "streamUrl": "http://example.com/stream/ch_2_38.m3u8"
     },
@@ -959,7 +959,7 @@
       "num": 79,
       "name": "Test Channel 2-39",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_2",
       "streamUrl": "http://example.com/stream/ch_2_39.m3u8"
     },
@@ -1013,7 +1013,7 @@
       "num": 85,
       "name": "Test Channel 3-5",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_5.m3u8"
     },
@@ -1040,7 +1040,7 @@
       "num": 88,
       "name": "Test Channel 3-8",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_8.m3u8"
     },
@@ -1058,7 +1058,7 @@
       "num": 90,
       "name": "Test Channel 3-10",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_10.m3u8"
     },
@@ -1076,7 +1076,7 @@
       "num": 92,
       "name": "Test Channel 3-12",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_12.m3u8"
     },
@@ -1085,7 +1085,7 @@
       "num": 93,
       "name": "Test Channel 3-13",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_13.m3u8"
     },
@@ -1094,7 +1094,7 @@
       "num": 94,
       "name": "Test Channel 3-14",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_14.m3u8"
     },
@@ -1112,7 +1112,7 @@
       "num": 96,
       "name": "Test Channel 3-16",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_16.m3u8"
     },
@@ -1139,7 +1139,7 @@
       "num": 99,
       "name": "Test Channel 3-19",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_19.m3u8"
     },
@@ -1175,7 +1175,7 @@
       "num": 103,
       "name": "Test Channel 3-23",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_23.m3u8"
     },
@@ -1202,7 +1202,7 @@
       "num": 106,
       "name": "Test Channel 3-26",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_26.m3u8"
     },
@@ -1220,7 +1220,7 @@
       "num": 108,
       "name": "Test Channel 3-28",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_28.m3u8"
     },
@@ -1256,7 +1256,7 @@
       "num": 112,
       "name": "Test Channel 3-32",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_32.m3u8"
     },
@@ -1274,7 +1274,7 @@
       "num": 114,
       "name": "Test Channel 3-34",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_34.m3u8"
     },
@@ -1292,7 +1292,7 @@
       "num": 116,
       "name": "Test Channel 3-36",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_36.m3u8"
     },
@@ -1319,7 +1319,7 @@
       "num": 119,
       "name": "Test Channel 3-39",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_3",
       "streamUrl": "http://example.com/stream/ch_3_39.m3u8"
     },
@@ -1337,7 +1337,7 @@
       "num": 121,
       "name": "Test Channel 4-1",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_4",
       "streamUrl": "http://example.com/stream/ch_4_1.m3u8"
     },
@@ -1346,7 +1346,7 @@
       "num": 122,
       "name": "Test Channel 4-2",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_4",
       "streamUrl": "http://example.com/stream/ch_4_2.m3u8"
     },
@@ -1391,7 +1391,7 @@
       "num": 127,
       "name": "Test Channel 4-7",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_4",
       "streamUrl": "http://example.com/stream/ch_4_7.m3u8"
     },
@@ -1409,7 +1409,7 @@
       "num": 129,
       "name": "Test Channel 4-9",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_4",
       "streamUrl": "http://example.com/stream/ch_4_9.m3u8"
     },
@@ -1418,7 +1418,7 @@
       "num": 130,
       "name": "Test Channel 4-10",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_4",
       "streamUrl": "http://example.com/stream/ch_4_10.m3u8"
     },
@@ -1427,7 +1427,7 @@
       "num": 131,
       "name": "Test Channel 4-11",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_4",
       "streamUrl": "http://example.com/stream/ch_4_11.m3u8"
     },
@@ -1454,7 +1454,7 @@
       "num": 134,
       "name": "Test Channel 4-14",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_4",
       "streamUrl": "http://example.com/stream/ch_4_14.m3u8"
     },
@@ -1589,7 +1589,7 @@
       "num": 149,
       "name": "Test Channel 4-29",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_4",
       "streamUrl": "http://example.com/stream/ch_4_29.m3u8"
     },
@@ -1616,7 +1616,7 @@
       "num": 152,
       "name": "Test Channel 4-32",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_4",
       "streamUrl": "http://example.com/stream/ch_4_32.m3u8"
     },
@@ -1625,7 +1625,7 @@
       "num": 153,
       "name": "Test Channel 4-33",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_4",
       "streamUrl": "http://example.com/stream/ch_4_33.m3u8"
     },
@@ -1634,7 +1634,7 @@
       "num": 154,
       "name": "Test Channel 4-34",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_4",
       "streamUrl": "http://example.com/stream/ch_4_34.m3u8"
     },
@@ -1643,7 +1643,7 @@
       "num": 155,
       "name": "Test Channel 4-35",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_4",
       "streamUrl": "http://example.com/stream/ch_4_35.m3u8"
     },
@@ -1670,7 +1670,7 @@
       "num": 158,
       "name": "Test Channel 4-38",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_4",
       "streamUrl": "http://example.com/stream/ch_4_38.m3u8"
     },
@@ -1688,7 +1688,7 @@
       "num": 160,
       "name": "Test Channel 4-40",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_4",
       "streamUrl": "http://example.com/stream/ch_4_40.m3u8"
     },
@@ -1715,7 +1715,7 @@
       "num": 163,
       "name": "Test Channel 5-3",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_5",
       "streamUrl": "http://example.com/stream/ch_5_3.m3u8"
     },
@@ -1724,7 +1724,7 @@
       "num": 164,
       "name": "Test Channel 5-4",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_5",
       "streamUrl": "http://example.com/stream/ch_5_4.m3u8"
     },
@@ -1742,7 +1742,7 @@
       "num": 166,
       "name": "Test Channel 5-6",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_5",
       "streamUrl": "http://example.com/stream/ch_5_6.m3u8"
     },
@@ -1769,7 +1769,7 @@
       "num": 169,
       "name": "Test Channel 5-9",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_5",
       "streamUrl": "http://example.com/stream/ch_5_9.m3u8"
     },
@@ -1805,7 +1805,7 @@
       "num": 173,
       "name": "Test Channel 5-13",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_5",
       "streamUrl": "http://example.com/stream/ch_5_13.m3u8"
     },
@@ -1823,7 +1823,7 @@
       "num": 175,
       "name": "Test Channel 5-15",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_5",
       "streamUrl": "http://example.com/stream/ch_5_15.m3u8"
     },
@@ -1859,7 +1859,7 @@
       "num": 179,
       "name": "Test Channel 5-19",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_5",
       "streamUrl": "http://example.com/stream/ch_5_19.m3u8"
     },
@@ -1868,7 +1868,7 @@
       "num": 180,
       "name": "Test Channel 5-20",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_5",
       "streamUrl": "http://example.com/stream/ch_5_20.m3u8"
     },
@@ -1886,7 +1886,7 @@
       "num": 182,
       "name": "Test Channel 5-22",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_5",
       "streamUrl": "http://example.com/stream/ch_5_22.m3u8"
     },
@@ -1949,7 +1949,7 @@
       "num": 189,
       "name": "Test Channel 5-29",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_5",
       "streamUrl": "http://example.com/stream/ch_5_29.m3u8"
     },
@@ -1958,7 +1958,7 @@
       "num": 190,
       "name": "Test Channel 5-30",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_5",
       "streamUrl": "http://example.com/stream/ch_5_30.m3u8"
     },
@@ -1985,7 +1985,7 @@
       "num": 193,
       "name": "Test Channel 5-33",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_5",
       "streamUrl": "http://example.com/stream/ch_5_33.m3u8"
     },
@@ -2012,7 +2012,7 @@
       "num": 196,
       "name": "Test Channel 5-36",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_5",
       "streamUrl": "http://example.com/stream/ch_5_36.m3u8"
     },
@@ -2030,7 +2030,7 @@
       "num": 198,
       "name": "Test Channel 5-38",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_5",
       "streamUrl": "http://example.com/stream/ch_5_38.m3u8"
     },
@@ -2084,7 +2084,7 @@
       "num": 204,
       "name": "Test Channel 6-4",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_6",
       "streamUrl": "http://example.com/stream/ch_6_4.m3u8"
     },
@@ -2138,7 +2138,7 @@
       "num": 210,
       "name": "Test Channel 6-10",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_6",
       "streamUrl": "http://example.com/stream/ch_6_10.m3u8"
     },
@@ -2192,7 +2192,7 @@
       "num": 216,
       "name": "Test Channel 6-16",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_6",
       "streamUrl": "http://example.com/stream/ch_6_16.m3u8"
     },
@@ -2273,7 +2273,7 @@
       "num": 225,
       "name": "Test Channel 6-25",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_6",
       "streamUrl": "http://example.com/stream/ch_6_25.m3u8"
     },
@@ -2282,7 +2282,7 @@
       "num": 226,
       "name": "Test Channel 6-26",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_6",
       "streamUrl": "http://example.com/stream/ch_6_26.m3u8"
     },
@@ -2309,7 +2309,7 @@
       "num": 229,
       "name": "Test Channel 6-29",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_6",
       "streamUrl": "http://example.com/stream/ch_6_29.m3u8"
     },
@@ -2381,7 +2381,7 @@
       "num": 237,
       "name": "Test Channel 6-37",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_6",
       "streamUrl": "http://example.com/stream/ch_6_37.m3u8"
     },
@@ -2390,7 +2390,7 @@
       "num": 238,
       "name": "Test Channel 6-38",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_6",
       "streamUrl": "http://example.com/stream/ch_6_38.m3u8"
     },
@@ -2444,7 +2444,7 @@
       "num": 244,
       "name": "Test Channel 7-4",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_7",
       "streamUrl": "http://example.com/stream/ch_7_4.m3u8"
     },
@@ -2489,7 +2489,7 @@
       "num": 249,
       "name": "Test Channel 7-9",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_7",
       "streamUrl": "http://example.com/stream/ch_7_9.m3u8"
     },
@@ -2507,7 +2507,7 @@
       "num": 251,
       "name": "Test Channel 7-11",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_7",
       "streamUrl": "http://example.com/stream/ch_7_11.m3u8"
     },
@@ -2516,7 +2516,7 @@
       "num": 252,
       "name": "Test Channel 7-12",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_7",
       "streamUrl": "http://example.com/stream/ch_7_12.m3u8"
     },
@@ -2543,7 +2543,7 @@
       "num": 255,
       "name": "Test Channel 7-15",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_7",
       "streamUrl": "http://example.com/stream/ch_7_15.m3u8"
     },
@@ -2579,7 +2579,7 @@
       "num": 259,
       "name": "Test Channel 7-19",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_7",
       "streamUrl": "http://example.com/stream/ch_7_19.m3u8"
     },
@@ -2615,7 +2615,7 @@
       "num": 263,
       "name": "Test Channel 7-23",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_7",
       "streamUrl": "http://example.com/stream/ch_7_23.m3u8"
     },
@@ -2660,7 +2660,7 @@
       "num": 268,
       "name": "Test Channel 7-28",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_7",
       "streamUrl": "http://example.com/stream/ch_7_28.m3u8"
     },
@@ -2696,7 +2696,7 @@
       "num": 272,
       "name": "Test Channel 7-32",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_7",
       "streamUrl": "http://example.com/stream/ch_7_32.m3u8"
     },
@@ -2732,7 +2732,7 @@
       "num": 276,
       "name": "Test Channel 7-36",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_7",
       "streamUrl": "http://example.com/stream/ch_7_36.m3u8"
     },
@@ -2759,7 +2759,7 @@
       "num": 279,
       "name": "Test Channel 7-39",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_7",
       "streamUrl": "http://example.com/stream/ch_7_39.m3u8"
     },
@@ -2795,7 +2795,7 @@
       "num": 283,
       "name": "Test Channel 8-3",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_8",
       "streamUrl": "http://example.com/stream/ch_8_3.m3u8"
     },
@@ -2813,7 +2813,7 @@
       "num": 285,
       "name": "Test Channel 8-5",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_8",
       "streamUrl": "http://example.com/stream/ch_8_5.m3u8"
     },
@@ -2822,7 +2822,7 @@
       "num": 286,
       "name": "Test Channel 8-6",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_8",
       "streamUrl": "http://example.com/stream/ch_8_6.m3u8"
     },
@@ -2840,7 +2840,7 @@
       "num": 288,
       "name": "Test Channel 8-8",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_8",
       "streamUrl": "http://example.com/stream/ch_8_8.m3u8"
     },
@@ -2849,7 +2849,7 @@
       "num": 289,
       "name": "Test Channel 8-9",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_8",
       "streamUrl": "http://example.com/stream/ch_8_9.m3u8"
     },
@@ -2858,7 +2858,7 @@
       "num": 290,
       "name": "Test Channel 8-10",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_8",
       "streamUrl": "http://example.com/stream/ch_8_10.m3u8"
     },
@@ -2867,7 +2867,7 @@
       "num": 291,
       "name": "Test Channel 8-11",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_8",
       "streamUrl": "http://example.com/stream/ch_8_11.m3u8"
     },
@@ -2876,7 +2876,7 @@
       "num": 292,
       "name": "Test Channel 8-12",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_8",
       "streamUrl": "http://example.com/stream/ch_8_12.m3u8"
     },
@@ -2903,7 +2903,7 @@
       "num": 295,
       "name": "Test Channel 8-15",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_8",
       "streamUrl": "http://example.com/stream/ch_8_15.m3u8"
     },
@@ -2993,7 +2993,7 @@
       "num": 305,
       "name": "Test Channel 8-25",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_8",
       "streamUrl": "http://example.com/stream/ch_8_25.m3u8"
     },
@@ -3020,7 +3020,7 @@
       "num": 308,
       "name": "Test Channel 8-28",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_8",
       "streamUrl": "http://example.com/stream/ch_8_28.m3u8"
     },
@@ -3047,7 +3047,7 @@
       "num": 311,
       "name": "Test Channel 8-31",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_8",
       "streamUrl": "http://example.com/stream/ch_8_31.m3u8"
     },
@@ -3119,7 +3119,7 @@
       "num": 319,
       "name": "Test Channel 8-39",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_8",
       "streamUrl": "http://example.com/stream/ch_8_39.m3u8"
     },
@@ -3155,7 +3155,7 @@
       "num": 323,
       "name": "Test Channel 9-3",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_9",
       "streamUrl": "http://example.com/stream/ch_9_3.m3u8"
     },
@@ -3164,7 +3164,7 @@
       "num": 324,
       "name": "Test Channel 9-4",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_9",
       "streamUrl": "http://example.com/stream/ch_9_4.m3u8"
     },
@@ -3182,7 +3182,7 @@
       "num": 326,
       "name": "Test Channel 9-6",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_9",
       "streamUrl": "http://example.com/stream/ch_9_6.m3u8"
     },
@@ -3200,7 +3200,7 @@
       "num": 328,
       "name": "Test Channel 9-8",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_9",
       "streamUrl": "http://example.com/stream/ch_9_8.m3u8"
     },
@@ -3317,7 +3317,7 @@
       "num": 341,
       "name": "Test Channel 9-21",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_9",
       "streamUrl": "http://example.com/stream/ch_9_21.m3u8"
     },
@@ -3371,7 +3371,7 @@
       "num": 347,
       "name": "Test Channel 9-27",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_9",
       "streamUrl": "http://example.com/stream/ch_9_27.m3u8"
     },
@@ -3380,7 +3380,7 @@
       "num": 348,
       "name": "Test Channel 9-28",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_9",
       "streamUrl": "http://example.com/stream/ch_9_28.m3u8"
     },
@@ -3407,7 +3407,7 @@
       "num": 351,
       "name": "Test Channel 9-31",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_9",
       "streamUrl": "http://example.com/stream/ch_9_31.m3u8"
     },
@@ -3416,7 +3416,7 @@
       "num": 352,
       "name": "Test Channel 9-32",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_9",
       "streamUrl": "http://example.com/stream/ch_9_32.m3u8"
     },
@@ -3443,7 +3443,7 @@
       "num": 355,
       "name": "Test Channel 9-35",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_9",
       "streamUrl": "http://example.com/stream/ch_9_35.m3u8"
     },
@@ -3452,7 +3452,7 @@
       "num": 356,
       "name": "Test Channel 9-36",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_9",
       "streamUrl": "http://example.com/stream/ch_9_36.m3u8"
     },
@@ -3533,7 +3533,7 @@
       "num": 365,
       "name": "Test Channel 10-5",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_10",
       "streamUrl": "http://example.com/stream/ch_10_5.m3u8"
     },
@@ -3569,7 +3569,7 @@
       "num": 369,
       "name": "Test Channel 10-9",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_10",
       "streamUrl": "http://example.com/stream/ch_10_9.m3u8"
     },
@@ -3578,7 +3578,7 @@
       "num": 370,
       "name": "Test Channel 10-10",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_10",
       "streamUrl": "http://example.com/stream/ch_10_10.m3u8"
     },
@@ -3587,7 +3587,7 @@
       "num": 371,
       "name": "Test Channel 10-11",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_10",
       "streamUrl": "http://example.com/stream/ch_10_11.m3u8"
     },
@@ -3623,7 +3623,7 @@
       "num": 375,
       "name": "Test Channel 10-15",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_10",
       "streamUrl": "http://example.com/stream/ch_10_15.m3u8"
     },
@@ -3632,7 +3632,7 @@
       "num": 376,
       "name": "Test Channel 10-16",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_10",
       "streamUrl": "http://example.com/stream/ch_10_16.m3u8"
     },
@@ -3704,7 +3704,7 @@
       "num": 384,
       "name": "Test Channel 10-24",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_10",
       "streamUrl": "http://example.com/stream/ch_10_24.m3u8"
     },
@@ -3758,7 +3758,7 @@
       "num": 390,
       "name": "Test Channel 10-30",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_10",
       "streamUrl": "http://example.com/stream/ch_10_30.m3u8"
     },
@@ -3785,7 +3785,7 @@
       "num": 393,
       "name": "Test Channel 10-33",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_10",
       "streamUrl": "http://example.com/stream/ch_10_33.m3u8"
     },
@@ -3803,7 +3803,7 @@
       "num": 395,
       "name": "Test Channel 10-35",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_10",
       "streamUrl": "http://example.com/stream/ch_10_35.m3u8"
     },
@@ -3812,7 +3812,7 @@
       "num": 396,
       "name": "Test Channel 10-36",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_10",
       "streamUrl": "http://example.com/stream/ch_10_36.m3u8"
     },
@@ -3821,7 +3821,7 @@
       "num": 397,
       "name": "Test Channel 10-37",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_10",
       "streamUrl": "http://example.com/stream/ch_10_37.m3u8"
     },
@@ -3830,7 +3830,7 @@
       "num": 398,
       "name": "Test Channel 10-38",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_10",
       "streamUrl": "http://example.com/stream/ch_10_38.m3u8"
     },
@@ -3938,7 +3938,7 @@
       "num": 410,
       "name": "Test Channel 11-10",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_11",
       "streamUrl": "http://example.com/stream/ch_11_10.m3u8"
     },
@@ -3956,7 +3956,7 @@
       "num": 412,
       "name": "Test Channel 11-12",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_11",
       "streamUrl": "http://example.com/stream/ch_11_12.m3u8"
     },
@@ -3974,7 +3974,7 @@
       "num": 414,
       "name": "Test Channel 11-14",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_11",
       "streamUrl": "http://example.com/stream/ch_11_14.m3u8"
     },
@@ -4028,7 +4028,7 @@
       "num": 420,
       "name": "Test Channel 11-20",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_11",
       "streamUrl": "http://example.com/stream/ch_11_20.m3u8"
     },
@@ -4037,7 +4037,7 @@
       "num": 421,
       "name": "Test Channel 11-21",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_11",
       "streamUrl": "http://example.com/stream/ch_11_21.m3u8"
     },
@@ -4046,7 +4046,7 @@
       "num": 422,
       "name": "Test Channel 11-22",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_11",
       "streamUrl": "http://example.com/stream/ch_11_22.m3u8"
     },
@@ -4055,7 +4055,7 @@
       "num": 423,
       "name": "Test Channel 11-23",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_11",
       "streamUrl": "http://example.com/stream/ch_11_23.m3u8"
     },
@@ -4064,7 +4064,7 @@
       "num": 424,
       "name": "Test Channel 11-24",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_11",
       "streamUrl": "http://example.com/stream/ch_11_24.m3u8"
     },
@@ -4118,7 +4118,7 @@
       "num": 430,
       "name": "Test Channel 11-30",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_11",
       "streamUrl": "http://example.com/stream/ch_11_30.m3u8"
     },
@@ -4127,7 +4127,7 @@
       "num": 431,
       "name": "Test Channel 11-31",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_11",
       "streamUrl": "http://example.com/stream/ch_11_31.m3u8"
     },
@@ -4163,7 +4163,7 @@
       "num": 435,
       "name": "Test Channel 11-35",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_11",
       "streamUrl": "http://example.com/stream/ch_11_35.m3u8"
     },
@@ -4190,7 +4190,7 @@
       "num": 438,
       "name": "Test Channel 11-38",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_11",
       "streamUrl": "http://example.com/stream/ch_11_38.m3u8"
     },
@@ -4199,7 +4199,7 @@
       "num": 439,
       "name": "Test Channel 11-39",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_11",
       "streamUrl": "http://example.com/stream/ch_11_39.m3u8"
     },
@@ -4226,7 +4226,7 @@
       "num": 442,
       "name": "Test Channel 12-2",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_12",
       "streamUrl": "http://example.com/stream/ch_12_2.m3u8"
     },
@@ -4235,7 +4235,7 @@
       "num": 443,
       "name": "Test Channel 12-3",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_12",
       "streamUrl": "http://example.com/stream/ch_12_3.m3u8"
     },
@@ -4298,7 +4298,7 @@
       "num": 450,
       "name": "Test Channel 12-10",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_12",
       "streamUrl": "http://example.com/stream/ch_12_10.m3u8"
     },
@@ -4307,7 +4307,7 @@
       "num": 451,
       "name": "Test Channel 12-11",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_12",
       "streamUrl": "http://example.com/stream/ch_12_11.m3u8"
     },
@@ -4325,7 +4325,7 @@
       "num": 453,
       "name": "Test Channel 12-13",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_12",
       "streamUrl": "http://example.com/stream/ch_12_13.m3u8"
     },
@@ -4370,7 +4370,7 @@
       "num": 458,
       "name": "Test Channel 12-18",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_12",
       "streamUrl": "http://example.com/stream/ch_12_18.m3u8"
     },
@@ -4397,7 +4397,7 @@
       "num": 461,
       "name": "Test Channel 12-21",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_12",
       "streamUrl": "http://example.com/stream/ch_12_21.m3u8"
     },
@@ -4406,7 +4406,7 @@
       "num": 462,
       "name": "Test Channel 12-22",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_12",
       "streamUrl": "http://example.com/stream/ch_12_22.m3u8"
     },
@@ -4415,7 +4415,7 @@
       "num": 463,
       "name": "Test Channel 12-23",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_12",
       "streamUrl": "http://example.com/stream/ch_12_23.m3u8"
     },
@@ -4424,7 +4424,7 @@
       "num": 464,
       "name": "Test Channel 12-24",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_12",
       "streamUrl": "http://example.com/stream/ch_12_24.m3u8"
     },
@@ -4514,7 +4514,7 @@
       "num": 474,
       "name": "Test Channel 12-34",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_12",
       "streamUrl": "http://example.com/stream/ch_12_34.m3u8"
     },
@@ -4541,7 +4541,7 @@
       "num": 477,
       "name": "Test Channel 12-37",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_12",
       "streamUrl": "http://example.com/stream/ch_12_37.m3u8"
     },
@@ -4586,7 +4586,7 @@
       "num": 482,
       "name": "Test Channel 13-2",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_13",
       "streamUrl": "http://example.com/stream/ch_13_2.m3u8"
     },
@@ -4658,7 +4658,7 @@
       "num": 490,
       "name": "Test Channel 13-10",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_13",
       "streamUrl": "http://example.com/stream/ch_13_10.m3u8"
     },
@@ -4676,7 +4676,7 @@
       "num": 492,
       "name": "Test Channel 13-12",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_13",
       "streamUrl": "http://example.com/stream/ch_13_12.m3u8"
     },
@@ -4703,7 +4703,7 @@
       "num": 495,
       "name": "Test Channel 13-15",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_13",
       "streamUrl": "http://example.com/stream/ch_13_15.m3u8"
     },
@@ -4748,7 +4748,7 @@
       "num": 500,
       "name": "Test Channel 13-20",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_13",
       "streamUrl": "http://example.com/stream/ch_13_20.m3u8"
     },
@@ -4766,7 +4766,7 @@
       "num": 502,
       "name": "Test Channel 13-22",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_13",
       "streamUrl": "http://example.com/stream/ch_13_22.m3u8"
     },
@@ -4775,7 +4775,7 @@
       "num": 503,
       "name": "Test Channel 13-23",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_13",
       "streamUrl": "http://example.com/stream/ch_13_23.m3u8"
     },
@@ -4811,7 +4811,7 @@
       "num": 507,
       "name": "Test Channel 13-27",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_13",
       "streamUrl": "http://example.com/stream/ch_13_27.m3u8"
     },
@@ -4829,7 +4829,7 @@
       "num": 509,
       "name": "Test Channel 13-29",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_13",
       "streamUrl": "http://example.com/stream/ch_13_29.m3u8"
     },
@@ -4883,7 +4883,7 @@
       "num": 515,
       "name": "Test Channel 13-35",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_13",
       "streamUrl": "http://example.com/stream/ch_13_35.m3u8"
     },
@@ -4892,7 +4892,7 @@
       "num": 516,
       "name": "Test Channel 13-36",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_13",
       "streamUrl": "http://example.com/stream/ch_13_36.m3u8"
     },
@@ -4901,7 +4901,7 @@
       "num": 517,
       "name": "Test Channel 13-37",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_13",
       "streamUrl": "http://example.com/stream/ch_13_37.m3u8"
     },
@@ -4928,7 +4928,7 @@
       "num": 520,
       "name": "Test Channel 13-40",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_13",
       "streamUrl": "http://example.com/stream/ch_13_40.m3u8"
     },
@@ -4937,7 +4937,7 @@
       "num": 521,
       "name": "Test Channel 14-1",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_1.m3u8"
     },
@@ -4946,7 +4946,7 @@
       "num": 522,
       "name": "Test Channel 14-2",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_2.m3u8"
     },
@@ -4964,7 +4964,7 @@
       "num": 524,
       "name": "Test Channel 14-4",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_4.m3u8"
     },
@@ -4991,7 +4991,7 @@
       "num": 527,
       "name": "Test Channel 14-7",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_7.m3u8"
     },
@@ -5036,7 +5036,7 @@
       "num": 532,
       "name": "Test Channel 14-12",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_12.m3u8"
     },
@@ -5045,7 +5045,7 @@
       "num": 533,
       "name": "Test Channel 14-13",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_13.m3u8"
     },
@@ -5072,7 +5072,7 @@
       "num": 536,
       "name": "Test Channel 14-16",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_16.m3u8"
     },
@@ -5108,7 +5108,7 @@
       "num": 540,
       "name": "Test Channel 14-20",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_20.m3u8"
     },
@@ -5126,7 +5126,7 @@
       "num": 542,
       "name": "Test Channel 14-22",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_22.m3u8"
     },
@@ -5162,7 +5162,7 @@
       "num": 546,
       "name": "Test Channel 14-26",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_26.m3u8"
     },
@@ -5180,7 +5180,7 @@
       "num": 548,
       "name": "Test Channel 14-28",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_28.m3u8"
     },
@@ -5207,7 +5207,7 @@
       "num": 551,
       "name": "Test Channel 14-31",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_31.m3u8"
     },
@@ -5225,7 +5225,7 @@
       "num": 553,
       "name": "Test Channel 14-33",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_33.m3u8"
     },
@@ -5243,7 +5243,7 @@
       "num": 555,
       "name": "Test Channel 14-35",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_35.m3u8"
     },
@@ -5252,7 +5252,7 @@
       "num": 556,
       "name": "Test Channel 14-36",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_36.m3u8"
     },
@@ -5261,7 +5261,7 @@
       "num": 557,
       "name": "Test Channel 14-37",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_37.m3u8"
     },
@@ -5279,7 +5279,7 @@
       "num": 559,
       "name": "Test Channel 14-39",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_14",
       "streamUrl": "http://example.com/stream/ch_14_39.m3u8"
     },
@@ -5315,7 +5315,7 @@
       "num": 563,
       "name": "Test Channel 15-3",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_15",
       "streamUrl": "http://example.com/stream/ch_15_3.m3u8"
     },
@@ -5369,7 +5369,7 @@
       "num": 569,
       "name": "Test Channel 15-9",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_15",
       "streamUrl": "http://example.com/stream/ch_15_9.m3u8"
     },
@@ -5459,7 +5459,7 @@
       "num": 579,
       "name": "Test Channel 15-19",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_15",
       "streamUrl": "http://example.com/stream/ch_15_19.m3u8"
     },
@@ -5468,7 +5468,7 @@
       "num": 580,
       "name": "Test Channel 15-20",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_15",
       "streamUrl": "http://example.com/stream/ch_15_20.m3u8"
     },
@@ -5486,7 +5486,7 @@
       "num": 582,
       "name": "Test Channel 15-22",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_15",
       "streamUrl": "http://example.com/stream/ch_15_22.m3u8"
     },
@@ -5576,7 +5576,7 @@
       "num": 592,
       "name": "Test Channel 15-32",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_15",
       "streamUrl": "http://example.com/stream/ch_15_32.m3u8"
     },
@@ -5585,7 +5585,7 @@
       "num": 593,
       "name": "Test Channel 15-33",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_15",
       "streamUrl": "http://example.com/stream/ch_15_33.m3u8"
     },
@@ -5594,7 +5594,7 @@
       "num": 594,
       "name": "Test Channel 15-34",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_15",
       "streamUrl": "http://example.com/stream/ch_15_34.m3u8"
     },
@@ -5612,7 +5612,7 @@
       "num": 596,
       "name": "Test Channel 15-36",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_15",
       "streamUrl": "http://example.com/stream/ch_15_36.m3u8"
     },
@@ -5675,7 +5675,7 @@
       "num": 603,
       "name": "Test Channel 16-3",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_16",
       "streamUrl": "http://example.com/stream/ch_16_3.m3u8"
     },
@@ -5720,7 +5720,7 @@
       "num": 608,
       "name": "Test Channel 16-8",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_16",
       "streamUrl": "http://example.com/stream/ch_16_8.m3u8"
     },
@@ -5738,7 +5738,7 @@
       "num": 610,
       "name": "Test Channel 16-10",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_16",
       "streamUrl": "http://example.com/stream/ch_16_10.m3u8"
     },
@@ -5765,7 +5765,7 @@
       "num": 613,
       "name": "Test Channel 16-13",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_16",
       "streamUrl": "http://example.com/stream/ch_16_13.m3u8"
     },
@@ -5783,7 +5783,7 @@
       "num": 615,
       "name": "Test Channel 16-15",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_16",
       "streamUrl": "http://example.com/stream/ch_16_15.m3u8"
     },
@@ -5855,7 +5855,7 @@
       "num": 623,
       "name": "Test Channel 16-23",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_16",
       "streamUrl": "http://example.com/stream/ch_16_23.m3u8"
     },
@@ -5918,7 +5918,7 @@
       "num": 630,
       "name": "Test Channel 16-30",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_16",
       "streamUrl": "http://example.com/stream/ch_16_30.m3u8"
     },
@@ -5927,7 +5927,7 @@
       "num": 631,
       "name": "Test Channel 16-31",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_16",
       "streamUrl": "http://example.com/stream/ch_16_31.m3u8"
     },
@@ -5999,7 +5999,7 @@
       "num": 639,
       "name": "Test Channel 16-39",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_16",
       "streamUrl": "http://example.com/stream/ch_16_39.m3u8"
     },
@@ -6044,7 +6044,7 @@
       "num": 644,
       "name": "Test Channel 17-4",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_17",
       "streamUrl": "http://example.com/stream/ch_17_4.m3u8"
     },
@@ -6062,7 +6062,7 @@
       "num": 646,
       "name": "Test Channel 17-6",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_17",
       "streamUrl": "http://example.com/stream/ch_17_6.m3u8"
     },
@@ -6089,7 +6089,7 @@
       "num": 649,
       "name": "Test Channel 17-9",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_17",
       "streamUrl": "http://example.com/stream/ch_17_9.m3u8"
     },
@@ -6107,7 +6107,7 @@
       "num": 651,
       "name": "Test Channel 17-11",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_17",
       "streamUrl": "http://example.com/stream/ch_17_11.m3u8"
     },
@@ -6143,7 +6143,7 @@
       "num": 655,
       "name": "Test Channel 17-15",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_17",
       "streamUrl": "http://example.com/stream/ch_17_15.m3u8"
     },
@@ -6242,7 +6242,7 @@
       "num": 666,
       "name": "Test Channel 17-26",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_17",
       "streamUrl": "http://example.com/stream/ch_17_26.m3u8"
     },
@@ -6251,7 +6251,7 @@
       "num": 667,
       "name": "Test Channel 17-27",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_17",
       "streamUrl": "http://example.com/stream/ch_17_27.m3u8"
     },
@@ -6260,7 +6260,7 @@
       "num": 668,
       "name": "Test Channel 17-28",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_17",
       "streamUrl": "http://example.com/stream/ch_17_28.m3u8"
     },
@@ -6287,7 +6287,7 @@
       "num": 671,
       "name": "Test Channel 17-31",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_17",
       "streamUrl": "http://example.com/stream/ch_17_31.m3u8"
     },
@@ -6350,7 +6350,7 @@
       "num": 678,
       "name": "Test Channel 17-38",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_17",
       "streamUrl": "http://example.com/stream/ch_17_38.m3u8"
     },
@@ -6467,7 +6467,7 @@
       "num": 691,
       "name": "Test Channel 18-11",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_18",
       "streamUrl": "http://example.com/stream/ch_18_11.m3u8"
     },
@@ -6476,7 +6476,7 @@
       "num": 692,
       "name": "Test Channel 18-12",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_18",
       "streamUrl": "http://example.com/stream/ch_18_12.m3u8"
     },
@@ -6485,7 +6485,7 @@
       "num": 693,
       "name": "Test Channel 18-13",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_18",
       "streamUrl": "http://example.com/stream/ch_18_13.m3u8"
     },
@@ -6539,7 +6539,7 @@
       "num": 699,
       "name": "Test Channel 18-19",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_18",
       "streamUrl": "http://example.com/stream/ch_18_19.m3u8"
     },
@@ -6548,7 +6548,7 @@
       "num": 700,
       "name": "Test Channel 18-20",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_18",
       "streamUrl": "http://example.com/stream/ch_18_20.m3u8"
     },
@@ -6575,7 +6575,7 @@
       "num": 703,
       "name": "Test Channel 18-23",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_18",
       "streamUrl": "http://example.com/stream/ch_18_23.m3u8"
     },
@@ -6584,7 +6584,7 @@
       "num": 704,
       "name": "Test Channel 18-24",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_18",
       "streamUrl": "http://example.com/stream/ch_18_24.m3u8"
     },
@@ -6602,7 +6602,7 @@
       "num": 706,
       "name": "Test Channel 18-26",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_18",
       "streamUrl": "http://example.com/stream/ch_18_26.m3u8"
     },
@@ -6638,7 +6638,7 @@
       "num": 710,
       "name": "Test Channel 18-30",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_18",
       "streamUrl": "http://example.com/stream/ch_18_30.m3u8"
     },
@@ -6656,7 +6656,7 @@
       "num": 712,
       "name": "Test Channel 18-32",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_18",
       "streamUrl": "http://example.com/stream/ch_18_32.m3u8"
     },
@@ -6674,7 +6674,7 @@
       "num": 714,
       "name": "Test Channel 18-34",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_18",
       "streamUrl": "http://example.com/stream/ch_18_34.m3u8"
     },
@@ -6692,7 +6692,7 @@
       "num": 716,
       "name": "Test Channel 18-36",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_18",
       "streamUrl": "http://example.com/stream/ch_18_36.m3u8"
     },
@@ -6701,7 +6701,7 @@
       "num": 717,
       "name": "Test Channel 18-37",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_18",
       "streamUrl": "http://example.com/stream/ch_18_37.m3u8"
     },
@@ -6710,7 +6710,7 @@
       "num": 718,
       "name": "Test Channel 18-38",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_18",
       "streamUrl": "http://example.com/stream/ch_18_38.m3u8"
     },
@@ -6746,7 +6746,7 @@
       "num": 722,
       "name": "Test Channel 19-2",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_19",
       "streamUrl": "http://example.com/stream/ch_19_2.m3u8"
     },
@@ -6773,7 +6773,7 @@
       "num": 725,
       "name": "Test Channel 19-5",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_19",
       "streamUrl": "http://example.com/stream/ch_19_5.m3u8"
     },
@@ -6782,7 +6782,7 @@
       "num": 726,
       "name": "Test Channel 19-6",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_19",
       "streamUrl": "http://example.com/stream/ch_19_6.m3u8"
     },
@@ -6791,7 +6791,7 @@
       "num": 727,
       "name": "Test Channel 19-7",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_19",
       "streamUrl": "http://example.com/stream/ch_19_7.m3u8"
     },
@@ -6818,7 +6818,7 @@
       "num": 730,
       "name": "Test Channel 19-10",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_19",
       "streamUrl": "http://example.com/stream/ch_19_10.m3u8"
     },
@@ -6845,7 +6845,7 @@
       "num": 733,
       "name": "Test Channel 19-13",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_19",
       "streamUrl": "http://example.com/stream/ch_19_13.m3u8"
     },
@@ -6881,7 +6881,7 @@
       "num": 737,
       "name": "Test Channel 19-17",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_19",
       "streamUrl": "http://example.com/stream/ch_19_17.m3u8"
     },
@@ -6899,7 +6899,7 @@
       "num": 739,
       "name": "Test Channel 19-19",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_19",
       "streamUrl": "http://example.com/stream/ch_19_19.m3u8"
     },
@@ -6926,7 +6926,7 @@
       "num": 742,
       "name": "Test Channel 19-22",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_19",
       "streamUrl": "http://example.com/stream/ch_19_22.m3u8"
     },
@@ -7007,7 +7007,7 @@
       "num": 751,
       "name": "Test Channel 19-31",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_19",
       "streamUrl": "http://example.com/stream/ch_19_31.m3u8"
     },
@@ -7016,7 +7016,7 @@
       "num": 752,
       "name": "Test Channel 19-32",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_19",
       "streamUrl": "http://example.com/stream/ch_19_32.m3u8"
     },
@@ -7034,7 +7034,7 @@
       "num": 754,
       "name": "Test Channel 19-34",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_19",
       "streamUrl": "http://example.com/stream/ch_19_34.m3u8"
     },
@@ -7079,7 +7079,7 @@
       "num": 759,
       "name": "Test Channel 19-39",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_19",
       "streamUrl": "http://example.com/stream/ch_19_39.m3u8"
     },
@@ -7115,7 +7115,7 @@
       "num": 763,
       "name": "Test Channel 20-3",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_20",
       "streamUrl": "http://example.com/stream/ch_20_3.m3u8"
     },
@@ -7124,7 +7124,7 @@
       "num": 764,
       "name": "Test Channel 20-4",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_20",
       "streamUrl": "http://example.com/stream/ch_20_4.m3u8"
     },
@@ -7178,7 +7178,7 @@
       "num": 770,
       "name": "Test Channel 20-10",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_20",
       "streamUrl": "http://example.com/stream/ch_20_10.m3u8"
     },
@@ -7187,7 +7187,7 @@
       "num": 771,
       "name": "Test Channel 20-11",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_20",
       "streamUrl": "http://example.com/stream/ch_20_11.m3u8"
     },
@@ -7214,7 +7214,7 @@
       "num": 774,
       "name": "Test Channel 20-14",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_20",
       "streamUrl": "http://example.com/stream/ch_20_14.m3u8"
     },
@@ -7232,7 +7232,7 @@
       "num": 776,
       "name": "Test Channel 20-16",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_20",
       "streamUrl": "http://example.com/stream/ch_20_16.m3u8"
     },
@@ -7259,7 +7259,7 @@
       "num": 779,
       "name": "Test Channel 20-19",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_20",
       "streamUrl": "http://example.com/stream/ch_20_19.m3u8"
     },
@@ -7277,7 +7277,7 @@
       "num": 781,
       "name": "Test Channel 20-21",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_20",
       "streamUrl": "http://example.com/stream/ch_20_21.m3u8"
     },
@@ -7295,7 +7295,7 @@
       "num": 783,
       "name": "Test Channel 20-23",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_20",
       "streamUrl": "http://example.com/stream/ch_20_23.m3u8"
     },
@@ -7313,7 +7313,7 @@
       "num": 785,
       "name": "Test Channel 20-25",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_20",
       "streamUrl": "http://example.com/stream/ch_20_25.m3u8"
     },
@@ -7358,7 +7358,7 @@
       "num": 790,
       "name": "Test Channel 20-30",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_20",
       "streamUrl": "http://example.com/stream/ch_20_30.m3u8"
     },
@@ -7439,7 +7439,7 @@
       "num": 799,
       "name": "Test Channel 20-39",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_20",
       "streamUrl": "http://example.com/stream/ch_20_39.m3u8"
     },
@@ -7493,7 +7493,7 @@
       "num": 805,
       "name": "Test Channel 21-5",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_21",
       "streamUrl": "http://example.com/stream/ch_21_5.m3u8"
     },
@@ -7502,7 +7502,7 @@
       "num": 806,
       "name": "Test Channel 21-6",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_21",
       "streamUrl": "http://example.com/stream/ch_21_6.m3u8"
     },
@@ -7610,7 +7610,7 @@
       "num": 818,
       "name": "Test Channel 21-18",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_21",
       "streamUrl": "http://example.com/stream/ch_21_18.m3u8"
     },
@@ -7709,7 +7709,7 @@
       "num": 829,
       "name": "Test Channel 21-29",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_21",
       "streamUrl": "http://example.com/stream/ch_21_29.m3u8"
     },
@@ -7772,7 +7772,7 @@
       "num": 836,
       "name": "Test Channel 21-36",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_21",
       "streamUrl": "http://example.com/stream/ch_21_36.m3u8"
     },
@@ -7781,7 +7781,7 @@
       "num": 837,
       "name": "Test Channel 21-37",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_21",
       "streamUrl": "http://example.com/stream/ch_21_37.m3u8"
     },
@@ -7952,7 +7952,7 @@
       "num": 856,
       "name": "Test Channel 22-16",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_22",
       "streamUrl": "http://example.com/stream/ch_22_16.m3u8"
     },
@@ -8006,7 +8006,7 @@
       "num": 862,
       "name": "Test Channel 22-22",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_22",
       "streamUrl": "http://example.com/stream/ch_22_22.m3u8"
     },
@@ -8078,7 +8078,7 @@
       "num": 870,
       "name": "Test Channel 22-30",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_22",
       "streamUrl": "http://example.com/stream/ch_22_30.m3u8"
     },
@@ -8105,7 +8105,7 @@
       "num": 873,
       "name": "Test Channel 22-33",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_22",
       "streamUrl": "http://example.com/stream/ch_22_33.m3u8"
     },
@@ -8141,7 +8141,7 @@
       "num": 877,
       "name": "Test Channel 22-37",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_22",
       "streamUrl": "http://example.com/stream/ch_22_37.m3u8"
     },
@@ -8159,7 +8159,7 @@
       "num": 879,
       "name": "Test Channel 22-39",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_22",
       "streamUrl": "http://example.com/stream/ch_22_39.m3u8"
     },
@@ -8168,7 +8168,7 @@
       "num": 880,
       "name": "Test Channel 22-40",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_22",
       "streamUrl": "http://example.com/stream/ch_22_40.m3u8"
     },
@@ -8195,7 +8195,7 @@
       "num": 883,
       "name": "Test Channel 23-3",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_23",
       "streamUrl": "http://example.com/stream/ch_23_3.m3u8"
     },
@@ -8231,7 +8231,7 @@
       "num": 887,
       "name": "Test Channel 23-7",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_23",
       "streamUrl": "http://example.com/stream/ch_23_7.m3u8"
     },
@@ -8240,7 +8240,7 @@
       "num": 888,
       "name": "Test Channel 23-8",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_23",
       "streamUrl": "http://example.com/stream/ch_23_8.m3u8"
     },
@@ -8249,7 +8249,7 @@
       "num": 889,
       "name": "Test Channel 23-9",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_23",
       "streamUrl": "http://example.com/stream/ch_23_9.m3u8"
     },
@@ -8258,7 +8258,7 @@
       "num": 890,
       "name": "Test Channel 23-10",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_23",
       "streamUrl": "http://example.com/stream/ch_23_10.m3u8"
     },
@@ -8339,7 +8339,7 @@
       "num": 899,
       "name": "Test Channel 23-19",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_23",
       "streamUrl": "http://example.com/stream/ch_23_19.m3u8"
     },
@@ -8393,7 +8393,7 @@
       "num": 905,
       "name": "Test Channel 23-25",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_23",
       "streamUrl": "http://example.com/stream/ch_23_25.m3u8"
     },
@@ -8402,7 +8402,7 @@
       "num": 906,
       "name": "Test Channel 23-26",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_23",
       "streamUrl": "http://example.com/stream/ch_23_26.m3u8"
     },
@@ -8411,7 +8411,7 @@
       "num": 907,
       "name": "Test Channel 23-27",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_23",
       "streamUrl": "http://example.com/stream/ch_23_27.m3u8"
     },
@@ -8420,7 +8420,7 @@
       "num": 908,
       "name": "Test Channel 23-28",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_23",
       "streamUrl": "http://example.com/stream/ch_23_28.m3u8"
     },
@@ -8429,7 +8429,7 @@
       "num": 909,
       "name": "Test Channel 23-29",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_23",
       "streamUrl": "http://example.com/stream/ch_23_29.m3u8"
     },
@@ -8456,7 +8456,7 @@
       "num": 912,
       "name": "Test Channel 23-32",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_23",
       "streamUrl": "http://example.com/stream/ch_23_32.m3u8"
     },
@@ -8501,7 +8501,7 @@
       "num": 917,
       "name": "Test Channel 23-37",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_23",
       "streamUrl": "http://example.com/stream/ch_23_37.m3u8"
     },
@@ -8528,7 +8528,7 @@
       "num": 920,
       "name": "Test Channel 23-40",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_23",
       "streamUrl": "http://example.com/stream/ch_23_40.m3u8"
     },
@@ -8564,7 +8564,7 @@
       "num": 924,
       "name": "Test Channel 24-4",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_4.m3u8"
     },
@@ -8591,7 +8591,7 @@
       "num": 927,
       "name": "Test Channel 24-7",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_7.m3u8"
     },
@@ -8609,7 +8609,7 @@
       "num": 929,
       "name": "Test Channel 24-9",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_9.m3u8"
     },
@@ -8636,7 +8636,7 @@
       "num": 932,
       "name": "Test Channel 24-12",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_12.m3u8"
     },
@@ -8654,7 +8654,7 @@
       "num": 934,
       "name": "Test Channel 24-14",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_14.m3u8"
     },
@@ -8690,7 +8690,7 @@
       "num": 938,
       "name": "Test Channel 24-18",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_18.m3u8"
     },
@@ -8699,7 +8699,7 @@
       "num": 939,
       "name": "Test Channel 24-19",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_19.m3u8"
     },
@@ -8717,7 +8717,7 @@
       "num": 941,
       "name": "Test Channel 24-21",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_21.m3u8"
     },
@@ -8735,7 +8735,7 @@
       "num": 943,
       "name": "Test Channel 24-23",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_23.m3u8"
     },
@@ -8744,7 +8744,7 @@
       "num": 944,
       "name": "Test Channel 24-24",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_24.m3u8"
     },
@@ -8753,7 +8753,7 @@
       "num": 945,
       "name": "Test Channel 24-25",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_25.m3u8"
     },
@@ -8798,7 +8798,7 @@
       "num": 950,
       "name": "Test Channel 24-30",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_30.m3u8"
     },
@@ -8807,7 +8807,7 @@
       "num": 951,
       "name": "Test Channel 24-31",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_31.m3u8"
     },
@@ -8816,7 +8816,7 @@
       "num": 952,
       "name": "Test Channel 24-32",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_32.m3u8"
     },
@@ -8825,7 +8825,7 @@
       "num": 953,
       "name": "Test Channel 24-33",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_33.m3u8"
     },
@@ -8834,7 +8834,7 @@
       "num": 954,
       "name": "Test Channel 24-34",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_34.m3u8"
     },
@@ -8852,7 +8852,7 @@
       "num": 956,
       "name": "Test Channel 24-36",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_36.m3u8"
     },
@@ -8879,7 +8879,7 @@
       "num": 959,
       "name": "Test Channel 24-39",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_39.m3u8"
     },
@@ -8888,7 +8888,7 @@
       "num": 960,
       "name": "Test Channel 24-40",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_24",
       "streamUrl": "http://example.com/stream/ch_24_40.m3u8"
     },
@@ -8915,7 +8915,7 @@
       "num": 963,
       "name": "Test Channel 25-3",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_25",
       "streamUrl": "http://example.com/stream/ch_25_3.m3u8"
     },
@@ -8933,7 +8933,7 @@
       "num": 965,
       "name": "Test Channel 25-5",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_25",
       "streamUrl": "http://example.com/stream/ch_25_5.m3u8"
     },
@@ -8951,7 +8951,7 @@
       "num": 967,
       "name": "Test Channel 25-7",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_25",
       "streamUrl": "http://example.com/stream/ch_25_7.m3u8"
     },
@@ -8987,7 +8987,7 @@
       "num": 971,
       "name": "Test Channel 25-11",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_25",
       "streamUrl": "http://example.com/stream/ch_25_11.m3u8"
     },
@@ -9023,7 +9023,7 @@
       "num": 975,
       "name": "Test Channel 25-15",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_25",
       "streamUrl": "http://example.com/stream/ch_25_15.m3u8"
     },
@@ -9068,7 +9068,7 @@
       "num": 980,
       "name": "Test Channel 25-20",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_25",
       "streamUrl": "http://example.com/stream/ch_25_20.m3u8"
     },
@@ -9095,7 +9095,7 @@
       "num": 983,
       "name": "Test Channel 25-23",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_25",
       "streamUrl": "http://example.com/stream/ch_25_23.m3u8"
     },
@@ -9158,7 +9158,7 @@
       "num": 990,
       "name": "Test Channel 25-30",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_25",
       "streamUrl": "http://example.com/stream/ch_25_30.m3u8"
     },
@@ -9194,7 +9194,7 @@
       "num": 994,
       "name": "Test Channel 25-34",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_25",
       "streamUrl": "http://example.com/stream/ch_25_34.m3u8"
     },
@@ -9212,7 +9212,7 @@
       "num": 996,
       "name": "Test Channel 25-36",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_25",
       "streamUrl": "http://example.com/stream/ch_25_36.m3u8"
     },
@@ -9239,7 +9239,7 @@
       "num": 999,
       "name": "Test Channel 25-39",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_25",
       "streamUrl": "http://example.com/stream/ch_25_39.m3u8"
     },
@@ -9248,7 +9248,7 @@
       "num": 1000,
       "name": "Test Channel 25-40",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_25",
       "streamUrl": "http://example.com/stream/ch_25_40.m3u8"
     },
@@ -9266,7 +9266,7 @@
       "num": 1002,
       "name": "Test Channel 26-2",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_2.m3u8"
     },
@@ -9275,7 +9275,7 @@
       "num": 1003,
       "name": "Test Channel 26-3",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_3.m3u8"
     },
@@ -9311,7 +9311,7 @@
       "num": 1007,
       "name": "Test Channel 26-7",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_7.m3u8"
     },
@@ -9329,7 +9329,7 @@
       "num": 1009,
       "name": "Test Channel 26-9",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_9.m3u8"
     },
@@ -9383,7 +9383,7 @@
       "num": 1015,
       "name": "Test Channel 26-15",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_15.m3u8"
     },
@@ -9392,7 +9392,7 @@
       "num": 1016,
       "name": "Test Channel 26-16",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_16.m3u8"
     },
@@ -9401,7 +9401,7 @@
       "num": 1017,
       "name": "Test Channel 26-17",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_17.m3u8"
     },
@@ -9437,7 +9437,7 @@
       "num": 1021,
       "name": "Test Channel 26-21",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_21.m3u8"
     },
@@ -9464,7 +9464,7 @@
       "num": 1024,
       "name": "Test Channel 26-24",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_24.m3u8"
     },
@@ -9473,7 +9473,7 @@
       "num": 1025,
       "name": "Test Channel 26-25",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_25.m3u8"
     },
@@ -9500,7 +9500,7 @@
       "num": 1028,
       "name": "Test Channel 26-28",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_28.m3u8"
     },
@@ -9518,7 +9518,7 @@
       "num": 1030,
       "name": "Test Channel 26-30",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_30.m3u8"
     },
@@ -9572,7 +9572,7 @@
       "num": 1036,
       "name": "Test Channel 26-36",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_36.m3u8"
     },
@@ -9590,7 +9590,7 @@
       "num": 1038,
       "name": "Test Channel 26-38",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_38.m3u8"
     },
@@ -9599,7 +9599,7 @@
       "num": 1039,
       "name": "Test Channel 26-39",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_26",
       "streamUrl": "http://example.com/stream/ch_26_39.m3u8"
     },
@@ -9617,7 +9617,7 @@
       "num": 1041,
       "name": "Test Channel 27-1",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_1.m3u8"
     },
@@ -9680,7 +9680,7 @@
       "num": 1048,
       "name": "Test Channel 27-8",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_8.m3u8"
     },
@@ -9698,7 +9698,7 @@
       "num": 1050,
       "name": "Test Channel 27-10",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_10.m3u8"
     },
@@ -9707,7 +9707,7 @@
       "num": 1051,
       "name": "Test Channel 27-11",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_11.m3u8"
     },
@@ -9734,7 +9734,7 @@
       "num": 1054,
       "name": "Test Channel 27-14",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_14.m3u8"
     },
@@ -9743,7 +9743,7 @@
       "num": 1055,
       "name": "Test Channel 27-15",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_15.m3u8"
     },
@@ -9761,7 +9761,7 @@
       "num": 1057,
       "name": "Test Channel 27-17",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_17.m3u8"
     },
@@ -9779,7 +9779,7 @@
       "num": 1059,
       "name": "Test Channel 27-19",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_19.m3u8"
     },
@@ -9833,7 +9833,7 @@
       "num": 1065,
       "name": "Test Channel 27-25",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_25.m3u8"
     },
@@ -9860,7 +9860,7 @@
       "num": 1068,
       "name": "Test Channel 27-28",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_28.m3u8"
     },
@@ -9869,7 +9869,7 @@
       "num": 1069,
       "name": "Test Channel 27-29",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_29.m3u8"
     },
@@ -9887,7 +9887,7 @@
       "num": 1071,
       "name": "Test Channel 27-31",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_31.m3u8"
     },
@@ -9923,7 +9923,7 @@
       "num": 1075,
       "name": "Test Channel 27-35",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_35.m3u8"
     },
@@ -9941,7 +9941,7 @@
       "num": 1077,
       "name": "Test Channel 27-37",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_37.m3u8"
     },
@@ -9950,7 +9950,7 @@
       "num": 1078,
       "name": "Test Channel 27-38",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_38.m3u8"
     },
@@ -9959,7 +9959,7 @@
       "num": 1079,
       "name": "Test Channel 27-39",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_27",
       "streamUrl": "http://example.com/stream/ch_27_39.m3u8"
     },
@@ -9977,7 +9977,7 @@
       "num": 1081,
       "name": "Test Channel 28-1",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_1.m3u8"
     },
@@ -9986,7 +9986,7 @@
       "num": 1082,
       "name": "Test Channel 28-2",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_2.m3u8"
     },
@@ -9995,7 +9995,7 @@
       "num": 1083,
       "name": "Test Channel 28-3",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_3.m3u8"
     },
@@ -10031,7 +10031,7 @@
       "num": 1087,
       "name": "Test Channel 28-7",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_7.m3u8"
     },
@@ -10049,7 +10049,7 @@
       "num": 1089,
       "name": "Test Channel 28-9",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_9.m3u8"
     },
@@ -10067,7 +10067,7 @@
       "num": 1091,
       "name": "Test Channel 28-11",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_11.m3u8"
     },
@@ -10085,7 +10085,7 @@
       "num": 1093,
       "name": "Test Channel 28-13",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_13.m3u8"
     },
@@ -10094,7 +10094,7 @@
       "num": 1094,
       "name": "Test Channel 28-14",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_14.m3u8"
     },
@@ -10103,7 +10103,7 @@
       "num": 1095,
       "name": "Test Channel 28-15",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_15.m3u8"
     },
@@ -10112,7 +10112,7 @@
       "num": 1096,
       "name": "Test Channel 28-16",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_16.m3u8"
     },
@@ -10139,7 +10139,7 @@
       "num": 1099,
       "name": "Test Channel 28-19",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_19.m3u8"
     },
@@ -10157,7 +10157,7 @@
       "num": 1101,
       "name": "Test Channel 28-21",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_21.m3u8"
     },
@@ -10166,7 +10166,7 @@
       "num": 1102,
       "name": "Test Channel 28-22",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_22.m3u8"
     },
@@ -10175,7 +10175,7 @@
       "num": 1103,
       "name": "Test Channel 28-23",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_23.m3u8"
     },
@@ -10193,7 +10193,7 @@
       "num": 1105,
       "name": "Test Channel 28-25",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_25.m3u8"
     },
@@ -10229,7 +10229,7 @@
       "num": 1109,
       "name": "Test Channel 28-29",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_29.m3u8"
     },
@@ -10247,7 +10247,7 @@
       "num": 1111,
       "name": "Test Channel 28-31",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_31.m3u8"
     },
@@ -10283,7 +10283,7 @@
       "num": 1115,
       "name": "Test Channel 28-35",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_35.m3u8"
     },
@@ -10310,7 +10310,7 @@
       "num": 1118,
       "name": "Test Channel 28-38",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_28",
       "streamUrl": "http://example.com/stream/ch_28_38.m3u8"
     },
@@ -10346,7 +10346,7 @@
       "num": 1122,
       "name": "Test Channel 29-2",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_2.m3u8"
     },
@@ -10355,7 +10355,7 @@
       "num": 1123,
       "name": "Test Channel 29-3",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_3.m3u8"
     },
@@ -10382,7 +10382,7 @@
       "num": 1126,
       "name": "Test Channel 29-6",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_6.m3u8"
     },
@@ -10409,7 +10409,7 @@
       "num": 1129,
       "name": "Test Channel 29-9",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_9.m3u8"
     },
@@ -10418,7 +10418,7 @@
       "num": 1130,
       "name": "Test Channel 29-10",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_10.m3u8"
     },
@@ -10427,7 +10427,7 @@
       "num": 1131,
       "name": "Test Channel 29-11",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_11.m3u8"
     },
@@ -10481,7 +10481,7 @@
       "num": 1137,
       "name": "Test Channel 29-17",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_17.m3u8"
     },
@@ -10490,7 +10490,7 @@
       "num": 1138,
       "name": "Test Channel 29-18",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_18.m3u8"
     },
@@ -10499,7 +10499,7 @@
       "num": 1139,
       "name": "Test Channel 29-19",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_19.m3u8"
     },
@@ -10517,7 +10517,7 @@
       "num": 1141,
       "name": "Test Channel 29-21",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_21.m3u8"
     },
@@ -10526,7 +10526,7 @@
       "num": 1142,
       "name": "Test Channel 29-22",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_22.m3u8"
     },
@@ -10544,7 +10544,7 @@
       "num": 1144,
       "name": "Test Channel 29-24",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_24.m3u8"
     },
@@ -10571,7 +10571,7 @@
       "num": 1147,
       "name": "Test Channel 29-27",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_27.m3u8"
     },
@@ -10589,7 +10589,7 @@
       "num": 1149,
       "name": "Test Channel 29-29",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_29.m3u8"
     },
@@ -10598,7 +10598,7 @@
       "num": 1150,
       "name": "Test Channel 29-30",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_30.m3u8"
     },
@@ -10634,7 +10634,7 @@
       "num": 1154,
       "name": "Test Channel 29-34",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_34.m3u8"
     },
@@ -10661,7 +10661,7 @@
       "num": 1157,
       "name": "Test Channel 29-37",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_37.m3u8"
     },
@@ -10688,7 +10688,7 @@
       "num": 1160,
       "name": "Test Channel 29-40",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_29",
       "streamUrl": "http://example.com/stream/ch_29_40.m3u8"
     },
@@ -10706,7 +10706,7 @@
       "num": 1162,
       "name": "Test Channel 30-2",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_30",
       "streamUrl": "http://example.com/stream/ch_30_2.m3u8"
     },
@@ -10715,7 +10715,7 @@
       "num": 1163,
       "name": "Test Channel 30-3",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_30",
       "streamUrl": "http://example.com/stream/ch_30_3.m3u8"
     },
@@ -10778,7 +10778,7 @@
       "num": 1170,
       "name": "Test Channel 30-10",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_30",
       "streamUrl": "http://example.com/stream/ch_30_10.m3u8"
     },
@@ -10832,7 +10832,7 @@
       "num": 1176,
       "name": "Test Channel 30-16",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_30",
       "streamUrl": "http://example.com/stream/ch_30_16.m3u8"
     },
@@ -10841,7 +10841,7 @@
       "num": 1177,
       "name": "Test Channel 30-17",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_30",
       "streamUrl": "http://example.com/stream/ch_30_17.m3u8"
     },
@@ -10877,7 +10877,7 @@
       "num": 1181,
       "name": "Test Channel 30-21",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_30",
       "streamUrl": "http://example.com/stream/ch_30_21.m3u8"
     },
@@ -10949,7 +10949,7 @@
       "num": 1189,
       "name": "Test Channel 30-29",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_30",
       "streamUrl": "http://example.com/stream/ch_30_29.m3u8"
     },
@@ -10994,7 +10994,7 @@
       "num": 1194,
       "name": "Test Channel 30-34",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_30",
       "streamUrl": "http://example.com/stream/ch_30_34.m3u8"
     },
@@ -11039,7 +11039,7 @@
       "num": 1199,
       "name": "Test Channel 30-39",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_30",
       "streamUrl": "http://example.com/stream/ch_30_39.m3u8"
     },
@@ -11057,7 +11057,7 @@
       "num": 1201,
       "name": "Test Channel 31-1",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_31",
       "streamUrl": "http://example.com/stream/ch_31_1.m3u8"
     },
@@ -11075,7 +11075,7 @@
       "num": 1203,
       "name": "Test Channel 31-3",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_31",
       "streamUrl": "http://example.com/stream/ch_31_3.m3u8"
     },
@@ -11138,7 +11138,7 @@
       "num": 1210,
       "name": "Test Channel 31-10",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_31",
       "streamUrl": "http://example.com/stream/ch_31_10.m3u8"
     },
@@ -11147,7 +11147,7 @@
       "num": 1211,
       "name": "Test Channel 31-11",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_31",
       "streamUrl": "http://example.com/stream/ch_31_11.m3u8"
     },
@@ -11165,7 +11165,7 @@
       "num": 1213,
       "name": "Test Channel 31-13",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_31",
       "streamUrl": "http://example.com/stream/ch_31_13.m3u8"
     },
@@ -11264,7 +11264,7 @@
       "num": 1224,
       "name": "Test Channel 31-24",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_31",
       "streamUrl": "http://example.com/stream/ch_31_24.m3u8"
     },
@@ -11309,7 +11309,7 @@
       "num": 1229,
       "name": "Test Channel 31-29",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_31",
       "streamUrl": "http://example.com/stream/ch_31_29.m3u8"
     },
@@ -11345,7 +11345,7 @@
       "num": 1233,
       "name": "Test Channel 31-33",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_31",
       "streamUrl": "http://example.com/stream/ch_31_33.m3u8"
     },
@@ -11390,7 +11390,7 @@
       "num": 1238,
       "name": "Test Channel 31-38",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_31",
       "streamUrl": "http://example.com/stream/ch_31_38.m3u8"
     },
@@ -11399,7 +11399,7 @@
       "num": 1239,
       "name": "Test Channel 31-39",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_31",
       "streamUrl": "http://example.com/stream/ch_31_39.m3u8"
     },
@@ -11408,7 +11408,7 @@
       "num": 1240,
       "name": "Test Channel 31-40",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_31",
       "streamUrl": "http://example.com/stream/ch_31_40.m3u8"
     },
@@ -11417,7 +11417,7 @@
       "num": 1241,
       "name": "Test Channel 32-1",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_32",
       "streamUrl": "http://example.com/stream/ch_32_1.m3u8"
     },
@@ -11426,7 +11426,7 @@
       "num": 1242,
       "name": "Test Channel 32-2",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_32",
       "streamUrl": "http://example.com/stream/ch_32_2.m3u8"
     },
@@ -11435,7 +11435,7 @@
       "num": 1243,
       "name": "Test Channel 32-3",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_32",
       "streamUrl": "http://example.com/stream/ch_32_3.m3u8"
     },
@@ -11525,7 +11525,7 @@
       "num": 1253,
       "name": "Test Channel 32-13",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_32",
       "streamUrl": "http://example.com/stream/ch_32_13.m3u8"
     },
@@ -11552,7 +11552,7 @@
       "num": 1256,
       "name": "Test Channel 32-16",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_32",
       "streamUrl": "http://example.com/stream/ch_32_16.m3u8"
     },
@@ -11615,7 +11615,7 @@
       "num": 1263,
       "name": "Test Channel 32-23",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_32",
       "streamUrl": "http://example.com/stream/ch_32_23.m3u8"
     },
@@ -11624,7 +11624,7 @@
       "num": 1264,
       "name": "Test Channel 32-24",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_32",
       "streamUrl": "http://example.com/stream/ch_32_24.m3u8"
     },
@@ -11642,7 +11642,7 @@
       "num": 1266,
       "name": "Test Channel 32-26",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_32",
       "streamUrl": "http://example.com/stream/ch_32_26.m3u8"
     },
@@ -11759,7 +11759,7 @@
       "num": 1279,
       "name": "Test Channel 32-39",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_32",
       "streamUrl": "http://example.com/stream/ch_32_39.m3u8"
     },
@@ -11786,7 +11786,7 @@
       "num": 1282,
       "name": "Test Channel 33-2",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_33",
       "streamUrl": "http://example.com/stream/ch_33_2.m3u8"
     },
@@ -11795,7 +11795,7 @@
       "num": 1283,
       "name": "Test Channel 33-3",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_33",
       "streamUrl": "http://example.com/stream/ch_33_3.m3u8"
     },
@@ -11804,7 +11804,7 @@
       "num": 1284,
       "name": "Test Channel 33-4",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_33",
       "streamUrl": "http://example.com/stream/ch_33_4.m3u8"
     },
@@ -11858,7 +11858,7 @@
       "num": 1290,
       "name": "Test Channel 33-10",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_33",
       "streamUrl": "http://example.com/stream/ch_33_10.m3u8"
     },
@@ -11930,7 +11930,7 @@
       "num": 1298,
       "name": "Test Channel 33-18",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_33",
       "streamUrl": "http://example.com/stream/ch_33_18.m3u8"
     },
@@ -11975,7 +11975,7 @@
       "num": 1303,
       "name": "Test Channel 33-23",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_33",
       "streamUrl": "http://example.com/stream/ch_33_23.m3u8"
     },
@@ -12011,7 +12011,7 @@
       "num": 1307,
       "name": "Test Channel 33-27",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_33",
       "streamUrl": "http://example.com/stream/ch_33_27.m3u8"
     },
@@ -12146,7 +12146,7 @@
       "num": 1322,
       "name": "Test Channel 34-2",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_34",
       "streamUrl": "http://example.com/stream/ch_34_2.m3u8"
     },
@@ -12173,7 +12173,7 @@
       "num": 1325,
       "name": "Test Channel 34-5",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_34",
       "streamUrl": "http://example.com/stream/ch_34_5.m3u8"
     },
@@ -12191,7 +12191,7 @@
       "num": 1327,
       "name": "Test Channel 34-7",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_34",
       "streamUrl": "http://example.com/stream/ch_34_7.m3u8"
     },
@@ -12200,7 +12200,7 @@
       "num": 1328,
       "name": "Test Channel 34-8",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_34",
       "streamUrl": "http://example.com/stream/ch_34_8.m3u8"
     },
@@ -12290,7 +12290,7 @@
       "num": 1338,
       "name": "Test Channel 34-18",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_34",
       "streamUrl": "http://example.com/stream/ch_34_18.m3u8"
     },
@@ -12308,7 +12308,7 @@
       "num": 1340,
       "name": "Test Channel 34-20",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_34",
       "streamUrl": "http://example.com/stream/ch_34_20.m3u8"
     },
@@ -12335,7 +12335,7 @@
       "num": 1343,
       "name": "Test Channel 34-23",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_34",
       "streamUrl": "http://example.com/stream/ch_34_23.m3u8"
     },
@@ -12362,7 +12362,7 @@
       "num": 1346,
       "name": "Test Channel 34-26",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_34",
       "streamUrl": "http://example.com/stream/ch_34_26.m3u8"
     },
@@ -12389,7 +12389,7 @@
       "num": 1349,
       "name": "Test Channel 34-29",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_34",
       "streamUrl": "http://example.com/stream/ch_34_29.m3u8"
     },
@@ -12434,7 +12434,7 @@
       "num": 1354,
       "name": "Test Channel 34-34",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_34",
       "streamUrl": "http://example.com/stream/ch_34_34.m3u8"
     },
@@ -12443,7 +12443,7 @@
       "num": 1355,
       "name": "Test Channel 34-35",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_34",
       "streamUrl": "http://example.com/stream/ch_34_35.m3u8"
     },
@@ -12488,7 +12488,7 @@
       "num": 1360,
       "name": "Test Channel 34-40",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_34",
       "streamUrl": "http://example.com/stream/ch_34_40.m3u8"
     },
@@ -12533,7 +12533,7 @@
       "num": 1365,
       "name": "Test Channel 35-5",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_5.m3u8"
     },
@@ -12596,7 +12596,7 @@
       "num": 1372,
       "name": "Test Channel 35-12",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_12.m3u8"
     },
@@ -12614,7 +12614,7 @@
       "num": 1374,
       "name": "Test Channel 35-14",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_14.m3u8"
     },
@@ -12623,7 +12623,7 @@
       "num": 1375,
       "name": "Test Channel 35-15",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_15.m3u8"
     },
@@ -12641,7 +12641,7 @@
       "num": 1377,
       "name": "Test Channel 35-17",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_17.m3u8"
     },
@@ -12668,7 +12668,7 @@
       "num": 1380,
       "name": "Test Channel 35-20",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_20.m3u8"
     },
@@ -12677,7 +12677,7 @@
       "num": 1381,
       "name": "Test Channel 35-21",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_21.m3u8"
     },
@@ -12686,7 +12686,7 @@
       "num": 1382,
       "name": "Test Channel 35-22",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_22.m3u8"
     },
@@ -12704,7 +12704,7 @@
       "num": 1384,
       "name": "Test Channel 35-24",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_24.m3u8"
     },
@@ -12740,7 +12740,7 @@
       "num": 1388,
       "name": "Test Channel 35-28",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_28.m3u8"
     },
@@ -12758,7 +12758,7 @@
       "num": 1390,
       "name": "Test Channel 35-30",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_30.m3u8"
     },
@@ -12794,7 +12794,7 @@
       "num": 1394,
       "name": "Test Channel 35-34",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_34.m3u8"
     },
@@ -12812,7 +12812,7 @@
       "num": 1396,
       "name": "Test Channel 35-36",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_36.m3u8"
     },
@@ -12821,7 +12821,7 @@
       "num": 1397,
       "name": "Test Channel 35-37",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_37.m3u8"
     },
@@ -12848,7 +12848,7 @@
       "num": 1400,
       "name": "Test Channel 35-40",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_35",
       "streamUrl": "http://example.com/stream/ch_35_40.m3u8"
     },
@@ -12875,7 +12875,7 @@
       "num": 1403,
       "name": "Test Channel 36-3",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_36",
       "streamUrl": "http://example.com/stream/ch_36_3.m3u8"
     },
@@ -12902,7 +12902,7 @@
       "num": 1406,
       "name": "Test Channel 36-6",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_36",
       "streamUrl": "http://example.com/stream/ch_36_6.m3u8"
     },
@@ -12983,7 +12983,7 @@
       "num": 1415,
       "name": "Test Channel 36-15",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_36",
       "streamUrl": "http://example.com/stream/ch_36_15.m3u8"
     },
@@ -13010,7 +13010,7 @@
       "num": 1418,
       "name": "Test Channel 36-18",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_36",
       "streamUrl": "http://example.com/stream/ch_36_18.m3u8"
     },
@@ -13019,7 +13019,7 @@
       "num": 1419,
       "name": "Test Channel 36-19",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_36",
       "streamUrl": "http://example.com/stream/ch_36_19.m3u8"
     },
@@ -13028,7 +13028,7 @@
       "num": 1420,
       "name": "Test Channel 36-20",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_36",
       "streamUrl": "http://example.com/stream/ch_36_20.m3u8"
     },
@@ -13037,7 +13037,7 @@
       "num": 1421,
       "name": "Test Channel 36-21",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_36",
       "streamUrl": "http://example.com/stream/ch_36_21.m3u8"
     },
@@ -13136,7 +13136,7 @@
       "num": 1432,
       "name": "Test Channel 36-32",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_36",
       "streamUrl": "http://example.com/stream/ch_36_32.m3u8"
     },
@@ -13199,7 +13199,7 @@
       "num": 1439,
       "name": "Test Channel 36-39",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_36",
       "streamUrl": "http://example.com/stream/ch_36_39.m3u8"
     },
@@ -13226,7 +13226,7 @@
       "num": 1442,
       "name": "Test Channel 37-2",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_37",
       "streamUrl": "http://example.com/stream/ch_37_2.m3u8"
     },
@@ -13271,7 +13271,7 @@
       "num": 1447,
       "name": "Test Channel 37-7",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_37",
       "streamUrl": "http://example.com/stream/ch_37_7.m3u8"
     },
@@ -13325,7 +13325,7 @@
       "num": 1453,
       "name": "Test Channel 37-13",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_37",
       "streamUrl": "http://example.com/stream/ch_37_13.m3u8"
     },
@@ -13334,7 +13334,7 @@
       "num": 1454,
       "name": "Test Channel 37-14",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_37",
       "streamUrl": "http://example.com/stream/ch_37_14.m3u8"
     },
@@ -13370,7 +13370,7 @@
       "num": 1458,
       "name": "Test Channel 37-18",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_37",
       "streamUrl": "http://example.com/stream/ch_37_18.m3u8"
     },
@@ -13379,7 +13379,7 @@
       "num": 1459,
       "name": "Test Channel 37-19",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_37",
       "streamUrl": "http://example.com/stream/ch_37_19.m3u8"
     },
@@ -13388,7 +13388,7 @@
       "num": 1460,
       "name": "Test Channel 37-20",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_37",
       "streamUrl": "http://example.com/stream/ch_37_20.m3u8"
     },
@@ -13397,7 +13397,7 @@
       "num": 1461,
       "name": "Test Channel 37-21",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_37",
       "streamUrl": "http://example.com/stream/ch_37_21.m3u8"
     },
@@ -13415,7 +13415,7 @@
       "num": 1463,
       "name": "Test Channel 37-23",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_37",
       "streamUrl": "http://example.com/stream/ch_37_23.m3u8"
     },
@@ -13442,7 +13442,7 @@
       "num": 1466,
       "name": "Test Channel 37-26",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_37",
       "streamUrl": "http://example.com/stream/ch_37_26.m3u8"
     },
@@ -13451,7 +13451,7 @@
       "num": 1467,
       "name": "Test Channel 37-27",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_37",
       "streamUrl": "http://example.com/stream/ch_37_27.m3u8"
     },
@@ -13460,7 +13460,7 @@
       "num": 1468,
       "name": "Test Channel 37-28",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_37",
       "streamUrl": "http://example.com/stream/ch_37_28.m3u8"
     },
@@ -13487,7 +13487,7 @@
       "num": 1471,
       "name": "Test Channel 37-31",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_37",
       "streamUrl": "http://example.com/stream/ch_37_31.m3u8"
     },
@@ -13496,7 +13496,7 @@
       "num": 1472,
       "name": "Test Channel 37-32",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_37",
       "streamUrl": "http://example.com/stream/ch_37_32.m3u8"
     },
@@ -13577,7 +13577,7 @@
       "num": 1481,
       "name": "Test Channel 38-1",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_38",
       "streamUrl": "http://example.com/stream/ch_38_1.m3u8"
     },
@@ -13649,7 +13649,7 @@
       "num": 1489,
       "name": "Test Channel 38-9",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_38",
       "streamUrl": "http://example.com/stream/ch_38_9.m3u8"
     },
@@ -13658,7 +13658,7 @@
       "num": 1490,
       "name": "Test Channel 38-10",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_38",
       "streamUrl": "http://example.com/stream/ch_38_10.m3u8"
     },
@@ -13676,7 +13676,7 @@
       "num": 1492,
       "name": "Test Channel 38-12",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_38",
       "streamUrl": "http://example.com/stream/ch_38_12.m3u8"
     },
@@ -13685,7 +13685,7 @@
       "num": 1493,
       "name": "Test Channel 38-13",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_38",
       "streamUrl": "http://example.com/stream/ch_38_13.m3u8"
     },
@@ -13739,7 +13739,7 @@
       "num": 1499,
       "name": "Test Channel 38-19",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_38",
       "streamUrl": "http://example.com/stream/ch_38_19.m3u8"
     },
@@ -13757,7 +13757,7 @@
       "num": 1501,
       "name": "Test Channel 38-21",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_38",
       "streamUrl": "http://example.com/stream/ch_38_21.m3u8"
     },
@@ -13775,7 +13775,7 @@
       "num": 1503,
       "name": "Test Channel 38-23",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_38",
       "streamUrl": "http://example.com/stream/ch_38_23.m3u8"
     },
@@ -13793,7 +13793,7 @@
       "num": 1505,
       "name": "Test Channel 38-25",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_38",
       "streamUrl": "http://example.com/stream/ch_38_25.m3u8"
     },
@@ -13838,7 +13838,7 @@
       "num": 1510,
       "name": "Test Channel 38-30",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_38",
       "streamUrl": "http://example.com/stream/ch_38_30.m3u8"
     },
@@ -13847,7 +13847,7 @@
       "num": 1511,
       "name": "Test Channel 38-31",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_38",
       "streamUrl": "http://example.com/stream/ch_38_31.m3u8"
     },
@@ -13910,7 +13910,7 @@
       "num": 1518,
       "name": "Test Channel 38-38",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_38",
       "streamUrl": "http://example.com/stream/ch_38_38.m3u8"
     },
@@ -13928,7 +13928,7 @@
       "num": 1520,
       "name": "Test Channel 38-40",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_38",
       "streamUrl": "http://example.com/stream/ch_38_40.m3u8"
     },
@@ -13937,7 +13937,7 @@
       "num": 1521,
       "name": "Test Channel 39-1",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_39",
       "streamUrl": "http://example.com/stream/ch_39_1.m3u8"
     },
@@ -13946,7 +13946,7 @@
       "num": 1522,
       "name": "Test Channel 39-2",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_39",
       "streamUrl": "http://example.com/stream/ch_39_2.m3u8"
     },
@@ -13955,7 +13955,7 @@
       "num": 1523,
       "name": "Test Channel 39-3",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_39",
       "streamUrl": "http://example.com/stream/ch_39_3.m3u8"
     },
@@ -14027,7 +14027,7 @@
       "num": 1531,
       "name": "Test Channel 39-11",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_39",
       "streamUrl": "http://example.com/stream/ch_39_11.m3u8"
     },
@@ -14072,7 +14072,7 @@
       "num": 1536,
       "name": "Test Channel 39-16",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_39",
       "streamUrl": "http://example.com/stream/ch_39_16.m3u8"
     },
@@ -14090,7 +14090,7 @@
       "num": 1538,
       "name": "Test Channel 39-18",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_39",
       "streamUrl": "http://example.com/stream/ch_39_18.m3u8"
     },
@@ -14108,7 +14108,7 @@
       "num": 1540,
       "name": "Test Channel 39-20",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_39",
       "streamUrl": "http://example.com/stream/ch_39_20.m3u8"
     },
@@ -14126,7 +14126,7 @@
       "num": 1542,
       "name": "Test Channel 39-22",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_39",
       "streamUrl": "http://example.com/stream/ch_39_22.m3u8"
     },
@@ -14171,7 +14171,7 @@
       "num": 1547,
       "name": "Test Channel 39-27",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_39",
       "streamUrl": "http://example.com/stream/ch_39_27.m3u8"
     },
@@ -14180,7 +14180,7 @@
       "num": 1548,
       "name": "Test Channel 39-28",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_39",
       "streamUrl": "http://example.com/stream/ch_39_28.m3u8"
     },
@@ -14198,7 +14198,7 @@
       "num": 1550,
       "name": "Test Channel 39-30",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_39",
       "streamUrl": "http://example.com/stream/ch_39_30.m3u8"
     },
@@ -14234,7 +14234,7 @@
       "num": 1554,
       "name": "Test Channel 39-34",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_39",
       "streamUrl": "http://example.com/stream/ch_39_34.m3u8"
     },
@@ -14243,7 +14243,7 @@
       "num": 1555,
       "name": "Test Channel 39-35",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_39",
       "streamUrl": "http://example.com/stream/ch_39_35.m3u8"
     },
@@ -14297,7 +14297,7 @@
       "num": 1561,
       "name": "Test Channel 40-1",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_40",
       "streamUrl": "http://example.com/stream/ch_40_1.m3u8"
     },
@@ -14306,7 +14306,7 @@
       "num": 1562,
       "name": "Test Channel 40-2",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_40",
       "streamUrl": "http://example.com/stream/ch_40_2.m3u8"
     },
@@ -14315,7 +14315,7 @@
       "num": 1563,
       "name": "Test Channel 40-3",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_40",
       "streamUrl": "http://example.com/stream/ch_40_3.m3u8"
     },
@@ -14378,7 +14378,7 @@
       "num": 1570,
       "name": "Test Channel 40-10",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_40",
       "streamUrl": "http://example.com/stream/ch_40_10.m3u8"
     },
@@ -14396,7 +14396,7 @@
       "num": 1572,
       "name": "Test Channel 40-12",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_40",
       "streamUrl": "http://example.com/stream/ch_40_12.m3u8"
     },
@@ -14414,7 +14414,7 @@
       "num": 1574,
       "name": "Test Channel 40-14",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_40",
       "streamUrl": "http://example.com/stream/ch_40_14.m3u8"
     },
@@ -14432,7 +14432,7 @@
       "num": 1576,
       "name": "Test Channel 40-16",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_40",
       "streamUrl": "http://example.com/stream/ch_40_16.m3u8"
     },
@@ -14468,7 +14468,7 @@
       "num": 1580,
       "name": "Test Channel 40-20",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_40",
       "streamUrl": "http://example.com/stream/ch_40_20.m3u8"
     },
@@ -14504,7 +14504,7 @@
       "num": 1584,
       "name": "Test Channel 40-24",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_40",
       "streamUrl": "http://example.com/stream/ch_40_24.m3u8"
     },
@@ -14522,7 +14522,7 @@
       "num": 1586,
       "name": "Test Channel 40-26",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_40",
       "streamUrl": "http://example.com/stream/ch_40_26.m3u8"
     },
@@ -14576,7 +14576,7 @@
       "num": 1592,
       "name": "Test Channel 40-32",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_40",
       "streamUrl": "http://example.com/stream/ch_40_32.m3u8"
     },
@@ -14603,7 +14603,7 @@
       "num": 1595,
       "name": "Test Channel 40-35",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_40",
       "streamUrl": "http://example.com/stream/ch_40_35.m3u8"
     },
@@ -14621,7 +14621,7 @@
       "num": 1597,
       "name": "Test Channel 40-37",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_40",
       "streamUrl": "http://example.com/stream/ch_40_37.m3u8"
     },
@@ -14666,7 +14666,7 @@
       "num": 1602,
       "name": "Test Channel 41-2",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_41",
       "streamUrl": "http://example.com/stream/ch_41_2.m3u8"
     },
@@ -14684,7 +14684,7 @@
       "num": 1604,
       "name": "Test Channel 41-4",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_41",
       "streamUrl": "http://example.com/stream/ch_41_4.m3u8"
     },
@@ -14693,7 +14693,7 @@
       "num": 1605,
       "name": "Test Channel 41-5",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_41",
       "streamUrl": "http://example.com/stream/ch_41_5.m3u8"
     },
@@ -14711,7 +14711,7 @@
       "num": 1607,
       "name": "Test Channel 41-7",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_41",
       "streamUrl": "http://example.com/stream/ch_41_7.m3u8"
     },
@@ -14720,7 +14720,7 @@
       "num": 1608,
       "name": "Test Channel 41-8",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_41",
       "streamUrl": "http://example.com/stream/ch_41_8.m3u8"
     },
@@ -14765,7 +14765,7 @@
       "num": 1613,
       "name": "Test Channel 41-13",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_41",
       "streamUrl": "http://example.com/stream/ch_41_13.m3u8"
     },
@@ -14783,7 +14783,7 @@
       "num": 1615,
       "name": "Test Channel 41-15",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_41",
       "streamUrl": "http://example.com/stream/ch_41_15.m3u8"
     },
@@ -14792,7 +14792,7 @@
       "num": 1616,
       "name": "Test Channel 41-16",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_41",
       "streamUrl": "http://example.com/stream/ch_41_16.m3u8"
     },
@@ -14828,7 +14828,7 @@
       "num": 1620,
       "name": "Test Channel 41-20",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_41",
       "streamUrl": "http://example.com/stream/ch_41_20.m3u8"
     },
@@ -14846,7 +14846,7 @@
       "num": 1622,
       "name": "Test Channel 41-22",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_41",
       "streamUrl": "http://example.com/stream/ch_41_22.m3u8"
     },
@@ -14873,7 +14873,7 @@
       "num": 1625,
       "name": "Test Channel 41-25",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_41",
       "streamUrl": "http://example.com/stream/ch_41_25.m3u8"
     },
@@ -14891,7 +14891,7 @@
       "num": 1627,
       "name": "Test Channel 41-27",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_41",
       "streamUrl": "http://example.com/stream/ch_41_27.m3u8"
     },
@@ -14909,7 +14909,7 @@
       "num": 1629,
       "name": "Test Channel 41-29",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_41",
       "streamUrl": "http://example.com/stream/ch_41_29.m3u8"
     },
@@ -15026,7 +15026,7 @@
       "num": 1642,
       "name": "Test Channel 42-2",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_2.m3u8"
     },
@@ -15044,7 +15044,7 @@
       "num": 1644,
       "name": "Test Channel 42-4",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_4.m3u8"
     },
@@ -15062,7 +15062,7 @@
       "num": 1646,
       "name": "Test Channel 42-6",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_6.m3u8"
     },
@@ -15071,7 +15071,7 @@
       "num": 1647,
       "name": "Test Channel 42-7",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_7.m3u8"
     },
@@ -15089,7 +15089,7 @@
       "num": 1649,
       "name": "Test Channel 42-9",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_9.m3u8"
     },
@@ -15107,7 +15107,7 @@
       "num": 1651,
       "name": "Test Channel 42-11",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_11.m3u8"
     },
@@ -15179,7 +15179,7 @@
       "num": 1659,
       "name": "Test Channel 42-19",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_19.m3u8"
     },
@@ -15206,7 +15206,7 @@
       "num": 1662,
       "name": "Test Channel 42-22",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_22.m3u8"
     },
@@ -15233,7 +15233,7 @@
       "num": 1665,
       "name": "Test Channel 42-25",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_25.m3u8"
     },
@@ -15269,7 +15269,7 @@
       "num": 1669,
       "name": "Test Channel 42-29",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_29.m3u8"
     },
@@ -15278,7 +15278,7 @@
       "num": 1670,
       "name": "Test Channel 42-30",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_30.m3u8"
     },
@@ -15296,7 +15296,7 @@
       "num": 1672,
       "name": "Test Channel 42-32",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_32.m3u8"
     },
@@ -15314,7 +15314,7 @@
       "num": 1674,
       "name": "Test Channel 42-34",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_34.m3u8"
     },
@@ -15323,7 +15323,7 @@
       "num": 1675,
       "name": "Test Channel 42-35",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_35.m3u8"
     },
@@ -15332,7 +15332,7 @@
       "num": 1676,
       "name": "Test Channel 42-36",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_36.m3u8"
     },
@@ -15359,7 +15359,7 @@
       "num": 1679,
       "name": "Test Channel 42-39",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_39.m3u8"
     },
@@ -15368,7 +15368,7 @@
       "num": 1680,
       "name": "Test Channel 42-40",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_42",
       "streamUrl": "http://example.com/stream/ch_42_40.m3u8"
     },
@@ -15377,7 +15377,7 @@
       "num": 1681,
       "name": "Test Channel 43-1",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_43",
       "streamUrl": "http://example.com/stream/ch_43_1.m3u8"
     },
@@ -15395,7 +15395,7 @@
       "num": 1683,
       "name": "Test Channel 43-3",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_43",
       "streamUrl": "http://example.com/stream/ch_43_3.m3u8"
     },
@@ -15422,7 +15422,7 @@
       "num": 1686,
       "name": "Test Channel 43-6",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_43",
       "streamUrl": "http://example.com/stream/ch_43_6.m3u8"
     },
@@ -15440,7 +15440,7 @@
       "num": 1688,
       "name": "Test Channel 43-8",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_43",
       "streamUrl": "http://example.com/stream/ch_43_8.m3u8"
     },
@@ -15449,7 +15449,7 @@
       "num": 1689,
       "name": "Test Channel 43-9",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_43",
       "streamUrl": "http://example.com/stream/ch_43_9.m3u8"
     },
@@ -15467,7 +15467,7 @@
       "num": 1691,
       "name": "Test Channel 43-11",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_43",
       "streamUrl": "http://example.com/stream/ch_43_11.m3u8"
     },
@@ -15485,7 +15485,7 @@
       "num": 1693,
       "name": "Test Channel 43-13",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_43",
       "streamUrl": "http://example.com/stream/ch_43_13.m3u8"
     },
@@ -15503,7 +15503,7 @@
       "num": 1695,
       "name": "Test Channel 43-15",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_43",
       "streamUrl": "http://example.com/stream/ch_43_15.m3u8"
     },
@@ -15557,7 +15557,7 @@
       "num": 1701,
       "name": "Test Channel 43-21",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_43",
       "streamUrl": "http://example.com/stream/ch_43_21.m3u8"
     },
@@ -15593,7 +15593,7 @@
       "num": 1705,
       "name": "Test Channel 43-25",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_43",
       "streamUrl": "http://example.com/stream/ch_43_25.m3u8"
     },
@@ -15638,7 +15638,7 @@
       "num": 1710,
       "name": "Test Channel 43-30",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_43",
       "streamUrl": "http://example.com/stream/ch_43_30.m3u8"
     },
@@ -15764,7 +15764,7 @@
       "num": 1724,
       "name": "Test Channel 44-4",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_44",
       "streamUrl": "http://example.com/stream/ch_44_4.m3u8"
     },
@@ -15800,7 +15800,7 @@
       "num": 1728,
       "name": "Test Channel 44-8",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_44",
       "streamUrl": "http://example.com/stream/ch_44_8.m3u8"
     },
@@ -15836,7 +15836,7 @@
       "num": 1732,
       "name": "Test Channel 44-12",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_44",
       "streamUrl": "http://example.com/stream/ch_44_12.m3u8"
     },
@@ -15854,7 +15854,7 @@
       "num": 1734,
       "name": "Test Channel 44-14",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_44",
       "streamUrl": "http://example.com/stream/ch_44_14.m3u8"
     },
@@ -15908,7 +15908,7 @@
       "num": 1740,
       "name": "Test Channel 44-20",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_44",
       "streamUrl": "http://example.com/stream/ch_44_20.m3u8"
     },
@@ -15935,7 +15935,7 @@
       "num": 1743,
       "name": "Test Channel 44-23",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_44",
       "streamUrl": "http://example.com/stream/ch_44_23.m3u8"
     },
@@ -15953,7 +15953,7 @@
       "num": 1745,
       "name": "Test Channel 44-25",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_44",
       "streamUrl": "http://example.com/stream/ch_44_25.m3u8"
     },
@@ -15998,7 +15998,7 @@
       "num": 1750,
       "name": "Test Channel 44-30",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_44",
       "streamUrl": "http://example.com/stream/ch_44_30.m3u8"
     },
@@ -16007,7 +16007,7 @@
       "num": 1751,
       "name": "Test Channel 44-31",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_44",
       "streamUrl": "http://example.com/stream/ch_44_31.m3u8"
     },
@@ -16043,7 +16043,7 @@
       "num": 1755,
       "name": "Test Channel 44-35",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_44",
       "streamUrl": "http://example.com/stream/ch_44_35.m3u8"
     },
@@ -16115,7 +16115,7 @@
       "num": 1763,
       "name": "Test Channel 45-3",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_45",
       "streamUrl": "http://example.com/stream/ch_45_3.m3u8"
     },
@@ -16169,7 +16169,7 @@
       "num": 1769,
       "name": "Test Channel 45-9",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_45",
       "streamUrl": "http://example.com/stream/ch_45_9.m3u8"
     },
@@ -16205,7 +16205,7 @@
       "num": 1773,
       "name": "Test Channel 45-13",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_45",
       "streamUrl": "http://example.com/stream/ch_45_13.m3u8"
     },
@@ -16232,7 +16232,7 @@
       "num": 1776,
       "name": "Test Channel 45-16",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_45",
       "streamUrl": "http://example.com/stream/ch_45_16.m3u8"
     },
@@ -16250,7 +16250,7 @@
       "num": 1778,
       "name": "Test Channel 45-18",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_45",
       "streamUrl": "http://example.com/stream/ch_45_18.m3u8"
     },
@@ -16304,7 +16304,7 @@
       "num": 1784,
       "name": "Test Channel 45-24",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_45",
       "streamUrl": "http://example.com/stream/ch_45_24.m3u8"
     },
@@ -16331,7 +16331,7 @@
       "num": 1787,
       "name": "Test Channel 45-27",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_45",
       "streamUrl": "http://example.com/stream/ch_45_27.m3u8"
     },
@@ -16349,7 +16349,7 @@
       "num": 1789,
       "name": "Test Channel 45-29",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_45",
       "streamUrl": "http://example.com/stream/ch_45_29.m3u8"
     },
@@ -16358,7 +16358,7 @@
       "num": 1790,
       "name": "Test Channel 45-30",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_45",
       "streamUrl": "http://example.com/stream/ch_45_30.m3u8"
     },
@@ -16367,7 +16367,7 @@
       "num": 1791,
       "name": "Test Channel 45-31",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_45",
       "streamUrl": "http://example.com/stream/ch_45_31.m3u8"
     },
@@ -16385,7 +16385,7 @@
       "num": 1793,
       "name": "Test Channel 45-33",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_45",
       "streamUrl": "http://example.com/stream/ch_45_33.m3u8"
     },
@@ -16394,7 +16394,7 @@
       "num": 1794,
       "name": "Test Channel 45-34",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_45",
       "streamUrl": "http://example.com/stream/ch_45_34.m3u8"
     },
@@ -16403,7 +16403,7 @@
       "num": 1795,
       "name": "Test Channel 45-35",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_45",
       "streamUrl": "http://example.com/stream/ch_45_35.m3u8"
     },
@@ -16412,7 +16412,7 @@
       "num": 1796,
       "name": "Test Channel 45-36",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_45",
       "streamUrl": "http://example.com/stream/ch_45_36.m3u8"
     },
@@ -16475,7 +16475,7 @@
       "num": 1803,
       "name": "Test Channel 46-3",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_46",
       "streamUrl": "http://example.com/stream/ch_46_3.m3u8"
     },
@@ -16511,7 +16511,7 @@
       "num": 1807,
       "name": "Test Channel 46-7",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_46",
       "streamUrl": "http://example.com/stream/ch_46_7.m3u8"
     },
@@ -16655,7 +16655,7 @@
       "num": 1823,
       "name": "Test Channel 46-23",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_46",
       "streamUrl": "http://example.com/stream/ch_46_23.m3u8"
     },
@@ -16700,7 +16700,7 @@
       "num": 1828,
       "name": "Test Channel 46-28",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_46",
       "streamUrl": "http://example.com/stream/ch_46_28.m3u8"
     },
@@ -16709,7 +16709,7 @@
       "num": 1829,
       "name": "Test Channel 46-29",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_46",
       "streamUrl": "http://example.com/stream/ch_46_29.m3u8"
     },
@@ -16718,7 +16718,7 @@
       "num": 1830,
       "name": "Test Channel 46-30",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_46",
       "streamUrl": "http://example.com/stream/ch_46_30.m3u8"
     },
@@ -16736,7 +16736,7 @@
       "num": 1832,
       "name": "Test Channel 46-32",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_46",
       "streamUrl": "http://example.com/stream/ch_46_32.m3u8"
     },
@@ -16745,7 +16745,7 @@
       "num": 1833,
       "name": "Test Channel 46-33",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_46",
       "streamUrl": "http://example.com/stream/ch_46_33.m3u8"
     },
@@ -16754,7 +16754,7 @@
       "num": 1834,
       "name": "Test Channel 46-34",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_46",
       "streamUrl": "http://example.com/stream/ch_46_34.m3u8"
     },
@@ -16772,7 +16772,7 @@
       "num": 1836,
       "name": "Test Channel 46-36",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_46",
       "streamUrl": "http://example.com/stream/ch_46_36.m3u8"
     },
@@ -16961,7 +16961,7 @@
       "num": 1857,
       "name": "Test Channel 47-17",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_47",
       "streamUrl": "http://example.com/stream/ch_47_17.m3u8"
     },
@@ -17051,7 +17051,7 @@
       "num": 1867,
       "name": "Test Channel 47-27",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_47",
       "streamUrl": "http://example.com/stream/ch_47_27.m3u8"
     },
@@ -17150,7 +17150,7 @@
       "num": 1878,
       "name": "Test Channel 47-38",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_47",
       "streamUrl": "http://example.com/stream/ch_47_38.m3u8"
     },
@@ -17168,7 +17168,7 @@
       "num": 1880,
       "name": "Test Channel 47-40",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_47",
       "streamUrl": "http://example.com/stream/ch_47_40.m3u8"
     },
@@ -17204,7 +17204,7 @@
       "num": 1884,
       "name": "Test Channel 48-4",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_4.m3u8"
     },
@@ -17213,7 +17213,7 @@
       "num": 1885,
       "name": "Test Channel 48-5",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_5.m3u8"
     },
@@ -17231,7 +17231,7 @@
       "num": 1887,
       "name": "Test Channel 48-7",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_7.m3u8"
     },
@@ -17258,7 +17258,7 @@
       "num": 1890,
       "name": "Test Channel 48-10",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_10.m3u8"
     },
@@ -17267,7 +17267,7 @@
       "num": 1891,
       "name": "Test Channel 48-11",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_11.m3u8"
     },
@@ -17276,7 +17276,7 @@
       "num": 1892,
       "name": "Test Channel 48-12",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_12.m3u8"
     },
@@ -17285,7 +17285,7 @@
       "num": 1893,
       "name": "Test Channel 48-13",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_13.m3u8"
     },
@@ -17303,7 +17303,7 @@
       "num": 1895,
       "name": "Test Channel 48-15",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_15.m3u8"
     },
@@ -17321,7 +17321,7 @@
       "num": 1897,
       "name": "Test Channel 48-17",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_17.m3u8"
     },
@@ -17384,7 +17384,7 @@
       "num": 1904,
       "name": "Test Channel 48-24",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_24.m3u8"
     },
@@ -17393,7 +17393,7 @@
       "num": 1905,
       "name": "Test Channel 48-25",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_25.m3u8"
     },
@@ -17429,7 +17429,7 @@
       "num": 1909,
       "name": "Test Channel 48-29",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_29.m3u8"
     },
@@ -17438,7 +17438,7 @@
       "num": 1910,
       "name": "Test Channel 48-30",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_30.m3u8"
     },
@@ -17474,7 +17474,7 @@
       "num": 1914,
       "name": "Test Channel 48-34",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_34.m3u8"
     },
@@ -17510,7 +17510,7 @@
       "num": 1918,
       "name": "Test Channel 48-38",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_48",
       "streamUrl": "http://example.com/stream/ch_48_38.m3u8"
     },
@@ -17537,7 +17537,7 @@
       "num": 1921,
       "name": "Test Channel 49-1",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_1.m3u8"
     },
@@ -17555,7 +17555,7 @@
       "num": 1923,
       "name": "Test Channel 49-3",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_3.m3u8"
     },
@@ -17573,7 +17573,7 @@
       "num": 1925,
       "name": "Test Channel 49-5",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_5.m3u8"
     },
@@ -17582,7 +17582,7 @@
       "num": 1926,
       "name": "Test Channel 49-6",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_6.m3u8"
     },
@@ -17618,7 +17618,7 @@
       "num": 1930,
       "name": "Test Channel 49-10",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_10.m3u8"
     },
@@ -17645,7 +17645,7 @@
       "num": 1933,
       "name": "Test Channel 49-13",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_13.m3u8"
     },
@@ -17726,7 +17726,7 @@
       "num": 1942,
       "name": "Test Channel 49-22",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_22.m3u8"
     },
@@ -17735,7 +17735,7 @@
       "num": 1943,
       "name": "Test Channel 49-23",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_23.m3u8"
     },
@@ -17744,7 +17744,7 @@
       "num": 1944,
       "name": "Test Channel 49-24",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_24.m3u8"
     },
@@ -17762,7 +17762,7 @@
       "num": 1946,
       "name": "Test Channel 49-26",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_26.m3u8"
     },
@@ -17780,7 +17780,7 @@
       "num": 1948,
       "name": "Test Channel 49-28",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_28.m3u8"
     },
@@ -17789,7 +17789,7 @@
       "num": 1949,
       "name": "Test Channel 49-29",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_29.m3u8"
     },
@@ -17816,7 +17816,7 @@
       "num": 1952,
       "name": "Test Channel 49-32",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_32.m3u8"
     },
@@ -17843,7 +17843,7 @@
       "num": 1955,
       "name": "Test Channel 49-35",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_35.m3u8"
     },
@@ -17852,7 +17852,7 @@
       "num": 1956,
       "name": "Test Channel 49-36",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_49",
       "streamUrl": "http://example.com/stream/ch_49_36.m3u8"
     },
@@ -17906,7 +17906,7 @@
       "num": 1962,
       "name": "Test Channel 50-2",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_50",
       "streamUrl": "http://example.com/stream/ch_50_2.m3u8"
     },
@@ -17924,7 +17924,7 @@
       "num": 1964,
       "name": "Test Channel 50-4",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_50",
       "streamUrl": "http://example.com/stream/ch_50_4.m3u8"
     },
@@ -17933,7 +17933,7 @@
       "num": 1965,
       "name": "Test Channel 50-5",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_50",
       "streamUrl": "http://example.com/stream/ch_50_5.m3u8"
     },
@@ -17969,7 +17969,7 @@
       "num": 1969,
       "name": "Test Channel 50-9",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_50",
       "streamUrl": "http://example.com/stream/ch_50_9.m3u8"
     },
@@ -18005,7 +18005,7 @@
       "num": 1973,
       "name": "Test Channel 50-13",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_50",
       "streamUrl": "http://example.com/stream/ch_50_13.m3u8"
     },
@@ -18077,7 +18077,7 @@
       "num": 1981,
       "name": "Test Channel 50-21",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_50",
       "streamUrl": "http://example.com/stream/ch_50_21.m3u8"
     },
@@ -18122,7 +18122,7 @@
       "num": 1986,
       "name": "Test Channel 50-26",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_50",
       "streamUrl": "http://example.com/stream/ch_50_26.m3u8"
     },
@@ -18131,7 +18131,7 @@
       "num": 1987,
       "name": "Test Channel 50-27",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_50",
       "streamUrl": "http://example.com/stream/ch_50_27.m3u8"
     },
@@ -18158,7 +18158,7 @@
       "num": 1990,
       "name": "Test Channel 50-30",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_50",
       "streamUrl": "http://example.com/stream/ch_50_30.m3u8"
     },
@@ -18167,7 +18167,7 @@
       "num": 1991,
       "name": "Test Channel 50-31",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_50",
       "streamUrl": "http://example.com/stream/ch_50_31.m3u8"
     },
@@ -18194,7 +18194,7 @@
       "num": 1994,
       "name": "Test Channel 50-34",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_50",
       "streamUrl": "http://example.com/stream/ch_50_34.m3u8"
     },
@@ -18212,7 +18212,7 @@
       "num": 1996,
       "name": "Test Channel 50-36",
       "icon": null,
-      "isLive": false,
+      "isLive": true,
       "categoryId": "cat_50",
       "streamUrl": "http://example.com/stream/ch_50_36.m3u8"
     },
@@ -18239,7 +18239,7 @@
       "num": 1999,
       "name": "Test Channel 50-39",
       "icon": null,
-      "isLive": true,
+      "isLive": false,
       "categoryId": "cat_50",
       "streamUrl": "http://example.com/stream/ch_50_39.m3u8"
     },

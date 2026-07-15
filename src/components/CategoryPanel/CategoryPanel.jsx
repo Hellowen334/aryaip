@@ -46,7 +46,7 @@ export default function CategoryPanel(props) {
     fixedFilters = [
       { id: 'recently-viewed', name: 'Recently Viewed', count: 0 },
     ];
-  } else if (type === 'movies') {
+  } else if (type === 'movies' || type === 'series') {
     fixedFilters = [
       { id: 'resume-to', name: 'Resume to', count: 0 },
     ];
@@ -102,6 +102,25 @@ export default function CategoryPanel(props) {
     window.addEventListener('keydown', handleKey);
     return function() { window.removeEventListener('keydown', handleKey); };
   }, [isFocused, focusedIndex, allItems, onFocusChange, onExitRight, onExitLeft, onSelect]);
+
+  // Fokuslu kategori öğesini görünür alana kaydır
+  useEffect(function() {
+    if (!isFocused || !containerRef.current) return;
+    var container = containerRef.current;
+    var focusedEl = container.querySelector('.category-panel__item--focused');
+    if (focusedEl) {
+      var containerTop = container.scrollTop;
+      var containerBottom = containerTop + container.clientHeight;
+      var elemTop = focusedEl.offsetTop;
+      var elemBottom = elemTop + focusedEl.offsetHeight;
+
+      if (elemTop < containerTop) {
+        container.scrollTop = elemTop;
+      } else if (elemBottom > containerBottom) {
+        container.scrollTop = elemBottom - container.clientHeight;
+      }
+    }
+  }, [focusedIndex, isFocused]);
 
   // Separator index'i: sabit filtrelerin sonu
   var separatorAfter = fixedFilters.length - 1;

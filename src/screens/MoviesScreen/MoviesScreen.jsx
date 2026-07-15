@@ -29,13 +29,13 @@ var DEMO_CATEGORIES = [
 ];
 
 var DEMO_MOVIES = [
-  { id: 'm1', title: 'Demo News 1',    thumbnail: null, rating: '3.5', categoryId: 'news' },
-  { id: 'm2', title: 'Demo News 2',    thumbnail: null, rating: '3.5', categoryId: 'news' },
-  { id: 'm3', title: 'Demo Nature 1',  thumbnail: null, rating: '3.5', categoryId: 'nature' },
-  { id: 'm4', title: 'Demo Nature 2',  thumbnail: null, rating: '3.5', categoryId: 'nature' },
-  { id: 'm5', title: 'Demo Nature 3',  thumbnail: null, rating: '3.5', categoryId: 'nature' },
-  { id: 'm6', title: 'Demo Animals 1', thumbnail: null, rating: '3.5', categoryId: 'animals' },
-  { id: 'm7', title: 'Demo Animals 2', thumbnail: null, rating: '3.5', categoryId: 'animals' },
+  { id: 'm1', title: 'Demo News 1',    thumbnail: null, rating: '3.5', categoryId: 'news', streamUrl: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8' },
+  { id: 'm2', title: 'Demo News 2',    thumbnail: null, rating: '3.5', categoryId: 'news', streamUrl: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8' },
+  { id: 'm3', title: 'Demo Nature 1',  thumbnail: null, rating: '3.5', categoryId: 'nature', streamUrl: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8' },
+  { id: 'm4', title: 'Demo Nature 2',  thumbnail: null, rating: '3.5', categoryId: 'nature', streamUrl: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8' },
+  { id: 'm5', title: 'Demo Nature 3',  thumbnail: null, rating: '3.5', categoryId: 'nature', streamUrl: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8' },
+  { id: 'm6', title: 'Demo Animals 1', thumbnail: null, rating: '3.5', categoryId: 'animals', streamUrl: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8' },
+  { id: 'm7', title: 'Demo Animals 2', thumbnail: null, rating: '3.5', categoryId: 'animals', streamUrl: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8' },
 ];
 
 export default function MoviesScreen(props) {
@@ -45,24 +45,36 @@ export default function MoviesScreen(props) {
   var onExitLeft       = props.onExitLeft;
 
   // Fokus bölgesi
-  var zoneState = useState('grid');
-  var focusZone = zoneState[0];
-  var setFocusZone = zoneState[1];
+  var zoneState = useState(props.focusZone || 'grid');
+  var focusZone = props.focusZone !== undefined ? props.focusZone : zoneState[0];
+  var setFocusZone = function(val) {
+    zoneState[1](val);
+    if (props.onFocusZoneChange) props.onFocusZoneChange(val);
+  };
 
   // Seçili kategori
-  var catState = useState('all');
-  var selectedCategory = catState[0];
-  var setSelectedCategory = catState[1];
+  var catState = useState(props.selectedCategory || 'all');
+  var selectedCategory = props.selectedCategory !== undefined ? props.selectedCategory : catState[0];
+  var setSelectedCategory = function(val) {
+    catState[1](val);
+    if (props.onSelectedCategoryChange) props.onSelectedCategoryChange(val);
+  };
 
   // Kategori paneli fokus index
-  var catFocusState = useState(1); // 'All' başlangıç (index 1: resume-to=0, all=1)
-  var catFocusedIndex = catFocusState[0];
-  var setCatFocusedIndex = catFocusState[1];
+  var catFocusState = useState(props.focusedCatIndex !== undefined ? props.focusedCatIndex : 1); // 'All' başlangıç (index 1: resume-to=0, all=1)
+  var catFocusedIndex = props.focusedCatIndex !== undefined ? props.focusedCatIndex : catFocusState[0];
+  var setCatFocusedIndex = function(val) {
+    catFocusState[1](val);
+    if (props.onFocusedCatIndexChange) props.onFocusedCatIndexChange(val);
+  };
 
   // Grid fokus index
-  var gridFocusState = useState(0);
-  var gridFocusedIndex = gridFocusState[0];
-  var setGridFocusedIndex = gridFocusState[1];
+  var gridFocusState = useState(props.focusedGridIndex !== undefined ? props.focusedGridIndex : 0);
+  var gridFocusedIndex = props.focusedGridIndex !== undefined ? props.focusedGridIndex : gridFocusState[0];
+  var setGridFocusedIndex = function(val) {
+    gridFocusState[1](val);
+    if (props.onFocusedGridIndexChange) props.onFocusedGridIndexChange(val);
+  };
 
   // Kategori filtresi
   var filteredMovies = movies;
@@ -114,10 +126,12 @@ export default function MoviesScreen(props) {
           isFocused={isContentFocused && focusZone === 'grid'}
           onFocusChange={setGridFocusedIndex}
           onExitLeft={goToCategories}
-          columns={6}
-          containerHeight={500}
+          columns={4}
+          containerHeight={560}
           onSelect={function(movie) {
-            // TODO: film detay (sonraki faz)
+            if (props.onPlay && movie.streamUrl) {
+              props.onPlay(movie.streamUrl, movie.title, 'movie');
+            }
           }}
         />
       </div>

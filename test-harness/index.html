@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Arya IPTV Track Test Harness</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: #121212;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      width: 1280px;
+      height: 720px;
+      box-sizing: border-box;
+    }
+    h1 {
+      font-size: 24px;
+      margin-top: 0;
+      color: #00bcd4;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      height: 620px;
+      gap: 20px;
+    }
+    .left-panel {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .right-panel {
+      flex: 0.8;
+      display: flex;
+      flex-direction: column;
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 15px;
+    }
+    video {
+      width: 100%;
+      height: 360px;
+      background-color: #000;
+      border-radius: 6px;
+      border: 1px solid #444;
+    }
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #1a1a1a;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #333;
+    }
+    .control-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .label {
+      font-weight: bold;
+      color: #aaa;
+      min-width: 100px;
+    }
+    button {
+      background-color: #00bcd4;
+      color: black;
+      border: none;
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      outline: none;
+    }
+    button:hover {
+      background-color: #00e5ff;
+    }
+    button:focus {
+      outline: 3px solid #ffeb3b;
+    }
+    button:disabled {
+      background-color: #555;
+      color: #888;
+      cursor: not-allowed;
+    }
+    .track-btn {
+      background-color: #3f51b5;
+      color: white;
+    }
+    .track-btn:hover {
+      background-color: #5c6bc0;
+    }
+    .track-btn.active {
+      background-color: #4caf50;
+      color: white;
+    }
+    #log-container {
+      flex: 1;
+      overflow-y: auto;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 12px;
+      white-space: pre-wrap;
+      word-break: break-all;
+      background-color: #0d0d0d;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #222;
+      color: #00ff00;
+    }
+    .log-line {
+      margin-bottom: 4px;
+      border-bottom: 1px solid #1a1a1a;
+      padding-bottom: 2px;
+    }
+    .log-error {
+      color: #ff3333;
+    }
+    .log-success {
+      color: #00ff00;
+    }
+    .log-info {
+      color: #00b0ff;
+    }
+    .info-panel {
+      font-size: 13px;
+      color: #ccc;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <h1>Arya IPTV Track Test Harness</h1>
+  
+  <div class="container">
+    <div class="left-panel">
+      <!-- Video Element -->
+      <video id="test-video" controls autoplay playsinline></video>
+      
+      <!-- Controls -->
+      <div class="controls">
+        <div class="control-row">
+          <span class="label">Media:</span>
+          <button id="btn-load-tos">Load Tears of Steel (Multi-Audio MP4)</button>
+          <button id="btn-play-pause">Play / Pause</button>
+        </div>
+        
+        <div class="control-row" id="audio-tracks-row">
+          <span class="label">Audio Tracks:</span>
+          <span id="audio-status" style="color:#aaa;">No tracks detected</span>
+        </div>
+        
+        <div class="control-row" id="subtitle-tracks-row">
+          <span class="label">Subtitles:</span>
+          <span id="subtitle-status" style="color:#aaa;">No tracks detected</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="right-panel">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span style="font-weight:bold; font-size:16px;">Console Logs</span>
+        <button onclick="clearLogs()" style="padding:4px 8px; font-size:11px; background-color:#555; color:white;">Clear</button>
+      </div>
+      <div id="log-container"></div>
+      <div class="info-panel" style="margin-top:10px;">
+        <p><strong>Cihaz Bilgisi:</strong> <span id="user-agent-str"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Constants
+    const TEST_VIDEO_URL = "https://accurate-player-demo-assets.s3.eu-central-1.amazonaws.com/liden/ToS-multiaudio_fixed_w_subs.mp4";
+    
+    // Elements
+    const video = document.getElementById("test-video");
+    const logContainer = document.getElementById("log-container");
+    const userAgentStr = document.getElementById("user-agent-str");
+    
+    const btnLoadTos = document.getElementById("btn-load-tos");
+    const btnPlayPause = document.getElementById("btn-play-pause");
+    const audioTracksRow = document.getElementById("audio-tracks-row");
+    const subtitleTracksRow = document.getElementById("subtitle-tracks-row");
+    const audioStatus = document.getElementById("audio-status");
+    const subtitleStatus = document.getElementById("subtitle-status");
+
+    // Initialize User Agent
+    userAgentStr.textContent = navigator.userAgent;
+
+    // Helper functions for logging
+    function log(msg, type = "info") {
+      const line = document.createElement("div");
+      line.className = "log-line";
+      if (type === "error") line.classList.add("log-error");
+      if (type === "success") line.classList.add("log-success");
+      if (type === "info") line.classList.add("log-info");
+      
+      const time = new Date().toISOString().split('T')[1].slice(0, -1);
+      line.textContent = `[${time}] ${msg}`;
+      logContainer.appendChild(line);
+      logContainer.scrollTop = logContainer.scrollHeight;
+      console.log(`[Harness] ${msg}`);
+    }
+
+    function clearLogs() {
+      logContainer.innerHTML = "";
+      log("Logs cleared.");
+    }
+
+    // Video Events Logging
+    const events = ["loadstart", "loadedmetadata", "loadeddata", "play", "playing", "pause", "waiting", "seeking", "seeked", "error"];
+    events.forEach(evtName => {
+      video.addEventListener(evtName, (e) => {
+        if (evtName === "error") {
+          const err = video.error;
+          log(`Video Event: ERROR (code: ${err ? err.code : 'unknown'}, msg: ${err ? err.message : 'unknown'})`, "error");
+        } else if (evtName === "loadedmetadata") {
+          log(`Video Event: LOADEDMETADATA (duration: ${video.duration}s, readyState: ${video.readyState})`, "success");
+          queryTracks();
+        } else {
+          log(`Video Event: ${evtName.toUpperCase()} (readyState: ${video.readyState})`);
+        }
+      });
+    });
+
+    // Native sourceInfo detection on window / video elements
+    // Listen to custom webos events on video element
+    video.addEventListener("webos-sourceinfo", (e) => {
+      log(`DETECTED custom 'webos-sourceinfo' event! Detail: ${JSON.stringify(e.detail)}`, "success");
+    });
+    
+    video.addEventListener("sourceInfo", (e) => {
+      log(`DETECTED custom 'sourceInfo' event! Detail: ${JSON.stringify(e.detail || e)}`, "success");
+    });
+
+    // Log webOS objects if available
+    window.addEventListener("load", () => {
+      log("Window loaded. Checking webOS environment...");
+      if (window.webOS) {
+        log(`window.webOS detected! Keys: ${Object.keys(window.webOS).join(', ')}`, "success");
+      } else {
+        log("window.webOS NOT detected.");
+      }
+      if (window.webOSDev) {
+        log(`window.webOSDev detected! Keys: ${Object.keys(window.webOSDev).join(', ')}`, "success");
+      }
+    });
+
+    // Load Video
+    btnLoadTos.addEventListener("click", () => {
+      log(`Loading source: ${TEST_VIDEO_URL}`, "info");
+      video.src = TEST_VIDEO_URL;
+      video.load();
+      log("video.load() called.");
+    });
+
+    // Play / Pause
+    btnPlayPause.addEventListener("click", () => {
+      if (video.paused) {
+        video.play().then(() => {
+          log("Playback started.", "success");
+        }).catch(err => {
+          log(`Playback failed to start: ${err.message}`, "error");
+        });
+      } else {
+        video.pause();
+        log("Playback paused.");
+      }
+    });
+
+    // Query Tracks
+    function queryTracks() {
+      log("Querying audio/video/subtitle tracks...");
+
+      // 1. Audio Tracks
+      const audioTracks = video.audioTracks;
+      if (audioTracks) {
+        log(`video.audioTracks supported! Track count: ${audioTracks.length}`, "success");
+        updateAudioTracksUI(audioTracks);
+        
+        // Listen to change event
+        audioTracks.addEventListener("change", () => {
+          log("video.audioTracks triggered 'change' event!", "success");
+          queryTracks();
+        });
+      } else {
+        log("video.audioTracks NOT supported (undefined).", "error");
+        audioStatus.innerHTML = "<span style='color:#ff3333;'>Not Supported (video.audioTracks is undefined)</span>";
+      }
+
+      // 2. Subtitle Tracks (TextTracks)
+      const textTracks = video.textTracks;
+      if (textTracks) {
+        log(`video.textTracks supported! Track count: ${textTracks.length}`, "success");
+        updateSubtitleTracksUI(textTracks);
+
+        // Listen to change event
+        textTracks.addEventListener("change", () => {
+          log("video.textTracks triggered 'change' event!", "success");
+          queryTracks();
+        });
+      } else {
+        log("video.textTracks NOT supported (undefined).", "error");
+        subtitleStatus.innerHTML = "<span style='color:#ff3333;'>Not Supported (video.textTracks is undefined)</span>";
+      }
+    }
+
+    function updateAudioTracksUI(audioTracks) {
+      // Clear old buttons
+      const existingBtns = audioTracksRow.querySelectorAll("button");
+      existingBtns.forEach(btn => btn.remove());
+      audioStatus.style.display = "none";
+
+      if (audioTracks.length === 0) {
+        audioStatus.style.display = "inline";
+        audioStatus.textContent = "0 tracks detected in media metadata";
+        return;
+      }
+
+      for (let i = 0; i < audioTracks.length; i++) {
+        const track = audioTracks[i];
+        log(`Audio Track [${i}]: id=${track.id}, lang=${track.language}, label=${track.label || 'none'}, enabled=${track.enabled}, kind=${track.kind}`);
+        
+        const btn = document.createElement("button");
+        btn.className = "track-btn";
+        if (track.enabled) btn.classList.add("active");
+        
+        const labelText = track.label || track.language || `Track ${i}`;
+        btn.textContent = `${labelText} [${track.enabled ? 'ON' : 'OFF'}]`;
+        
+        btn.addEventListener("click", () => {
+          selectAudioTrack(i);
+        });
+        audioTracksRow.appendChild(btn);
+      }
+    }
+
+    function selectAudioTrack(index) {
+      const audioTracks = video.audioTracks;
+      if (!audioTracks) {
+        log("Cannot select audio track: video.audioTracks is not supported.", "error");
+        return;
+      }
+      if (index < 0 || index >= audioTracks.length) {
+        log(`Invalid audio track index: ${index}`, "error");
+        return;
+      }
+
+      log(`Attempting to set audio track [${index}] enabled = true (others to false)...`);
+      try {
+        for (let i = 0; i < audioTracks.length; i++) {
+          audioTracks[i].enabled = (i === index);
+        }
+        
+        // Log states immediately after setting
+        setTimeout(() => {
+          log("Post-switch audio track states verification:", "info");
+          for (let i = 0; i < audioTracks.length; i++) {
+            const track = audioTracks[i];
+            log(`Audio Track [${i}]: enabled=${track.enabled}`, track.enabled ? "success" : "info");
+          }
+          // Update buttons UI
+          updateAudioTracksUI(audioTracks);
+        }, 100);
+      } catch (err) {
+        log(`Error while switching audio track: ${err.message}`, "error");
+      }
+    }
+
+    function updateSubtitleTracksUI(textTracks) {
+      // Clear old buttons
+      const existingBtns = subtitleTracksRow.querySelectorAll("button");
+      existingBtns.forEach(btn => btn.remove());
+      subtitleStatus.style.display = "none";
+
+      if (textTracks.length === 0) {
+        subtitleStatus.style.display = "inline";
+        subtitleStatus.textContent = "0 subtitle tracks detected";
+        return;
+      }
+
+      // Add a button to disable all subtitles
+      const disableBtn = document.createElement("button");
+      disableBtn.className = "track-btn";
+      
+      let allDisabled = true;
+      for (let i = 0; i < textTracks.length; i++) {
+        if (textTracks[i].mode === "showing") {
+          allDisabled = false;
+        }
+      }
+      
+      if (allDisabled) disableBtn.classList.add("active");
+      disableBtn.textContent = "Disable Subtitles";
+      disableBtn.addEventListener("click", () => {
+        disableAllSubtitles();
+      });
+      subtitleTracksRow.appendChild(disableBtn);
+
+      for (let i = 0; i < textTracks.length; i++) {
+        const track = textTracks[i];
+        log(`Text Track [${i}]: id=${track.id}, lang=${track.language}, label=${track.label || 'none'}, mode=${track.mode}, kind=${track.kind}`);
+        
+        const btn = document.createElement("button");
+        btn.className = "track-btn";
+        if (track.mode === "showing") btn.classList.add("active");
+        
+        const labelText = track.label || track.language || `Subtitle ${i}`;
+        btn.textContent = `${labelText} [mode: ${track.mode}]`;
+        
+        btn.addEventListener("click", () => {
+          selectSubtitleTrack(i);
+        });
+        subtitleTracksRow.appendChild(btn);
+      }
+    }
+
+    function selectSubtitleTrack(index) {
+      const textTracks = video.textTracks;
+      if (!textTracks) {
+        log("Cannot select text track: video.textTracks is not supported.", "error");
+        return;
+      }
+      if (index < 0 || index >= textTracks.length) {
+        log(`Invalid text track index: ${index}`, "error");
+        return;
+      }
+
+      log(`Attempting to set subtitle track [${index}] mode = 'showing' (others disabled)...`);
+      try {
+        for (let i = 0; i < textTracks.length; i++) {
+          if (i === index) {
+            textTracks[i].mode = "showing";
+          } else {
+            textTracks[i].mode = "disabled";
+          }
+        }
+        
+        setTimeout(() => {
+          log("Post-switch subtitle track states verification:", "info");
+          for (let i = 0; i < textTracks.length; i++) {
+            const track = textTracks[i];
+            log(`Subtitle Track [${i}]: mode=${track.mode}`, track.mode === "showing" ? "success" : "info");
+          }
+          // Update buttons UI
+          updateSubtitleTracksUI(textTracks);
+        }, 100);
+      } catch (err) {
+        log(`Error while switching subtitle track: ${err.message}`, "error");
+      }
+    }
+
+    function disableAllSubtitles() {
+      const textTracks = video.textTracks;
+      if (!textTracks) return;
+      
+      log("Attempting to disable all subtitle tracks...");
+      try {
+        for (let i = 0; i < textTracks.length; i++) {
+          textTracks[i].mode = "disabled";
+        }
+        setTimeout(() => {
+          updateSubtitleTracksUI(textTracks);
+          log("All subtitle tracks disabled.", "success");
+        }, 100);
+      } catch (err) {
+        log(`Error disabling subtitles: ${err.message}`, "error");
+      }
+    }
+
+    // Periodic check for track states to log any changes
+    setInterval(() => {
+      if (video.src && video.readyState >= 1) {
+        const audioTracks = video.audioTracks;
+        if (audioTracks) {
+          // just checking if length matches buttons count
+          const buttons = audioTracksRow.querySelectorAll("button");
+          if (buttons.length !== audioTracks.length) {
+            log("Track count mismatch detected periodically, re-querying tracks...");
+            queryTracks();
+          }
+        }
+      }
+    }, 2000);
+  </script>
+</body>
+</html>

@@ -16,6 +16,7 @@
  */
 
 import React, { useEffect } from 'react';
+import { useChannelPreview } from '../../hooks/useChannelPreview';
 import './LivePreview.css';
 
 var KEY_LEFT  = 37;
@@ -30,6 +31,9 @@ export default function LivePreview(props) {
   var onExitLeft    = props.onExitLeft;
   var onToggleFavorite = props.onToggleFavorite;
   var onOpenEPG     = props.onOpenEPG;
+  var onPlay        = props.onPlay;
+
+  var preview = useChannelPreview(channel);
 
   // Klavye navigasyonu (butonlar arası)
   useEffect(function() {
@@ -45,14 +49,16 @@ export default function LivePreview(props) {
         }
       } else if (e.keyCode === KEY_RIGHT) {
         e.preventDefault();
-        if (focusedButton < 1) {
+        if (focusedButton < 2) {
           if (onFocusChange) onFocusChange(focusedButton + 1);
         }
       } else if (e.keyCode === KEY_OK) {
         e.preventDefault();
-        if (focusedButton === 0 && onOpenEPG) {
+        if (focusedButton === 0 && onPlay && channel && channel.streamUrl) {
+          onPlay(channel.streamUrl, channel.name, 'live');
+        } else if (focusedButton === 1 && onOpenEPG) {
           onOpenEPG();
-        } else if (focusedButton === 1 && onToggleFavorite) {
+        } else if (focusedButton === 2 && onToggleFavorite) {
           onToggleFavorite();
         }
       }
@@ -74,12 +80,38 @@ export default function LivePreview(props) {
 
   return (
     <div className="live-preview">
-      {/* Video alanı (placeholder — hls.js entegrasyonu sonra) */}
+      {/* Video alanı */}
       <div className="live-preview__video">
-        <div className="live-preview__video-placeholder">
-          <span className="live-preview__video-icon" aria-hidden="true">📡</span>
-          <span className="live-preview__video-text">Canlı Yayın</span>
-        </div>
+        {preview.error ? (
+          <div className="live-preview__video-fallback">
+            {channel.icon ? (
+              <img className="live-preview__video-fallback-img" src={channel.icon} alt="" />
+            ) : (
+              <div className="live-preview__video-fallback-placeholder" aria-hidden="true">📡</div>
+            )}
+            <div className="live-preview__video-error-badge">
+              <span className="live-preview__video-error-icon" aria-hidden="true">⚠️</span>
+              <span>Yayın yüklenemedi</span>
+            </div>
+          </div>
+        ) : (
+          <>
+            <video
+              ref={preview.videoRef}
+              className="live-preview__video-player"
+              muted
+              autoPlay
+              playsInline
+              style={{ display: preview.isPlaying ? 'block' : 'none' }}
+            />
+            {(preview.isLoading || !preview.isPlaying) && (
+              <div className="live-preview__video-loader">
+                <span className="live-preview__loader-spinner" />
+                <span className="live-preview__video-text">Bağlanıyor...</span>
+              </div>
+            )}
+          </>
+        )}
       </div>
 
       {/* Kanal bilgisi */}
@@ -97,15 +129,26 @@ export default function LivePreview(props) {
           data-focusable="true"
           data-focused={isFocused && focusedButton === 0 ? 'true' : undefined}
           tabIndex={isFocused && focusedButton === 0 ? 0 : -1}
-          onClick={onOpenEPG}
+          onClick={function() {
+            if (onPlay && channel && channel.streamUrl) onPlay(channel.streamUrl, channel.name, 'live');
+          }}
         >
-          <span aria-hidden="true">📋</span> EPG
+          <span aria-hidden="true">▶</span> Oynat
         </button>
         <button
           className={'live-preview__btn' + (isFocused && focusedButton === 1 ? ' live-preview__btn--focused' : '')}
           data-focusable="true"
           data-focused={isFocused && focusedButton === 1 ? 'true' : undefined}
           tabIndex={isFocused && focusedButton === 1 ? 0 : -1}
+          onClick={onOpenEPG}
+        >
+          <span aria-hidden="true">📋</span> EPG
+        </button>
+        <button
+          className={'live-preview__btn' + (isFocused && focusedButton === 2 ? ' live-preview__btn--focused' : '')}
+          data-focusable="true"
+          data-focused={isFocused && focusedButton === 2 ? 'true' : undefined}
+          tabIndex={isFocused && focusedButton === 2 ? 0 : -1}
           onClick={onToggleFavorite}
         >
           <span aria-hidden="true">💛</span> Favorite

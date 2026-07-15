@@ -1,0 +1,383 @@
+/**
+ * PlayerScreen.css — Video Oynatıcı Teması
+ */
+
+.player-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 720px;
+  background-color: #000000;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.player-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ── HUD (Heads-Up Display) Overlays ────────────────────────────────────── */
+
+.player-hud-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 40px 60px;
+  pointer-events: none;
+  animation: fadeInHUD 0.3s ease-out forwards;
+}
+
+@keyframes fadeInHUD {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Üst Bar */
+.player-hud-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  pointer-events: auto;
+}
+
+.player-hud-btn-back {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.player-hud-btn-back .back-arrow {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.player-hud-btn--focused,
+.player-hud-btn-back:hover {
+  background: #00bcd4;
+  border-color: #00bcd4;
+  color: #000000;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+  transform: scale(1.1);
+}
+
+.player-hud-title-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Duraklatılmış İkonu */
+.player-paused-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  animation: scaleUpPause 0.2s ease-out;
+}
+
+@keyframes scaleUpPause {
+  from { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+  to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+.paused-icon {
+  font-size: 32px;
+  color: #ffffff;
+  margin-left: 2px;
+}
+
+/* Alt Bar Kontroller */
+.player-hud-controls-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  pointer-events: auto;
+}
+
+/* Seekbar */
+.player-hud-seekbar-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.player-hud-time {
+  font-size: 14px;
+  font-weight: bold;
+  color: #c5c6c7;
+  min-width: 60px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.player-hud-seekbar-outer {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.player-hud-seekbar-inner {
+  height: 100%;
+  background: #00bcd4;
+  border-radius: 4px;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.8);
+}
+
+/* Kontrol Butonları */
+.player-hud-buttons-row {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.player-control-btn {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.player-control-btn--focused {
+  background: #00bcd4;
+  border-color: #00bcd4;
+  color: #000000;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.6);
+  transform: translateY(-2px);
+}
+
+.player-control-btn--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.3) !important;
+  color: #888888 !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* ── Spinner & Loader / Hata Overlays ───────────────────────────────────── */
+
+.player-loader-overlay,
+.player-error-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1002;
+}
+
+.player-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left-color: #00bcd4;
+  border-radius: 50%;
+  animation: playerSpin 1s linear infinite;
+}
+
+@keyframes playerSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.player-loader-text {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #00bcd4;
+  font-weight: bold;
+}
+
+.player-error-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.player-error-title {
+  font-size: 24px;
+  color: #ff3333;
+  margin: 0 0 10px 0;
+}
+
+.player-error-desc {
+  font-size: 16px;
+  color: #cccccc;
+  margin: 0 0 25px 0;
+  text-align: center;
+  max-width: 500px;
+  line-height: 1.4;
+}
+
+.player-error-btn {
+  background: #ff3333;
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(255, 51, 51, 0.3);
+}
+
+.player-error-btn--focused {
+  background: #ff6666;
+  box-shadow: 0 0 15px rgba(255, 102, 102, 0.6);
+  transform: scale(1.05);
+}
+
+/* ── Modals (Ses & Altyazı Seçim Paneli) ────────────────────────────────── */
+
+.player-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 1010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInBackdrop 0.25s ease-out;
+}
+
+@keyframes fadeInBackdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.player-modal-content {
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  width: 380px;
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  animation: slideUpModal 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUpModal {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.player-modal-title {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00bcd4;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+.player-modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.player-modal-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.player-modal-item .check-mark {
+  color: #00bcd4;
+  font-size: 16px;
+  font-weight: bold;
+  width: 25px;
+}
+
+.player-modal-item .track-label {
+  color: #e0e0e0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Seçili Öğe */
+.player-modal-item--selected {
+  background: rgba(0, 188, 212, 0.08);
+  border-color: rgba(0, 188, 212, 0.3);
+}
+
+.player-modal-item--selected .track-label {
+  color: #00bcd4;
+  font-weight: bold;
+}
+
+/* Odaklı Öğe */
+.player-modal-item--focused {
+  background: #00bcd4 !important;
+  border-color: #00bcd4 !important;
+  box-shadow: 0 0 12px rgba(0, 188, 212, 0.4);
+}
+
+.player-modal-item--focused .track-label {
+  color: #000000 !important;
+  font-weight: bold;
+}
+
+.player-modal-item--focused .check-mark {
+  color: #000000 !important;
+}

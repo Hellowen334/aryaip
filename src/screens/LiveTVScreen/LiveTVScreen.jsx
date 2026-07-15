@@ -33,29 +33,44 @@ export default function LiveTVScreen(props) {
   var onExitLeft       = props.onExitLeft;
 
   // Fokus bölgesi
-  var zoneState = useState('channels');
-  var focusZone = zoneState[0];
-  var setFocusZone = zoneState[1];
+  var zoneState = useState(props.focusZone || 'channels');
+  var focusZone = props.focusZone !== undefined ? props.focusZone : zoneState[0];
+  var setFocusZone = function(val) {
+    zoneState[1](val);
+    if (props.onFocusZoneChange) props.onFocusZoneChange(val);
+  };
 
   // Seçili kategori
-  var catState = useState('all');
-  var selectedCategory = catState[0];
-  var setSelectedCategory = catState[1];
+  var catState = useState(props.selectedCategory || 'all');
+  var selectedCategory = props.selectedCategory !== undefined ? props.selectedCategory : catState[0];
+  var setSelectedCategory = function(val) {
+    catState[1](val);
+    if (props.onSelectedCategoryChange) props.onSelectedCategoryChange(val);
+  };
 
   // Kategori paneli fokus index
-  var catFocusState = useState(1); // 'All' başlangıç (index 1: recently-viewed=0, all=1)
-  var catFocusedIndex = catFocusState[0];
-  var setCatFocusedIndex = catFocusState[1];
+  var catFocusState = useState(props.focusedCatIndex !== undefined ? props.focusedCatIndex : 1); // 'All' başlangıç (index 1: recently-viewed=0, all=1)
+  var catFocusedIndex = props.focusedCatIndex !== undefined ? props.focusedCatIndex : catFocusState[0];
+  var setCatFocusedIndex = function(val) {
+    catFocusState[1](val);
+    if (props.onFocusedCatIndexChange) props.onFocusedCatIndexChange(val);
+  };
 
   // Kanal listesi fokus index
-  var chFocusState = useState(0);
-  var chFocusedIndex = chFocusState[0];
-  var setChFocusedIndex = chFocusState[1];
+  var chFocusState = useState(props.focusedChIndex !== undefined ? props.focusedChIndex : 0);
+  var chFocusedIndex = props.focusedChIndex !== undefined ? props.focusedChIndex : chFocusState[0];
+  var setChFocusedIndex = function(val) {
+    chFocusState[1](val);
+    if (props.onFocusedChIndexChange) props.onFocusedChIndexChange(val);
+  };
 
   // Seçili kanal (preview'da gösterilecek)
-  var selectedChState = useState(channels[0] || null);
-  var selectedChannel = selectedChState[0];
-  var setSelectedChannel = selectedChState[1];
+  var selectedChState = useState(props.selectedChannel || channels[0] || null);
+  var selectedChannel = props.selectedChannel !== undefined ? props.selectedChannel : (selectedChState[0] || channels[0] || null);
+  var setSelectedChannel = function(val) {
+    selectedChState[1](val);
+    if (props.onSelectedChannelChange) props.onSelectedChannelChange(val);
+  };
 
   // Preview buton fokus
   var prevBtnState = useState(0);
@@ -78,13 +93,21 @@ export default function LiveTVScreen(props) {
 
   // Kanal seçim handler
   var handleChannelSelect = useCallback(function(channel) {
-    setSelectedChannel(channel);
-  }, []);
+    if (selectedChannel && selectedChannel.id === channel.id) {
+      if (props.onPlay && channel.streamUrl) {
+        props.onPlay(channel.streamUrl, channel.name, 'live');
+      }
+    } else {
+      setSelectedChannel(channel);
+    }
+  }, [selectedChannel, props.onPlay]);
 
   // Zone geçişleri
   var goToCategories = useCallback(function() { setFocusZone('categories'); }, []);
   var goToChannels   = useCallback(function() { setFocusZone('channels'); }, []);
   var goToPreview    = useCallback(function() { setFocusZone('preview'); }, []);
+
+  var focusedChannel = filteredChannels[chFocusedIndex] || null;
 
   return (
     <div className="livetv-screen">
@@ -126,11 +149,12 @@ export default function LiveTVScreen(props) {
 
         {/* Sağ: Preview */}
         <LivePreview
-          channel={selectedChannel}
+          channel={focusedChannel}
           isFocused={isContentFocused && focusZone === 'preview'}
           focusedButton={previewFocusedBtn}
           onFocusChange={setPreviewFocusedBtn}
           onExitLeft={goToChannels}
+          onPlay={props.onPlay}
         />
       </div>
     </div>

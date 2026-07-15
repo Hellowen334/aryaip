@@ -1,0 +1,21 @@
+/**
+ * SeriesCategoriesScreen.css — birleşik diziler ekranı CSS
+ */
+
+.series-category-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.series-category-screen__body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  gap: 1px;
+}
+
+.series-category-screen__body > *:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+}

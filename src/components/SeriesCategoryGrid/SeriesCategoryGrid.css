@@ -1,0 +1,62 @@
+/**
+ * SeriesCategoryGrid.css — Dizi Kategori Grid Stilleri
+ */
+.series-category-grid {
+  position: relative;
+  width: 100%;
+  overflow-y: hidden; /* containerHeight üzerinden scroll edeceğiz */
+  outline: none;
+}
+
+.series-category-grid__viewport {
+  position: relative;
+  width: 100%;
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.category-card {
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #1f293d 0%, #111827 100%);
+  border: 2px solid #2d3748;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  outline: none;
+}
+
+.category-card--focused {
+  transform: scale(1.05);
+  border-color: #8a5cf6;
+  box-shadow: 0 0 15px rgba(138, 92, 246, 0.4);
+}
+
+.category-card__name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #f3f4f6;
+  margin-bottom: 6px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.category-card__count {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.series-category-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+}

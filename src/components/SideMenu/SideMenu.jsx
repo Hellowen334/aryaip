@@ -158,6 +158,10 @@ export default function SideMenu(props) {
           var badge = item.hasBadge && membershipBadge ? membershipBadge.text : null;
           var badgeVariant = item.hasBadge && membershipBadge ? membershipBadge.variant : 'normal';
 
+          var isActiveScreen = currentScreen === item.screen ||
+                               (item.screen === SCREENS.SERIES && 
+                                (currentScreen === SCREENS.SERIES_GRID || currentScreen === SCREENS.SERIES_DETAIL));
+
           return (
             <MenuItem
               key={item.id}
@@ -165,7 +169,7 @@ export default function SideMenu(props) {
               label={item.label}
               icon={item.icon}
               screen={item.screen}
-              active={currentScreen === item.screen}
+              active={isActiveScreen}
               locked={isLocked}
               badge={badge}
               badgeVariant={badgeVariant}

@@ -1,0 +1,13 @@
+{
+  "id": "com.arya.iptv.testharness",
+  "version": "1.0.0",
+  "vendor": "Arya",
+  "type": "web",
+  "main": "index.html",
+  "title": "Arya Track Test Harness",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "resolution": "1280x720",
+  "bgColor": "#000000",
+  "iconColor": "#ffffff"
+}

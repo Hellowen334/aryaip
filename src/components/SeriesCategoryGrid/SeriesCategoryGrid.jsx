@@ -1,23 +1,12 @@
 /**
- * MovieGrid.jsx — Virtualized film grid'i (Filmler ekranı)
+ * SeriesCategoryGrid.jsx — Seviye 1: Dizi Kategorileri Grid Bileşeni
  *
- * Grid layout'ta sadece viewport'taki satırları render eder.
- * TV donanımı için optimize — 1000+ filmde bile akıcı.
- *
- * Props:
- *   movies        Array   — [{id, title, thumbnail, rating}]
- *   focusedIndex  number  — fokuslu film index'i (flat)
- *   isFocused     boolean — grid fokuslu mu
- *   onFocusChange (index) => void
- *   onSelect      (movie) => void
- *   onExitLeft    () => void — sola: CategoryPanel'e geç
- *   columns       number  — sütun sayısı (default: 6)
- *   containerHeight number — grid container yüksekliği
+ * Sadece ekranda görünen satırları render eden virtualized grid yapısı.
+ * ES5 uyumlu olarak yazılmıştır (WebOS TV uyumluluğu için).
  */
 
 import React, { useEffect, useRef, useState } from 'react';
-import ContentCard from '../ContentCard/ContentCard';
-import './MovieGrid.css';
+import './SeriesCategoryGrid.css';
 
 var KEY_UP    = 38;
 var KEY_DOWN  = 40;
@@ -27,19 +16,19 @@ var KEY_OK    = 13;
 
 var BUFFER_ROWS = 2;
 
-export default function MovieGrid(props) {
-  var movies         = props.movies || [];
+export default function SeriesCategoryGrid(props) {
+  var categories     = props.categories || [];
   var focusedIndex   = props.focusedIndex || 0;
   var isFocused      = props.isFocused || false;
   var onFocusChange  = props.onFocusChange;
   var onSelect       = props.onSelect;
   var onExitLeft     = props.onExitLeft;
-  var columns        = props.columns || 6;
-  var containerHeight = props.containerHeight || 500;
+  var columns        = props.columns || 4;
+  var containerHeight = props.containerHeight || 520;
 
-  var CARD_GAP       = 12;
-  var CARD_WIDTH     = columns === 4 ? 175 : 160;
-  var CARD_HEIGHT    = columns === 4 ? (Math.floor(containerHeight / 4) - CARD_GAP) : 260;
+  var CARD_GAP       = 16;
+  var CARD_WIDTH     = 220;
+  var CARD_HEIGHT    = 120;
   var rowHeight      = CARD_HEIGHT + CARD_GAP;
 
   var containerRef = useRef(null);
@@ -47,10 +36,10 @@ export default function MovieGrid(props) {
   var scrollTop = scrollTopState[0];
   var setScrollTop = scrollTopState[1];
 
-  var totalRows = Math.ceil(movies.length / columns);
+  var totalRows = Math.ceil(categories.length / columns);
   var totalHeight = totalRows * rowHeight;
 
-  // Fokuslu kartı görünür alana getir
+  // Odaklanan kartı viewport içine kaydır
   useEffect(function() {
     if (!isFocused) return;
     var row = Math.floor(focusedIndex / columns);
@@ -72,13 +61,13 @@ export default function MovieGrid(props) {
   for (var r = startRow; r <= endRow; r++) {
     for (var c = 0; c < columns; c++) {
       var idx = r * columns + c;
-      if (idx < movies.length) {
-        visibleItems.push({ movie: movies[idx], index: idx, row: r, col: c });
+      if (idx < categories.length) {
+        visibleItems.push({ category: categories[idx], index: idx, row: r, col: c });
       }
     }
   }
 
-  // Klavye navigasyonu (2D spatial)
+  // Yön tuşu navigasyonu (2D spatial)
   useEffect(function() {
     if (!isFocused) return;
 
@@ -95,7 +84,7 @@ export default function MovieGrid(props) {
         }
       } else if (e.keyCode === KEY_RIGHT) {
         e.preventDefault();
-        if (col < columns - 1 && focusedIndex + 1 < movies.length) {
+        if (col < columns - 1 && focusedIndex + 1 < categories.length) {
           if (onFocusChange) onFocusChange(focusedIndex + 1);
         }
       } else if (e.keyCode === KEY_UP) {
@@ -107,52 +96,67 @@ export default function MovieGrid(props) {
       } else if (e.keyCode === KEY_DOWN) {
         e.preventDefault();
         var targetDown = focusedIndex + columns;
-        if (targetDown < movies.length) {
+        if (targetDown < categories.length) {
           if (onFocusChange) onFocusChange(targetDown);
         }
       } else if (e.keyCode === KEY_OK) {
         e.preventDefault();
-        if (onSelect && movies[focusedIndex]) {
-          onSelect(movies[focusedIndex]);
+        if (onSelect && categories[focusedIndex]) {
+          onSelect(categories[focusedIndex]);
         }
       }
     }
 
     window.addEventListener('keydown', handleKey);
     return function() { window.removeEventListener('keydown', handleKey); };
-  }, [isFocused, focusedIndex, movies, columns, onFocusChange, onSelect, onExitLeft]);
+  }, [isFocused, focusedIndex, categories, columns, onFocusChange, onSelect, onExitLeft]);
 
   return (
     <div
-      className="movie-grid"
+      className="series-category-grid"
       ref={containerRef}
       style={{ height: containerHeight + 'px' }}
     >
-      <div className="movie-grid__viewport" style={{ height: totalHeight + 'px', transform: 'translateY(' + (-scrollTop) + 'px)' }}>
+      <div
+        className="series-category-grid__viewport"
+        style={{
+          height: totalHeight + 'px',
+          transform: 'translateY(' + (-scrollTop) + 'px)'
+        }}
+      >
         {visibleItems.map(function(entry) {
-          var m = entry.movie;
+          var cat = entry.category;
           var i = entry.index;
+          var focused = isFocused && i === focusedIndex;
+
           var cardStyle = {
             position: 'absolute',
             top: (entry.row * rowHeight) + 'px',
             left: (entry.col * (CARD_WIDTH + CARD_GAP)) + 'px',
             width: CARD_WIDTH + 'px',
-            height: CARD_HEIGHT + 'px',
+            height: CARD_HEIGHT + 'px'
           };
 
           return (
-            <ContentCard
-              key={m.id || ('movie-' + i)}
-              id={'movie-card-' + i}
-              title={m.title}
-              thumbnail={m.thumbnail}
-              rating={m.rating}
-              focused={isFocused && i === focusedIndex}
-              onSelect={function() {
-                if (onSelect) onSelect(m);
+            <div
+              key={cat.id || ('cat-' + i)}
+              id={'cat-card-' + i}
+              className={'category-card' + (focused ? ' category-card--focused' : '')}
+              data-focusable="true"
+              data-focused={focused ? 'true' : undefined}
+              onClick={function() {
+                if (onSelect) onSelect(cat);
               }}
               style={cardStyle}
-            />
+              role="button"
+              tabIndex={0}
+              aria-label={cat.name + (cat.count ? ', ' + cat.count + ' dizi' : '')}
+            >
+              <div className="category-card__name">{cat.name}</div>
+              {cat.count > 0 && (
+                <div className="category-card__count">{cat.count} Dizi</div>
+              )}
+            </div>
           );
         })}
       </div>

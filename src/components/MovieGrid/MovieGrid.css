@@ -11,4 +11,5 @@
 .movie-grid__viewport {
   position: relative;
   width: 100%;
+  transition: transform 0.15s ease-out;
 }

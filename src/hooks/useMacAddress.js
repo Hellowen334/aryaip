@@ -28,20 +28,25 @@ function callLuna(uri, method, params) {
 
     // webOS 3.x+ için PalmServiceBridge
     if (typeof window.PalmServiceBridge !== 'undefined') {
-      var bridge = new window.PalmServiceBridge();
-      bridge.onservicecallback = function(msg) {
-        try {
-          const parsed = JSON.parse(msg);
-          if (parsed.returnValue === false) {
-            reject(new Error(parsed.errorText || 'Luna call failed'));
-          } else {
-            resolve(parsed);
+      try {
+        var bridge = new window.PalmServiceBridge();
+        bridge.onservicecallback = function(msg) {
+          try {
+            var parsed = JSON.parse(msg);
+            if (parsed.returnValue === false) {
+              reject(new Error(parsed.errorText || 'Luna call failed'));
+            } else {
+              resolve(parsed);
+            }
+          } catch (e) {
+            reject(e);
           }
-        } catch (e) {
-          reject(e);
-        }
-      };
-      bridge.call(fullUri, JSON.stringify(lunaParams));
+        };
+        bridge.call(fullUri, JSON.stringify(lunaParams));
+      } catch (e) {
+        console.error('[useMacAddress] PalmServiceBridge instantiation or call failed:', e);
+        reject(e);
+      }
       return;
     }
 

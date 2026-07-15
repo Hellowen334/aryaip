@@ -3,7 +3,7 @@
  */
 
 .category-panel {
-  width: var(--category-width, 180px);
+  width: var(--category-width, 260px);
   flex-shrink: 0;
   display: flex;
   flex-direction: column;

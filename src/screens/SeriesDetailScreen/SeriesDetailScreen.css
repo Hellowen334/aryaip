@@ -1,0 +1,204 @@
+/**
+ * SeriesDetailScreen.css — Dizi Detay Ekranı Stilleri
+ */
+.series-detail-screen {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  background-color: #0b0f19;
+  display: flex;
+  flex-direction: column;
+  color: #f3f4f6;
+  overflow: hidden;
+}
+
+/* 1. Banner Alanı */
+.series-banner {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  background: linear-gradient(180deg, rgba(31, 41, 55, 0.4) 0%, rgba(17, 24, 39, 0.6) 100%);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+}
+
+.series-banner__cover {
+  width: 160px;
+  height: 230px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2d3748;
+}
+
+.series-banner__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.series-banner__title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.series-banner__meta-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.series-banner__rating {
+  background-color: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.series-banner__genre {
+  color: #a78bfa;
+  font-weight: 500;
+}
+
+.series-banner__plot {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #9ca3af;
+  margin: 0 0 16px 0;
+  max-width: 800px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.series-banner__crew {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.series-banner__crew span {
+  color: #d1d5db;
+}
+
+/* 2. Sezon Seçici (SeasonSelector) */
+.season-selector {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e293b;
+  outline: none;
+}
+
+.season-tab {
+  padding: 8px 20px;
+  background-color: #1e293b;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #9ca3af;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.season-tab--active {
+  background-color: rgba(138, 92, 246, 0.15);
+  color: #a78bfa;
+  border-color: rgba(138, 92, 246, 0.4);
+}
+
+.season-tab--focused {
+  transform: scale(1.05);
+  border-color: #8a5cf6;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(138, 92, 246, 0.3);
+}
+
+/* 3. Bölüm Listesi (EpisodeList) */
+.episode-list {
+  flex: 1;
+  overflow-y: hidden; /* Scroll containerHeight ve translate ile yapılacak */
+  position: relative;
+  outline: none;
+}
+
+.episode-list__viewport {
+  position: relative;
+  width: 100%;
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.episode-card {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  background-color: #111827;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.episode-card--focused {
+  background-color: #1f293d;
+  border-color: #8a5cf6;
+  transform: scale(1.01);
+}
+
+.episode-card__image-container {
+  width: 100px;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  background-color: #0b0f19;
+}
+
+.episode-card__number {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #4b5563;
+  width: 32px;
+  text-align: center;
+}
+
+.episode-card--focused .episode-card__number {
+  color: #a78bfa;
+}
+
+.episode-card__details {
+  flex: 1;
+  min-width: 0;
+}
+
+.episode-card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.episode-card__duration {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
